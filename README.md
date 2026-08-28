@@ -51,3 +51,27 @@ Health: `GET /gesundheit` — prüft die Datenbank, nicht nur den Prozess.
 - Mandantentrennung wird in der Datenbank erzwungen (Row Level Security), nicht
   nur in der Anwendung.
 - Deutsche Beschriftungen in der Oberfläche, deutsche Bezeichner im Code.
+
+## Dokumentation
+
+| Datei | Inhalt |
+|---|---|
+| `docs/BETRIEB.md` | Coolify-Aufbau, Umgebungsvariablen, Migrationen, Sicherung, offene Punkte |
+| `docs/PHASE-0.md` | Was der Testkorpus leistet, was er nicht leistet, und welche Entscheidungen offen sind |
+| `docs/adr/` | Architekturentscheidungen mit Begründung |
+
+## Stand der Umsetzung
+
+| Bereich | Stand |
+|---|---|
+| Mandantentrennung (RLS, Introspektionstest über alle Tabellen) | umgesetzt und belegt |
+| Auth, Rollen, Einladungen, Rate-Limit, CSRF, CSP | umgesetzt |
+| Dokumentenpaket: zwei Extraktionspfade, Profiladapter, Konfidenz | umgesetzt, Fixtures synthetisch |
+| Check: Feldkatalog, sichere Regelmaschine, 20 Regeln, Quittierung, PDF | umgesetzt |
+| Delta: Kaskade, elf Klassen, Kontrollrechnung, PDF und JSON | umgesetzt |
+| Atlas: Umkreis, Statistik, Nachweispflicht, PDF und CSV | umgesetzt |
+| Atlas-Pool | gebaut, bis zur wettbewerbsrechtlichen Prüfung abgeschaltet |
+| Abonnements, Datenexport, Kontolöschung, Wartung | umgesetzt |
+| Landingpages und Rechtstexte | umgesetzt, Rechtstexte als ungeprüfte Entwürfe gekennzeichnet |
+| Abrechnung mit Zahlungsanbieter | nicht umgesetzt (Querschnitt 2.1 sieht das bewusst später vor) |
+| Echtdokumente, Abbruchentscheidung, PLZ-Amtsdaten, Markenrecherche | offen, siehe `docs/PHASE-0.md` |
