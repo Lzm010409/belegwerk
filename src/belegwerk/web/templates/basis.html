@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block titel %}{{ marke }}{% endblock %}</title>
+<meta name="robots" content="{% block robots %}noindex, nofollow{% endblock %}">
+{% block meta %}{% endblock %}
+<link rel="stylesheet" href="/static/schriften.css">
+<link rel="stylesheet" href="/static/belegwerk.css">
+<link rel="icon" href="/static/marke.svg" type="image/svg+xml">
+<script src="/static/htmx.min.js" defer></script>
+<script src="/static/alpine.min.js" defer></script>
+</head>
+<body{% block body_attr %}{% endblock %}>
+<a class="visuell-versteckt" href="#inhalt">Zum Inhalt springen</a>
+{% block kopfleiste %}
+<header class="kopfleiste">
+  <div class="kopfleiste-inhalt">
+    <a class="marke" href="{{ '/app' if benutzer else '/' }}">
+      Belegwerk{% if modul %} <span class="marke-modul">{{ modul }}</span>{% endif %}
+    </a>
+    {% if benutzer %}
+    <nav class="hauptnavigation" aria-label="Hauptnavigation">
+      {% for eintrag in navigation %}
+        <a href="{{ eintrag.pfad }}" {% if eintrag.aktiv %}aria-current="page"{% endif %}>{{ eintrag.beschriftung }}</a>
+      {% endfor %}
+      <a href="/app/einstellungen">Einstellungen</a>
+      <form method="post" action="/abmelden" style="display:inline">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+        <button class="hauptnavigation-abmelden knopf knopf-zweit" style="padding:.3rem .6rem;font-size:.9rem;color:var(--paper);border-color:var(--rule)">Abmelden</button>
+      </form>
+    </nav>
+    {% else %}
+    <nav class="hauptnavigation" aria-label="Hauptnavigation">
+      <a href="/delta">Delta</a>
+      <a href="/atlas">Atlas</a>
+      <a href="/check">Check</a>
+      <a href="/anmelden">Anmelden</a>
+    </nav>
+    {% endif %}
+  </div>
+</header>
+{% endblock %}
+
+<main id="inhalt" class="inhalt">
+  <div class="huelle">
+    {% for art, text in meldungen %}
+      <div class="meldung meldung-{{ art }}" role="{{ 'alert' if art == 'fehler' else 'status' }}"><p>{{ text }}</p></div>
+    {% endfor %}
+    {% block inhalt %}{% endblock %}
+  </div>
+</main>
+
+{% block fussleiste %}
+<footer class="fussleiste">
+  <div class="huelle">
+    <ul>
+      <li><a href="/impressum">Impressum</a></li>
+      <li><a href="/datenschutz">Datenschutz</a></li>
+      <li><a href="/agb">AGB</a></li>
+      <li><a href="/auftragsverarbeitung">AV-Vertrag</a></li>
+      {% if benutzer %}<li><a href="/app/rueckmeldung">Rückmeldung geben</a></li>{% endif %}
+    </ul>
+    <p>Belegwerk — Delta, Atlas, Check. Fachliche Verantwortung für das Gutachten bleibt beim Sachverständigen.</p>
+  </div>
+</footer>
+{% endblock %}
+{% block skripte %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* Belegwerk — Gestaltung nach Plattformdatei Abschnitt 6.
+   Messtechnik, nicht SaaS: Gehaeuse-Anthrazit, Protokollweiss, Haarlinien,
+   Ziffern in Mono. Handgeschrieben statt Utility-Framework (siehe ADR 0002). */
+
+:root {
+  --ink: #14181D;
+  --paper: #ECEEF0;
+  --paper-warm: #F7F8F9;
+  --rule: #C3C8CE;
+  --delta: #C8102E;
+  --hold: #1F6F5C;
+  --hinweis: #E0A106;
+
+  --ink-70: #4A5058;
+  --ink-50: #6E747C;
+  --delta-flaeche: #FBECEE;
+  --hold-flaeche: #E9F2EF;
+  --hinweis-flaeche: #FBF3DE;
+
+  --schrift-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --schrift-text: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --schrift-daten: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --raster-nummer: 3.25rem;   /* schmale linke Spalte des Positionsrasters */
+  --mass: 1rem;
+  --radius: 2px;              /* Geraetefront, keine runden Karten */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--schrift-text);
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--schrift-display);
+  font-weight: 700;
+  font-stretch: 125%;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+h1 { font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem); }
+h2 { font-size: clamp(1.2rem, 1rem + 0.9vw, 1.6rem); }
+h3 { font-size: 1.05rem; }
+
+p { margin: 0 0 1em; }
+a { color: var(--ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--delta); }
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.mono, .zahl { font-family: var(--schrift-daten); font-variant-numeric: tabular-nums; }
+.zahl { text-align: right; white-space: nowrap; }
+.klein { font-size: 0.82rem; color: var(--ink-70); }
+.gedaempft { color: var(--ink-50); }
+.delta-farbe { color: var(--delta); }
+.hold-farbe { color: var(--hold); }
+.hinweis-farbe { color: #8a6300; }
+.durchgestrichen { text-decoration: line-through; text-decoration-color: var(--delta); }
+.nur-lesbar { speak: never; }
+.visuell-versteckt {
+  position: absolute; width: 1px; height: 1px; margin: -1px;
+  clip-path: inset(50%); overflow: hidden; white-space: nowrap;
+}
+
+/* ---------- Grundgeruest ---------- */
+
+.huelle { max-width: 78rem; margin: 0 auto; padding: 0 var(--mass); }
+
+.kopfleiste {
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: 3px solid var(--ink);
+}
+.kopfleiste a { color: var(--paper); text-decoration: none; }
+.kopfleiste-inhalt {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem;
+  padding: 0.6rem var(--mass); max-width: 78rem; margin: 0 auto;
+}
+.marke {
+  font-family: var(--schrift-display); font-weight: 700; font-stretch: 125%;
+  font-size: 1.05rem; letter-spacing: 0.02em; text-transform: uppercase;
+}
+.marke-modul { color: var(--rule); font-weight: 400; font-stretch: 100%; }
+.hauptnavigation { display: flex; flex-wrap: wrap; gap: 0.25rem; margin-left: auto; }
+.hauptnavigation a {
+  padding: 0.3rem 0.6rem; font-size: 0.9rem; border: 1px solid transparent;
+}
+.hauptnavigation a[aria-current="page"] { border-color: var(--rule); background: #1E242B; }
+.hauptnavigation a:hover { background: #1E242B; color: #fff; }
+
+.inhalt { padding: 1.5rem 0 4rem; }
+
+.fussleiste {
+  border-top: 1px solid var(--rule);
+  padding: 1.25rem 0 2.5rem; font-size: 0.82rem; color: var(--ink-70);
+}
+.fussleiste ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.75rem; padding: 0; margin: 0 0 0.5rem; }
+
+/* ---------- Positionsraster (Signature-Element) ---------- */
+
+.raster { border-top: 1px solid var(--ink); }
+.raster-zeile {
+  display: grid;
+  grid-template-columns: var(--raster-nummer) 1fr;
+  gap: 0 0.75rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.raster-nummer {
+  font-family: var(--schrift-daten); font-variant-numeric: tabular-nums;
+  font-size: 0.8rem; color: var(--ink-50); padding-top: 0.15rem;
+}
+.raster-inhalt > :last-child { margin-bottom: 0; }
+
+/* ---------- Karten und Bloecke ---------- */
+
+.karte {
+  background: var(--paper-warm);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+.karte + .karte { margin-top: 1rem; }
+.karte-kopf {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem;
+  margin: -1rem -1rem 1rem; padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--rule); background: #E4E7EA;
+}
+.karte-kopf h2, .karte-kopf h3 { margin: 0; }
+
+.gitter { display: grid; gap: 1rem; }
+@media (min-width: 48rem) { .gitter-2 { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 64rem) { .gitter-3 { grid-template-columns: repeat(3, 1fr); } }
+
+.kennzahlen { display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
+@media (min-width: 40rem) { .kennzahlen { grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); } }
+.kennzahl { background: var(--paper-warm); padding: 0.7rem 0.8rem; }
+.kennzahl-wert {
+  font-family: var(--schrift-daten); font-weight: 700; font-size: 1.35rem;
+  font-variant-numeric: tabular-nums; display: block; line-height: 1.2;
+}
+.kennzahl-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-70); }
+
+/* ---------- Tabellen ---------- */
+
+.tabellenrahmen { overflow-x: auto; border: 1px solid var(--rule); background: var(--paper-warm); }
+table.protokoll { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+table.protokoll th, table.protokoll td {
+  padding: 0.42rem 0.6rem; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top;
+}
+table.protokoll thead th {
+  background: var(--ink); color: var(--paper); font-weight: 600; font-size: 0.75rem;
+  text-transform: uppercase; letter-spacing: 0.05em; position: sticky; top: 0; z-index: 1;
+}
+table.protokoll td.zahl, table.protokoll th.zahl { text-align: right; font-family: var(--schrift-daten); font-variant-numeric: tabular-nums; }
+table.protokoll tbody tr:hover { background: #E8EBED; }
+table.protokoll tr.unveraendert td { color: var(--ink-50); }
+table.protokoll tr.entfallen td.bezeichnung { text-decoration: line-through; text-decoration-color: var(--delta); }
+
+/* ---------- Formulare ---------- */
+
+label { display: block; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.2rem; }
+.feld { margin-bottom: 0.9rem; }
+.feld-hilfe { font-size: 0.78rem; color: var(--ink-70); margin-top: 0.2rem; }
+input[type=text], input[type=email], input[type=password], input[type=number],
+input[type=date], input[type=search], input[type=tel], select, textarea {
+  width: 100%; padding: 0.45rem 0.55rem; font: inherit; font-size: 0.95rem;
+  color: var(--ink); background: #fff; border: 1px solid var(--ink-50);
+  border-radius: var(--radius);
+}
+input[inputmode=decimal], input[type=number], input.mono { font-family: var(--schrift-daten); }
+input:disabled, select:disabled, textarea:disabled { background: #E4E7EA; color: var(--ink-50); }
+textarea { min-height: 6rem; resize: vertical; }
+fieldset { border: 1px solid var(--rule); padding: 0.8rem; margin: 0 0 1rem; }
+legend { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0 0.35rem; }
+
+.knopf {
+  display: inline-block; font: inherit; font-weight: 600; font-size: 0.92rem;
+  padding: 0.5rem 1rem; border: 1px solid var(--ink); border-radius: var(--radius);
+  background: var(--ink); color: var(--paper); cursor: pointer; text-decoration: none;
+}
+.knopf:hover { background: #000; color: #fff; }
+.knopf[disabled], .knopf[aria-disabled="true"] { opacity: 0.5; cursor: not-allowed; }
+.knopf-zweit { background: transparent; color: var(--ink); }
+.knopf-zweit:hover { background: var(--ink); color: var(--paper); }
+.knopf-warn { background: var(--delta); border-color: var(--delta); }
+.knopf-warn:hover { background: #a50d26; }
+.knopfreihe { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+
+/* ---------- Meldungen ---------- */
+
+.meldung { border-left: 4px solid var(--ink); background: var(--paper-warm); padding: 0.7rem 0.9rem; margin-bottom: 1rem; }
+.meldung-fehler { border-color: var(--delta); background: var(--delta-flaeche); }
+.meldung-erfolg { border-color: var(--hold); background: var(--hold-flaeche); }
+.meldung-hinweis { border-color: var(--hinweis); background: var(--hinweis-flaeche); }
+.meldung p:last-child { margin-bottom: 0; }
+
+.marker {
+  display: inline-block; font-family: var(--schrift-daten); font-size: 0.7rem;
+  text-transform: uppercase; letter-spacing: 0.04em; padding: 0.1rem 0.4rem;
+  border: 1px solid currentColor; border-radius: var(--radius); white-space: nowrap;
+}
+.marker-fehler { color: var(--delta); background: var(--delta-flaeche); }
+.marker-warnung { color: #8a6300; background: var(--hinweis-flaeche); }
+.marker-hinweis { color: var(--ink-70); background: #E4E7EA; }
+.marker-hold { color: var(--hold); background: var(--hold-flaeche); }
+
+/* ---------- Dropzone ---------- */
+
+.dropzone {
+  border: 2px dashed var(--ink-50); background: var(--paper-warm);
+  padding: 1.5rem 1rem; text-align: center; border-radius: var(--radius);
+}
+.dropzone.aktiv { border-color: var(--ink); background: #E4E7EA; }
+.dropzone input[type=file] { margin-top: 0.6rem; }
+
+/* ---------- klebende Summenzeile ---------- */
+
+.summenleiste {
+  position: sticky; bottom: 0; z-index: 5;
+  background: var(--ink); color: var(--paper);
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.5rem; justify-content: space-between;
+  padding: 0.6rem 1rem; border-top: 3px solid var(--delta);
+}
+.summenleiste .zahl { color: #fff; font-weight: 700; }
+
+/* ---------- leere Zustaende ---------- */
+
+.leer {
+  border: 1px dashed var(--rule); background: var(--paper-warm);
+  padding: 1.5rem 1rem; text-align: center; color: var(--ink-70);
+}
+.leer p:last-child { margin-bottom: 0; }
+
+/* ---------- Fortschritt ---------- */
+
+.fortschritt { height: 6px; background: var(--rule); border: 1px solid var(--rule); }
+.fortschritt-balken { height: 100%; background: var(--ink); transition: width 0.3s linear; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important; scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .kopfleiste, .fussleiste, .knopfreihe, .summenleiste { display: none; }
+  body { background: #fff; }
+}

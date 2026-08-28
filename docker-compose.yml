@@ -1,0 +1,35 @@
+# Nur fuer die lokale Entwicklung. Im Betrieb legt Coolify die Ressourcen
+# getrennt an: eine Postgres-Ressource und eine Anwendungs-Ressource.
+services:
+  datenbank:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: belegwerk
+      POSTGRES_USER: belegwerk
+      POSTGRES_PASSWORD: belegwerk
+    ports: ["5432:5432"]
+    volumes: ["pgdaten:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U belegwerk"]
+      interval: 5s
+      retries: 20
+
+  anwendung:
+    build: .
+    depends_on:
+      datenbank: {condition: service_healthy}
+    environment:
+      DATABASE_URL: postgresql://belegwerk:belegwerk@datenbank:5432/belegwerk
+      SITZUNG_GEHEIMNIS: nur-fuer-die-lokale-entwicklung
+      APP_BASIS_URL: http://localhost:8000
+      UMGEBUNG: entwicklung
+      ERSTER_ADMIN_EMAIL: admin@example.de
+      ERSTER_ADMIN_NAME: Betreiber
+      ERSTER_ADMIN_PASSWORT: entwicklung-nur-lokal
+    command: sh -c "/app/skripte/vor-deployment.sh && uvicorn belegwerk.anwendung:app --host 0.0.0.0 --port 8000"
+    ports: ["8000:8000"]
+    volumes: ["daten:/data"]
+
+volumes:
+  pgdaten:
+  daten:

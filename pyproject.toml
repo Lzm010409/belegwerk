@@ -1,0 +1,64 @@
+[project]
+name = "belegwerk"
+version = "0.1.0"
+description = "Belegwerk — Werkzeuge fuer Kfz-Sachverstaendige: Delta, Atlas, Check"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "jinja2>=3.1",
+  "python-multipart>=0.0.9",
+  "itsdangerous>=2.2",
+  "sqlalchemy[asyncio]>=2.0.30",
+  "asyncpg>=0.29",
+  "alembic>=1.13",
+  "argon2-cffi>=23.1",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "pyyaml>=6.0",
+  "python-dateutil>=2.9",
+  "rapidfuzz>=3.9",
+  "pdfplumber>=0.11",
+  "pypdf>=4.2",
+  "lxml>=5.2",
+  "weasyprint>=62",
+  "pillow>=10.3",
+  "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.2",
+  "pytest-asyncio>=0.23",
+  "mypy>=1.10",
+  "types-PyYAML",
+  "types-python-dateutil",
+  "aiosqlite>=0.20",
+  "reportlab>=4.2",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+belegwerk = ["web/templates/**/*", "web/static/**/*", "**/*.yaml", "**/*.yml", "**/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["belegwerk"]
+mypy_path = "src"
+plugins = []
+
+[[tool.mypy.overrides]]
+module = ["pdfplumber.*", "weasyprint.*", "rapidfuzz.*", "argon2.*", "pypdf.*", "PIL.*", "reportlab.*"]
+ignore_missing_imports = true
