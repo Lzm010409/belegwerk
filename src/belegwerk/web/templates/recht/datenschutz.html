@@ -1,0 +1,101 @@
+{% extends "recht/basis_recht.html" %}
+{% block text %}
+<h2>1. Verantwortlicher</h2>
+<p>[Name und Anschrift des Betreibers], E-Mail: [E-Mail-Adresse].
+{% if false %}{% endif %} Ein Datenschutzbeauftragter ist [bestellt / nicht bestellt, da die
+Voraussetzungen des § 38 BDSG nicht vorliegen].</p>
+
+<h2>2. Zwei Rollen: eigene Verarbeitung und Auftragsverarbeitung</h2>
+<p>
+  Belegwerk verarbeitet Daten in zwei getrennten Rollen. Für die Nutzung der Website und die
+  Verwaltung Ihres Kontos sind wir <strong>Verantwortlicher</strong>. Für die Inhalte, die Sie in
+  Belegwerk verarbeiten — Gutachten, Kalkulationen, Prüfberichte und die darin enthaltenen Daten
+  Ihrer Auftraggeber — sind wir <strong>Auftragsverarbeiter</strong>; Verantwortlicher bleiben Sie.
+  Grundlage dafür ist der <a href="/auftragsverarbeitung.pdf">Vertrag zur Auftragsverarbeitung</a>,
+  der vor der ersten Nutzung zu schließen ist.
+</p>
+
+<h2>3. Aufruf der Website</h2>
+<p>
+  Beim Aufruf werden vom Server technisch notwendige Daten verarbeitet (aufgerufene Adresse,
+  Zeitpunkt, Statuscode, übertragene Datenmenge). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO;
+  das berechtigte Interesse liegt im sicheren Betrieb. <strong>IP-Adressen werden nicht in die
+  Anwendungsprotokolle geschrieben.</strong> Es findet kein Tracking statt, es werden keine
+  Analysedienste eingebunden und keine Einwilligungsabfrage benötigt, weil außer der
+  Sitzungsverwaltung keine Cookies gesetzt werden.
+</p>
+
+<h2>4. Cookies</h2>
+<table class="protokoll">
+  <thead><tr><th>Cookie</th><th>Zweck</th><th>Dauer</th></tr></thead>
+  <tbody>
+    <tr><td class="mono">belegwerk_sitzung</td><td>Hält Ihre Anmeldung. Enthält nur einen Zufallswert.</td><td>14 Tage</td></tr>
+    <tr><td class="mono">belegwerk_csrf</td><td>Schutz vor Formularfälschung.</td><td>12 Stunden</td></tr>
+    <tr><td class="mono">belegwerk_meldung</td><td>Überträgt eine einzelne Statusmeldung zur nächsten Seite.</td><td>30 Sekunden</td></tr>
+  </tbody>
+</table>
+<p class="klein">Alle drei sind technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG) und einwilligungsfrei.</p>
+
+<h2>5. Konto und Nutzung</h2>
+<p>
+  Für Ihr Konto verarbeiten wir Name, E-Mail-Adresse, Bürobezeichnung, das Passwort als
+  Argon2id-Hash sowie den Zeitpunkt der letzten Anmeldung. Rechtsgrundlage ist Art. 6 Abs. 1
+  lit. b DSGVO. Nutzungsdaten werden in strukturierter Form protokolliert; Dokumentinhalte,
+  Namen, Kennzeichen und Fahrzeug-Identifizierungsnummern gelangen dabei ausdrücklich nicht in
+  die Protokolle.
+</p>
+
+<h2>6. Inhalte, die Sie verarbeiten</h2>
+<p>
+  Hochgeladene Gutachten, Kalkulationen, Prüfberichte und Nachweisdokumente enthalten
+  regelmäßig personenbezogene Daten Ihrer Auftraggeber und Dritter. Wir verarbeiten sie
+  ausschließlich weisungsgebunden nach dem AV-Vertrag. Aus hochgeladenen Fotos werden
+  Metadaten einschließlich Standortangaben vor der Speicherung entfernt.
+</p>
+
+<h2>7. Löschfristen</h2>
+<table class="protokoll">
+  <thead><tr><th>Daten</th><th>Frist</th></tr></thead>
+  <tbody>
+    <tr><td>Hochgeladene Dokumente</td><td>90 Tage nach dem Upload</td></tr>
+    <tr><td>Erzeugte Anlagen und Protokolle (Dateien)</td><td>12 Monate</td></tr>
+    <tr><td>Vorgangsdaten und Ergebnisse</td><td>bis zur Kontolöschung</td></tr>
+    <tr><td>Abgelaufene Sitzungen</td><td>täglich</td></tr>
+    <tr><td>Gesamtes Konto nach Löschauftrag</td><td>14 Tage Karenz, danach unwiderruflich</td></tr>
+  </tbody>
+</table>
+
+<h2>8. Empfänger</h2>
+<p>
+  Eine Übermittlung findet nur an die in der
+  <a href="/unterauftragsverarbeiter">Liste der Unterauftragsverarbeiter</a> genannten Stellen
+  statt. Eine Übermittlung in Drittländer außerhalb der EU findet nicht statt.
+</p>
+
+<h2>9. Optionaler Sprachmodellpfad</h2>
+<p>
+  Belegwerk kann für zwei eng begrenzte Aufgaben ein Sprachmodell nutzen: die Zuordnung
+  zweier Positionsbezeichnungen und die Prüfung von Textkonsistenz. Übermittelt werden dabei
+  ausschließlich Bezeichnungen und Textabschnitte, niemals Beträge, Namen oder Kennzeichen.
+  Der Pfad ist je Büro abschaltbar; ohne ihn steht der volle Funktionsumfang zur Verfügung.
+  Ist er eingeschaltet, ist der Anbieter in der Unterauftragsverarbeiterliste geführt.
+</p>
+
+<h2>10. Ihre Rechte</h2>
+<p>
+  Sie haben das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17),
+  Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21 DSGVO).
+  Eine vollständige Kopie aller Daten Ihres Büros erhalten Sie jederzeit selbst über
+  <span class="mono">Einstellungen → Alle Daten als ZIP herunterladen</span>. Außerdem steht
+  Ihnen ein Beschwerderecht bei einer Aufsichtsbehörde zu; zuständig ist
+  [zuständige Landesdatenschutzbehörde].
+</p>
+
+<h2>11. Sicherheit</h2>
+<p>
+  Übertragung ausschließlich über TLS. Passwörter werden mit Argon2id gespeichert. Die
+  Trennung der Büros wird zusätzlich zur Anwendungslogik in der Datenbank erzwungen
+  (Row Level Security). Einzelheiten stehen im
+  <a href="/tom">TOM-Dokument</a>.
+</p>
+{% endblock %}

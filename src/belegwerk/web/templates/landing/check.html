@@ -1,0 +1,153 @@
+{% extends "basis.html" %}
+{% block robots %}index, follow{% endblock %}
+{% block titel %}Check — Endkontrolle des Gutachtens vor dem Versand{% endblock %}
+{% block meta %}
+<meta name="description" content="Check prüft das fertige Gutachten-PDF gegen 20 Regeln und meldet Widersprüche, bevor es beim Versicherer liegt. Unabhängig von der verwendeten Gutachtensoftware.">
+{% endblock %}
+{% block inhalt %}
+
+<section>
+  <h1 style="max-width:26ch">Legen Sie ein Gutachten hier ab. In fünfzehn Sekunden wissen Sie, ob es widerspruchsfrei ist.</h1>
+
+  {% if fehler %}<div class="meldung meldung-fehler" role="alert"><p>{{ fehler }}</p></div>{% endif %}
+
+  {% if offen %}
+  <div class="gitter gitter-2">
+    <form method="post" action="/check/probe" enctype="multipart/form-data" class="karte"
+          x-data="{aktiv:false, name:''}"
+          @dragover.prevent="aktiv=true" @dragleave.prevent="aktiv=false"
+          @drop.prevent="aktiv=false; $refs.datei.files=$event.dataTransfer.files; name=$refs.datei.files[0]?.name||''">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+      <div class="dropzone" :class="aktiv && 'aktiv'">
+        <p><strong>Gutachten hier ablegen</strong></p>
+        <label class="visuell-versteckt" for="datei">Gutachten als PDF</label>
+        <input id="datei" x-ref="datei" type="file" name="datei" accept="application/pdf,.pdf,.txt" required
+               @change="name=$refs.datei.files[0]?.name||''">
+        <p class="klein gedaempft" x-text="name"></p>
+      </div>
+      <button class="knopf" type="submit" style="margin-top:1rem">{{ regeln|length }} Regeln prüfen</button>
+    </form>
+
+    <div class="karte">
+      <div class="karte-kopf"><h2 style="font-size:1rem">Was mit der Datei geschieht</h2></div>
+      <p class="klein">
+        Die Datei wird nicht gespeichert. Sie liegt für die Dauer dieser Anfrage im Arbeitsspeicher,
+        das Protokoll entsteht daraus, danach ist sie weg. Protokolliert wird eine Prüfsumme der
+        Datei und die Zahl der Befunde — kein Inhalt, kein Dateiname, keine Kennzeichen.
+      </p>
+      <p class="klein">
+        Wollen Sie auch das nicht: die Prüfung läuft im angemeldeten Zugang genauso, dort mit
+        <a href="/auftragsverarbeitung.pdf">AV-Vertrag</a> und Löschfristen.
+      </p>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if probe %}
+  <div class="karte" id="ergebnis">
+    <div class="karte-kopf"><h2>Prüfprotokoll</h2>
+      <span class="mono klein">{{ probe.ergebnis.geprueft }} Regeln geprüft</span></div>
+    {% if probe.ergebnis.ohne_befund %}
+      <div class="meldung meldung-erfolg" role="status">
+        <p><strong>{{ probe.ergebnis.geprueft }} Regeln geprüft, keine Befunde.</strong></p>
+        <p class="klein">Das heißt: widerspruchsfrei nach {{ probe.ergebnis.geprueft }} Regeln. Es heißt nicht, dass das Gutachten fehlerfrei ist.</p>
+      </div>
+    {% else %}
+      <div class="meldung meldung-hinweis">
+        <p><strong>{{ probe.ergebnis.befunde|length }} Befund{{ 'e' if probe.ergebnis.befunde|length != 1 }} bei {{ probe.ergebnis.geprueft }} geprüften Regeln.</strong></p>
+      </div>
+      <div class="raster">
+      {% for befund in probe.ergebnis.befunde %}
+        <div class="raster-zeile">
+          <div class="raster-nummer">{{ '%02d'|format(befund.nummer) }}</div>
+          <div class="raster-inhalt">
+            <p style="margin-bottom:.2rem"><span class="marker marker-{{ befund.schwere.value }}">{{ befund.schwere.beschriftung }}</span> <strong>{{ befund.titel }}</strong></p>
+            <p>{{ befund.meldung }}</p>
+            {% if befund.fundstelle %}<p class="klein gedaempft">Seite {{ befund.fundstelle.seite }} — „{{ befund.fundstelle.ausschnitt }}“</p>{% endif %}
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    {% endif %}
+    {% if probe.ergebnis.fehlende_pflichtfelder %}
+    <p class="klein gedaempft">Nicht gefundene Pflichtfelder: {{ probe.ergebnis.fehlende_pflichtfelder|join(', ')|replace('_',' ') }}. Im angemeldeten Zugang lassen sich dafür eigene Muster hinterlegen.</p>
+    {% endif %}
+  </div>
+  {% endif %}
+</section>
+
+<section class="raster" style="margin-top:2.5rem">
+  <div class="raster-zeile">
+    <div class="raster-nummer">02</div>
+    <div class="raster-inhalt">
+      <h2>Was geprüft wird</h2>
+      <div class="tabellenrahmen">
+        <table class="protokoll">
+          <thead><tr><th class="zahl">Nr</th><th>Regel</th><th>Schwere</th></tr></thead>
+          <tbody>
+          {% for regel in regeln %}
+            <tr>
+              <td class="zahl">{{ '%02d'|format(regel.nummer) }}</td>
+              <td>{{ regel.titel }}<br><span class="klein gedaempft">{{ regel.meldung }}</span></td>
+              <td><span class="marker marker-{{ regel.schwere.value }}">{{ regel.schwere.beschriftung }}</span></td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">03</div>
+    <div class="raster-inhalt">
+      <h2>Eigene Regeln</h2>
+      <p style="max-width:62ch">
+        Jedes Büro hat Eigenheiten. Eigene Regeln legen Sie über ein Formular an — Bedingung,
+        Schweregrad, Meldungstext. Globale Regeln lassen sich einzeln abschalten. Ebenso lassen
+        sich eigene Labelmuster hinterlegen, wenn Ihre Gutachtensoftware Felder anders beschriftet.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">04</div>
+    <div class="raster-inhalt">
+      <h2>Sie behalten das letzte Wort</h2>
+      <p style="max-width:62ch">
+        Jeder Befund lässt sich mit Begründung quittieren. Die Begründung wird gespeichert und
+        steht im Prüfprotokoll für die Akte. Das Werkzeug entscheidet nichts.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">05</div>
+    <div class="raster-inhalt">
+      <h2>Unabhängig von Ihrer Software</h2>
+      <p style="max-width:62ch">
+        Geprüft wird das fertige PDF. Kein Eingriff, keine Schnittstelle, kein Umstellungsaufwand.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">06</div>
+    <div class="raster-inhalt">
+      <h2>Datenschutz</h2>
+      <p style="max-width:62ch">
+        Hosting in Deutschland. <a href="/auftragsverarbeitung.pdf">AV-Vertrag nach Artikel 28 DSGVO</a>
+        zum Download. Im angemeldeten Zugang werden Uploads nach 90 Tagen gelöscht, Protokolle nach
+        zwölf Monaten. Die optionale Textprüfung über ein Sprachmodell ist abschaltbar und betrifft
+        niemals Zahlen.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">07</div>
+    <div class="raster-inhalt">
+      <h2>Preis</h2>
+      <p><span class="mono" style="font-size:1.6rem">{{ preis }} € im Monat</span></p>
+      <p class="klein gedaempft">Bis 100 Prüfungen im Monat. Darüber nach Absprache; die Staffel steht hier, sobald ein Büro sie erreicht.</p>
+    </div>
+  </div>
+</section>
+
+{% with modul_vorauswahl = 'check' %}{% include "landing/teile/formular.html" %}{% endwith %}
+{% endblock %}

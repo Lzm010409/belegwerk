@@ -1,0 +1,32 @@
+<section class="karte" id="zugang" style="margin-top:2.5rem;max-width:34rem">
+  <div class="karte-kopf"><h2>Testzugang anfordern</h2></div>
+  <p class="klein">30 Tage, alle Module, ohne Zahlungsmittel. Danach bleiben Ihre Daten lesbar und exportierbar.</p>
+  <form method="post" action="/zugang">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="modul" value="{{ modul_vorauswahl | default('') }}">
+    <div class="feld">
+      <label for="zname">Name</label>
+      <input id="zname" name="name" required autocomplete="name">
+    </div>
+    <div class="feld">
+      <label for="zbuero">Büro</label>
+      <input id="zbuero" name="buero" required autocomplete="organization">
+    </div>
+    <div class="feld">
+      <label for="zemail">E-Mail</label>
+      <input id="zemail" name="email" type="email" required autocomplete="email">
+    </div>
+    {% if plz_feld %}
+    <div class="feld">
+      <label for="zplz">Welchen Raum decken Sie ab?</label>
+      <input id="zplz" name="plz" class="mono" inputmode="numeric" pattern="\d{5}" placeholder="26123">
+      <p class="feld-hilfe">Die Antwort steuert, wo als Nächstes Datendichte aufgebaut wird.</p>
+    </div>
+    {% endif %}
+    <div aria-hidden="true" style="position:absolute;left:-9999px">
+      <label for="webseite">Webseite</label>
+      <input id="webseite" name="webseite" tabindex="-1" autocomplete="off">
+    </div>
+    <button class="knopf" type="submit">Testzugang anfordern</button>
+  </form>
+</section>

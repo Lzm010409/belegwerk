@@ -1,0 +1,120 @@
+{% extends "basis.html" %}
+{% block robots %}index, follow{% endblock %}
+{% block titel %}Atlas — regionale Stundenverrechnungssätze mit Nachweis{% endblock %}
+{% block meta %}
+<meta name="description" content="Atlas hält regionale Stundenverrechnungssätze, UPE-Aufschläge und Verbringungskosten mit dokumentiertem Erhebungsnachweis vor — als Anlage gegen Verweisungen auf günstigere Werkstätten.">
+{% endblock %}
+{% block inhalt %}
+
+<section>
+  <h1 style="max-width:26ch">Ein belegter Marktüberblick statt einer Erinnerung.</h1>
+
+  <div class="karte">
+    <div class="karte-kopf"><h2 style="font-size:1rem">Erfasste Betriebe</h2>
+      <span class="mono klein">Stand: jetzt, direkt aus der Datenbank</span></div>
+    {# Deutschlandkarte: grobe Umrissbox mit den tatsaechlich vorhandenen Punkten.
+       Die Zahlen darunter kommen live aus der Datenbank — eine geschoente Zahl
+       auf dieser Seite zerstoert genau das Vertrauen, das das Produkt verkauft. #}
+    <svg viewBox="0 0 300 420" role="img" style="width:100%;max-width:22rem;height:auto;display:block;margin:0 auto"
+         aria-label="Karte der erfassten Betriebe in Deutschland">
+      <rect x="0" y="0" width="300" height="420" fill="var(--paper-warm)"/>
+      <rect x="8" y="8" width="284" height="404" fill="none" stroke="var(--rule)" stroke-width="1"/>
+      {% for lat, lon in kennzahlen.punkte %}
+        {# Deutschland grob: Breite 47,3 bis 55,1 Grad, Laenge 5,9 bis 15,0 Grad #}
+        <circle cx="{{ ((lon - 5.9) / 9.1 * 284 + 8)|round(1) }}"
+                cy="{{ ((55.1 - lat) / 7.8 * 404 + 8)|round(1) }}"
+                r="2.6" fill="#14181D" opacity="0.8"/>
+      {% endfor %}
+    </svg>
+    <p class="mono klein" style="text-align:center;margin-top:.6rem">
+      {{ kennzahlen.betriebe }} erfasste Betriebe ·
+      {{ kennzahlen.mit_preisaushang }} mit Preisaushang belegt ·
+      {% if kennzahlen.zuletzt_ergaenzt %}zuletzt ergänzt am {{ kennzahlen.zuletzt_ergaenzt|datum }}{% else %}noch keine Erhebung{% endif %}
+    </p>
+    {% if kennzahlen.betriebe < 50 %}
+    <p class="klein gedaempft" style="text-align:center">
+      So sieht es heute aus. Ihr Umkreis fehlt noch.
+    </p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="raster" style="margin-top:2.5rem">
+  <div class="raster-zeile">
+    <div class="raster-nummer">02</div>
+    <div class="raster-inhalt">
+      <h2>Der Anlass</h2>
+      <p style="max-width:62ch">
+        Der Versicherer verweist auf eine freie Werkstatt mit 79 Euro Stundensatz. Dagegen hilft
+        kein Eindruck, sondern ein dokumentierter regionaler Marktüberblick — mit Datum, Quelle
+        und Nachweis je Betrieb.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">03</div>
+    <div class="raster-inhalt">
+      <h2>Was eine Anlage enthält</h2>
+      <p style="max-width:62ch">
+        Umkreis und Filter, Anzahl der Betriebe, Median, 25. und 75. Perzentil, Minimum und
+        Maximum je Satzart, ein Verteilungsdiagramm und die vollständige Betriebsliste mit
+        Entfernung, Erhebungsdatum und Nachweisart.
+      </p>
+      <p style="max-width:62ch">
+        Dazu ein Methodenabschnitt, aus dem allein nachvollziehbar ist, wie die Zahlen zustande
+        kamen. Das ist die einzige Anforderung, die vor Gericht zählt.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">04</div>
+    <div class="raster-inhalt">
+      <h2>Erfassen in 60 Sekunden</h2>
+      <p style="max-width:62ch">
+        Am Werkstatttresen: Preisaushang mit dem Handy fotografieren, Sätze eintragen,
+        Nachweisart wählen, speichern. Standortdaten werden aus dem Bild entfernt.
+        Ein Wert ohne Nachweisart wird nicht gespeichert.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">05</div>
+    <div class="raster-inhalt">
+      <h2>Wem die Daten gehören</h2>
+      <p style="max-width:62ch">
+        Ihre Erhebungen bleiben Ihre. Sie sind ausschließlich für Ihr Büro sichtbar.
+        Ein gemeinsamer Pool ist vorgesehen, funktioniert auf Gegenseitigkeit und ist
+        je Erhebung einzeln zu entscheiden — Voreinstellung aus. Bis zur
+        wettbewerbsrechtlichen Prüfung ist er nicht freigeschaltet; Atlas arbeitet als
+        Einzelplatz-Register.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">06</div>
+    <div class="raster-inhalt">
+      <h2>Grenzen</h2>
+      <p style="max-width:62ch">
+        Wo die Datenbasis dünn ist, sagt Atlas das. Unter fünf Betrieben im Umkreis wird
+        kein Median ausgewiesen, sondern der Hinweis, dass die Datenbasis für eine Aussage
+        nicht reicht. Erhebungen über 24 Monate bleiben sichtbar, zählen aber nicht in die
+        Kennzahlen. Die Daten sind eine dokumentierte Erhebung — nicht vollständig und nicht
+        repräsentativ.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">07</div>
+    <div class="raster-inhalt">
+      <h2>Preis</h2>
+      <p><span class="mono" style="font-size:1.6rem">{{ preis }} € im Monat</span></p>
+      <p class="klein gedaempft" style="max-width:62ch">
+        Beitragsrabatt, sobald der Pool freigeschaltet ist: Wer regelmäßig erfasst und Erhebungen
+        beisteuert, zahlt weniger. Die Mechanik steht dann offen auf dieser Seite, bevor sie gilt.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% with modul_vorauswahl = 'atlas', plz_feld = True %}{% include "landing/teile/formular.html" %}{% endwith %}
+{% endblock %}

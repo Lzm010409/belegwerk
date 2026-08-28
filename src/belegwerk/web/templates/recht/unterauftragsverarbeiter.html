@@ -1,0 +1,44 @@
+{% extends "recht/basis_recht.html" %}
+{% block text %}
+<p>
+  Liste der eingesetzten Unterauftragsverarbeiter nach Art. 28 Abs. 2 DSGVO. Änderungen teilen
+  wir mindestens vier Wochen vor Wirksamwerden in Textform mit; bis dahin kann der Kunde
+  widersprechen.
+</p>
+
+<table class="protokoll">
+  <thead><tr><th>Unternehmen</th><th>Leistung</th><th>Ort der Verarbeitung</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>[Hoster]</td>
+      <td>Betrieb von Servern, Datenbank und Sicherung</td>
+      <td>Deutschland</td>
+      <td>eingesetzt</td>
+    </tr>
+    <tr>
+      <td>[Mailanbieter]</td>
+      <td>Versand von Einladungen, Passwortrücksetzungen und Systemmeldungen</td>
+      <td>[EU-Standort]</td>
+      <td>eingesetzt</td>
+    </tr>
+    <tr>
+      <td>Mistral AI SAS</td>
+      <td>Zuordnung von Positionsbezeichnungen, Textkonsistenzprüfung</td>
+      <td>Frankreich (EU-Endpunkte)</td>
+      <td>nur bei eingeschaltetem Sprachmodellpfad</td>
+    </tr>
+    <tr>
+      <td>[Zahlungsanbieter]</td>
+      <td>Abrechnung und Rechnungsstellung</td>
+      <td>[EU-Standort]</td>
+      <td>vorgesehen, noch nicht eingesetzt</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="klein gedaempft">
+  Der Sprachmodellpfad ist je Büro abschaltbar. Ist er ausgeschaltet, findet keine Übermittlung
+  an Mistral AI statt; der Funktionsumfang bleibt vollständig nutzbar, an die Stelle der
+  automatischen Zuordnung tritt die Korrekturansicht.
+</p>
+{% endblock %}

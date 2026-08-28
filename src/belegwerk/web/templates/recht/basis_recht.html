@@ -1,0 +1,16 @@
+{% extends "basis.html" %}
+{% block robots %}index, follow{% endblock %}
+{% block titel %}{{ titel }} — {{ marke }}{% endblock %}
+{% block inhalt %}
+<article style="max-width:48rem">
+  <h1>{{ titel }}</h1>
+  <p class="klein gedaempft">Stand: {{ stand }}</p>
+  <div class="meldung meldung-hinweis">
+    <p><strong>Hinweis zum Stand dieses Dokuments.</strong> Dieser Text ist ein vollständiger
+    Entwurf des Betreibers und <em>nicht anwaltlich geprüft</em>. Vor dem Produktivgang ist er
+    zusammen mit AV-Vertrag, AGB und dem Poolmodell von Atlas rechtlich prüfen zu lassen.
+    Die Angaben in eckigen Klammern sind vor Veröffentlichung zu ersetzen.</p>
+  </div>
+  {% block text %}{% endblock %}
+</article>
+{% endblock %}

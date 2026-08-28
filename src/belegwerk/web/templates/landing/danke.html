@@ -1,0 +1,16 @@
+{% extends "basis.html" %}
+{% block titel %}Testzugang angefordert — Belegwerk{% endblock %}
+{% block inhalt %}
+<div class="raster" style="max-width:44rem">
+  <div class="raster-zeile">
+    <div class="raster-nummer">01</div>
+    <div class="raster-inhalt">
+      <h1>Testzugang angefordert</h1>
+      {% if fehler %}<div class="meldung meldung-hinweis"><p>{{ fehler }}</p></div>{% endif %}
+      <p>Wir melden uns an die angegebene Adresse und richten den Zugang ein. Sie erhalten dann eine Einladung mit einem Link, über den Sie Ihr Passwort setzen.</p>
+      <p class="klein gedaempft">Bis dahin lohnt ein Blick in den <a href="/auftragsverarbeitung.pdf">AV-Vertrag</a> und die <a href="/datenschutz">Datenschutzerklärung</a> — beides brauchen Sie ohnehin, bevor Sie Gutachtendaten in ein fremdes System geben.</p>
+      <a class="knopf knopf-zweit" href="/">Zur Startseite</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

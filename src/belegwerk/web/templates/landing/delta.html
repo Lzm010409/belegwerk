@@ -1,0 +1,128 @@
+{% extends "basis.html" %}
+{% block robots %}index, follow{% endblock %}
+{% block titel %}Delta — Kalkulationsvergleich gegen Prüfberichte{% endblock %}
+{% block meta %}
+<meta name="description" content="Delta legt die eigene Schadenkalkulation neben den Prüfbericht des Versicherers und zeigt Position für Position, was gestrichen wurde und was es kostet.">
+{% endblock %}
+{% block inhalt %}
+
+<section>
+  <h1 style="max-width:22ch">Der Prüfbericht hat {{ beispiel.summe|geld }} gestrichen. Hier steht, wo.</h1>
+  <p class="klein gedaempft" style="max-width:60ch">
+    Ein anonymisierter Fall. Die Tabelle unten ist keine Abbildung, sondern die Ansicht des Produkts.
+  </p>
+
+  <div class="karte" style="margin-top:1rem">
+    <div class="karte-kopf">
+      <h2 style="font-size:1rem">Abgleich Kalkulation / Prüfbericht</h2>
+      <span class="mono klein">0326/1147TG</span>
+    </div>
+    <div class="tabellenrahmen">
+      <table class="protokoll">
+        <thead>
+          <tr><th class="zahl">Pos</th><th>Bezeichnung</th><th>Abweichung</th>
+              <th class="zahl">Kalkulation</th><th class="zahl">Prüfbericht</th><th class="zahl">Differenz</th></tr>
+        </thead>
+        <tbody>
+        {% for zeile in beispiel.zeilen %}
+          <tr class="{{ 'entfallen' if zeile.klasse.value == 'POS_ENTFALLEN' }}">
+            <td class="zahl">{{ '%03d'|format(zeile.nr) }}</td>
+            <td class="bezeichnung">{{ zeile.bezeichnung }}</td>
+            <td class="klein">{{ zeile.klasse.beschriftung }}</td>
+            <td class="zahl">{{ zeile.eigen }}</td>
+            <td class="zahl delta-farbe">{{ zeile.pruefbericht }}</td>
+            <td class="zahl"><strong>{{ zeile.differenz|geld }}</strong></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="summenleiste" style="position:static;margin:1rem -1rem -1rem">
+      <span>Neun Abweichungen in sechs Klassen</span>
+      <span>Gesamtdifferenz <span class="zahl">{{ beispiel.summe|geld }}</span> netto</span>
+    </div>
+  </div>
+</section>
+
+<section class="raster" style="margin-top:2.5rem">
+  <div class="raster-zeile">
+    <div class="raster-nummer">02</div>
+    <div class="raster-inhalt">
+      <h2>Das Problem</h2>
+      <p style="max-width:62ch">
+        Zwei PDF nebeneinander, Position für Position durchgehen, Differenzen von Hand
+        notieren, Summen nachrechnen. Zwanzig bis fünfundvierzig Minuten je Fall,
+        jedes Mal, und am Ende steht eine Tabelle, die man selbst getippt hat.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">03</div>
+    <div class="raster-inhalt">
+      <h2>Ablauf</h2>
+      <ol style="max-width:62ch">
+        <li><strong>Hochladen.</strong> Eigene Kalkulation und Prüfbericht. Format und Absender erkennt Delta selbst.</li>
+        <li><strong>Prüfen.</strong> Liegt die Erkennungssicherheit unter 85 Prozent, zeigt Delta die Korrekturansicht: extrahierte Positionen links, Originalzeile rechts, Felder editierbar.</li>
+        <li><strong>Exportieren.</strong> PDF-Anlage mit Ihrem Briefkopf, gruppiert nach Abweichungsklasse, mit den Originalzeilen beider Dokumente als Beleg. Dazu ein JSON-Export mit stabilem Schema.</li>
+      </ol>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">04</div>
+    <div class="raster-inhalt">
+      <h2>Was erkannt wird</h2>
+      <div class="tabellenrahmen">
+        <table class="protokoll">
+          <thead><tr><th>Klasse</th><th>Erkennung</th></tr></thead>
+          <tbody>
+          {% for klasse in klassen %}
+            <tr><td>{{ klasse.beschriftung }}</td><td class="klein">{{ klasse.erlaeuterung }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <p class="klein gedaempft">
+        Die Summe aller Positionsdifferenzen muss der Differenz der ausgewiesenen Endsummen
+        entsprechen. Tut sie es nicht, zeigt Delta den unerklärten Restbetrag — statt eines
+        Ergebnisses, das sauber aussieht.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">05</div>
+    <div class="raster-inhalt">
+      <h2>Formate</h2>
+      <p style="max-width:62ch">
+        DAT als PDF, TXT oder VXS. Audatex als PDF. Prüfberichte gängiger Absender als PDF oder TXT.
+      </p>
+      <p class="klein gedaempft" style="max-width:62ch">
+        Was noch nicht geht: gescannte Dokumente ohne Textebene, handschriftliche Ergänzungen,
+        Prüfberichte in Layouts, für die noch kein Profil hinterlegt ist. Im letzten Fall genügt
+        eine Rückmeldung; ein Profil ist eine Konfigurationsdatei, kein Programmierauftrag.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">06</div>
+    <div class="raster-inhalt">
+      <h2>Datenschutz</h2>
+      <p style="max-width:62ch">
+        Hosting in Deutschland. <a href="/auftragsverarbeitung.pdf">AV-Vertrag nach Artikel 28 DSGVO</a>
+        zum Download. Uploads werden nach 90 Tagen gelöscht, erzeugte Anlagen nach zwölf Monaten.
+        Der Sprachmodellpfad ist optional und für Ihr Büro abschaltbar; er ordnet ausschließlich
+        Bezeichnungen zu und erzeugt keine Zahlen.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">07</div>
+    <div class="raster-inhalt">
+      <h2>Preis</h2>
+      <p><span class="mono" style="font-size:1.6rem">{{ preis }} € im Monat</span></p>
+      <p class="klein gedaempft">Je Büro, alle Arbeitsplätze eingeschlossen. 30 Tage Testphase ohne Zahlungsmittel, monatlich kündbar in der Oberfläche.</p>
+    </div>
+  </div>
+</section>
+
+{% with modul_vorauswahl = 'delta' %}{% include "landing/teile/formular.html" %}{% endwith %}
+{% endblock %}

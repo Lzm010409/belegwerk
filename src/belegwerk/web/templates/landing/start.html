@@ -1,0 +1,71 @@
+{% extends "basis.html" %}
+{% block robots %}index, follow{% endblock %}
+{% block titel %}Belegwerk — Werkzeuge für Kfz-Sachverständige{% endblock %}
+{% block meta %}
+<meta name="description" content="Drei Werkzeuge für Kfz-Sachverständige: Kalkulationsvergleich gegen Prüfberichte, Stundensatz-Register mit Nachweis, Endkontrolle des Gutachtens vor Versand.">
+{% endblock %}
+{% block inhalt %}
+<section class="raster" style="border-top:none">
+  <div class="raster-zeile" style="border-bottom:3px solid var(--ink)">
+    <div class="raster-nummer">01</div>
+    <div class="raster-inhalt">
+      <h1 style="max-width:24ch">Drei Werkzeuge für die Arbeit nach dem Gutachten.</h1>
+      <p style="max-width:60ch">
+        Belegwerk prüft Kalkulationen gegen Prüfberichte, hält regionale Stundenverrechnungssätze
+        mit Nachweis vor und kontrolliert das fertige Gutachten, bevor es hinausgeht.
+        Ein Login, eine Rechnung, drei einzeln buchbare Module.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="gitter gitter-3" style="margin-top:1.5rem">
+  {% for pfad, name, preis, satz, zeit in module %}
+  <div class="karte">
+    <div class="karte-kopf"><h2>{{ name }}</h2><span class="mono klein">{{ preis }} € im Monat</span></div>
+    <p>{{ satz }}</p>
+    <p class="klein gedaempft">{{ zeit }}</p>
+    <a class="knopf knopf-zweit" href="{{ pfad }}">{{ name }} ansehen</a>
+  </div>
+  {% endfor %}
+</section>
+
+<section class="raster" style="margin-top:2.5rem">
+  <div class="raster-zeile">
+    <div class="raster-nummer">02</div>
+    <div class="raster-inhalt">
+      <h2>Warum eine Dachmarke</h2>
+      <p style="max-width:62ch">
+        Die drei Werkzeuge teilen sich Zielgruppe, Dokumentenerkennung, Anmeldung und Abrechnung.
+        Wer mit Delta arbeitet, braucht die Atlas-Daten für dieselbe Stellungnahme. Deshalb ein
+        Zugang statt drei.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">03</div>
+    <div class="raster-inhalt">
+      <h2>Zahlen kommen nicht aus einem Sprachmodell</h2>
+      <p style="max-width:62ch">
+        Beträge, Arbeitswerte, Summen und Prozentsätze werden gerechnet, nicht geschätzt.
+        Ein Sprachmodell darf in Belegwerk ausschließlich Text zuordnen oder formulieren, und
+        dieser Pfad lässt sich für Ihr Büro vollständig abschalten.
+      </p>
+    </div>
+  </div>
+  <div class="raster-zeile">
+    <div class="raster-nummer">04</div>
+    <div class="raster-inhalt">
+      <h2>Datenschutz</h2>
+      <p style="max-width:62ch">
+        Hosting in Deutschland. Auftragsverarbeitungsvertrag nach Artikel 28 DSGVO zum
+        <a href="/auftragsverarbeitung.pdf">Download</a>. Uploads werden nach 90 Tagen gelöscht,
+        erzeugte Anlagen nach zwölf Monaten. Ihre Daten bekommen Sie jederzeit als ZIP zurück.
+        Kein Tracking, keine Cookies außer der Sitzung.
+      </p>
+    </div>
+  </div>
+</section>
+
+{% include "landing/teile/formular.html" %}
+{% endblock %}
