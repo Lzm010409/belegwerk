@@ -1,0 +1,111 @@
+{% extends "basis.html" %}
+{% block titel %}Delta {{ vorgang.aktenzeichen or '' }}{% endblock %}
+{% block inhalt %}
+<div class="karte">
+  <div class="karte-kopf">
+    <h1 style="font-size:1.4rem">Delta</h1>
+    <span class="mono klein">{{ vorgang.aktenzeichen or 'ohne Aktenzeichen' }}{% if vorgang.kennzeichen %} · {{ vorgang.kennzeichen }}{% endif %}</span>
+    <span class="knopfreihe" style="margin-left:auto">
+      <a class="knopf knopf-zweit" href="/app/delta/vorgang/{{ vorgang.id }}/anlage.pdf">PDF-Anlage</a>
+      <a class="knopf knopf-zweit" href="/app/delta/vorgang/{{ vorgang.id }}/export.json">JSON</a>
+      {% if vorgang.braucht_korrektur %}<a class="knopf" href="/app/delta/vorgang/{{ vorgang.id }}/korrektur">Prüfen &amp; korrigieren</a>{% endif %}
+    </span>
+  </div>
+
+  {% if not ergebnis.get('kontrolle_geht_auf') %}
+  <div class="meldung meldung-fehler" role="alert">
+    <p><strong>Kontrollrechnung geht nicht auf.</strong></p>
+    {% for hinweis in ergebnis.get('hinweise', []) %}<p>{{ hinweis }}</p>{% endfor %}
+  </div>
+  {% endif %}
+
+  {% if vorgang.braucht_korrektur %}
+  <div class="meldung meldung-hinweis">
+    <p>Mindestens ein Dokument wurde mit geringer Sicherheit gelesen
+      ({% for dok in vorgang.dokumente %}{{ 'Kalkulation' if dok.rolle.value == 'eigen' else 'Prüfbericht' }}: {{ (dok.konfidenz * 100)|round|int }} %{% if not loop.last %}, {% endif %}{% endfor %}).
+      Bitte in der <a href="/app/delta/vorgang/{{ vorgang.id }}/korrektur">Korrekturansicht</a> nachsehen, bevor Sie die Anlage verwenden.</p>
+  </div>
+  {% endif %}
+
+  <div class="kennzahlen">
+    <div class="kennzahl"><span class="kennzahl-wert">{{ ergebnis.get('eigen_netto','—') }}</span><span class="kennzahl-label">Kalkulation netto</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ ergebnis.get('pruefbericht_netto','—') }}</span><span class="kennzahl-label">Prüfbericht netto</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert delta-farbe">{{ ergebnis.get('differenz_netto','—') }}</span><span class="kennzahl-label">Differenz netto</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert delta-farbe">{{ ergebnis.get('differenz_brutto','—') }}</span><span class="kennzahl-label">Differenz brutto</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ vorgang.abweichungen|length }}</span><span class="kennzahl-label">Abweichungen</span></div>
+  </div>
+</div>
+
+{% if ergebnis.get('saetze') %}
+<div class="karte">
+  <div class="karte-kopf"><h2>Verrechnungssätze</h2></div>
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead><tr><th>Satz</th><th class="zahl">Kalkulation</th><th class="zahl">Prüfbericht</th></tr></thead>
+      <tbody>
+      {% for satz in ergebnis.saetze %}
+        <tr class="{{ 'unveraendert' if satz.eigen == satz.pruefbericht }}">
+          <td>{{ satz.beschriftung }}</td>
+          <td class="zahl">{{ satz.eigen }}</td>
+          <td class="zahl {{ 'delta-farbe' if satz.eigen != satz.pruefbericht }}">{{ satz.pruefbericht }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+
+<div class="knopfreihe" style="margin:1rem 0">
+  <a class="knopf {{ 'knopf-zweit' if klasse_filter }}" href="/app/delta/vorgang/{{ vorgang.id }}">Alle ({{ vorgang.abweichungen|length }})</a>
+  {% for klasse, abweichungen in alle_klassen.items() %}
+    <a class="knopf {{ '' if klasse_filter == klasse.value else 'knopf-zweit' }}"
+       href="/app/delta/vorgang/{{ vorgang.id }}?klasse={{ klasse.value }}">{{ klasse.beschriftung }} ({{ abweichungen|length }})</a>
+  {% endfor %}
+</div>
+
+{% for klasse, abweichungen in gruppen.items() %}
+<div class="karte">
+  <div class="karte-kopf">
+    <h2>{{ klasse.beschriftung }} ({{ abweichungen|length }})</h2>
+    <span class="klein gedaempft">{{ klasse.erlaeuterung }}</span>
+  </div>
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead>
+        <tr>
+          <th class="zahl">Pos</th><th>Bezeichnung</th>
+          <th class="zahl">Kalkulation</th><th class="zahl">Prüfbericht</th>
+          <th class="zahl">Differenz netto</th><th>Zuordnung</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for abweichung in abweichungen %}
+        <tr class="{{ 'entfallen' if klasse.value == 'POS_ENTFALLEN' }}">
+          <td class="zahl">{{ '%03d'|format(abweichung.laufnummer) }}</td>
+          <td class="bezeichnung">{{ abweichung.bezeichnung }}
+            {% if abweichung.beleg_eigen %}<br><span class="klein gedaempft mono">{{ abweichung.beleg_eigen[:110] }}</span>{% endif %}
+            {% if abweichung.beleg_pruefbericht %}<br><span class="klein gedaempft mono">{{ abweichung.beleg_pruefbericht[:110] }}</span>{% endif %}
+          </td>
+          <td class="zahl">{{ abweichung.wert_eigen or '—' }}</td>
+          <td class="zahl delta-farbe">{{ abweichung.wert_pruefbericht or '—' }}</td>
+          <td class="zahl"><strong>{{ abweichung.differenz_netto|geld }}</strong></td>
+          <td class="klein gedaempft">{% if abweichung.match_stufe %}Stufe {{ abweichung.match_stufe }} · {{ (abweichung.match_konfidenz * 100)|round|int }} %{% else %}einseitig{% endif %}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% else %}
+<div class="leer"><p>Keine Abweichung in dieser Klasse.</p></div>
+{% endfor %}
+
+<div class="summenleiste">
+  <span>
+    {% for gruppe in ergebnis.get('gruppen', []) %}{{ gruppe.beschriftung }} <span class="zahl">{{ gruppe.differenz }} €</span>{% if not loop.last %} · {% endif %}{% endfor %}
+  </span>
+  <span>Gesamtdifferenz <span class="zahl">{{ ergebnis.get('differenz_netto','—') }} €</span> netto ·
+    <span class="zahl">{{ ergebnis.get('differenz_brutto','—') }} €</span> brutto</span>
+</div>
+{% endblock %}

@@ -66,11 +66,13 @@ def anwendung_erzeugen() -> FastAPI:
     app.mount("/static", StaticFiles(directory=str(STATIK_VERZEICHNIS)), name="static")
 
     from belegwerk.check.router import router as check_router
+    from belegwerk.delta.router import router as delta_router
     from belegwerk.kern.router import router as kern_router
 
     app.include_router(gesundheit_router)
     app.include_router(kern_router)
     app.include_router(check_router)
+    app.include_router(delta_router)
     fehlerseiten_registrieren(app)
     return app
 

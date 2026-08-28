@@ -1,0 +1,71 @@
+{% extends "basis.html" %}
+{% block titel %}Prüfen &amp; korrigieren — Delta{% endblock %}
+{% block inhalt %}
+<h1>Prüfen &amp; korrigieren</h1>
+<p class="klein gedaempft">Links die extrahierten Positionen, rechts die Originalzeile aus dem Dokument. Jede Korrektur wird gespeichert und verbessert die Erkennung.</p>
+
+{% for dokument in [eigen, pruefbericht] %}
+{% if dokument %}
+<div class="karte">
+  <div class="karte-kopf">
+    <h2>{{ 'Ihre Kalkulation' if dokument.rolle.value == 'eigen' else 'Prüfbericht des Versicherers' }}</h2>
+    <span class="klein mono">{{ dokument.adapter }} · {{ dokument.quellformat }} · Sicherheit {{ (dokument.konfidenz * 100)|round|int }} %</span>
+  </div>
+  {% for hinweis in dokument.hinweise %}<div class="meldung meldung-hinweis"><p>{{ hinweis }}</p></div>{% endfor %}
+
+  <div class="raster">
+  {% for position in dokument.positionen %}
+    <div class="raster-zeile">
+      <div class="raster-nummer">{{ '%03d'|format(position.laufnummer) }}</div>
+      <div class="raster-inhalt">
+        <form method="post" action="/app/delta/position/{{ position.id }}" class="gitter gitter-2">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+          <input type="hidden" name="vorgang_id" value="{{ vorgang.id }}">
+          <div>
+            <div class="feld">
+              <label for="b{{ position.id }}">Bezeichnung</label>
+              <input id="b{{ position.id }}" name="bezeichnung" value="{{ position.bezeichnung }}">
+            </div>
+            <div class="gitter gitter-2">
+              <div class="feld">
+                <label for="t{{ position.id }}">Teilenummer</label>
+                <input id="t{{ position.id }}" name="teilenummer" class="mono" value="{{ position.teilenummer or '' }}">
+              </div>
+              <div class="feld">
+                <label for="be{{ position.id }}">Betrag</label>
+                <input id="be{{ position.id }}" name="betrag" inputmode="decimal" value="{{ position.betrag|zahl }}">
+              </div>
+              <div class="feld">
+                <label for="aw{{ position.id }}">Arbeitswerte</label>
+                <input id="aw{{ position.id }}" name="arbeitswerte" inputmode="decimal" value="{{ position.arbeitswerte|zahl(1) if position.arbeitswerte is not none else '' }}">
+              </div>
+              <div class="feld">
+                <label for="s{{ position.id }}">Stundensatz</label>
+                <input id="s{{ position.id }}" name="stundensatz" inputmode="decimal" value="{{ position.stundensatz|zahl if position.stundensatz is not none else '' }}">
+              </div>
+              <div class="feld">
+                <label for="l{{ position.id }}">Lackstufe</label>
+                <input id="l{{ position.id }}" name="lackstufe" inputmode="numeric" value="{{ position.lackstufe or '' }}">
+              </div>
+              <div class="feld">
+                <label for="au{{ position.id }}">UPE-Aufschlag %</label>
+                <input id="au{{ position.id }}" name="aufschlag_prozent" inputmode="decimal" value="{{ position.aufschlag_prozent|zahl(1) if position.aufschlag_prozent is not none else '' }}">
+              </div>
+            </div>
+            <button class="knopf knopf-zweit" type="submit">Korrektur übernehmen</button>
+          </div>
+          <div>
+            <p class="klein">Originalzeile</p>
+            <pre class="mono klein" style="white-space:pre-wrap;background:#E4E7EA;padding:.5rem;border:1px solid var(--rule);margin:0">{{ position.rohzeile }}</pre>
+          </div>
+        </form>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
+<p class="knopfreihe"><a class="knopf" href="/app/delta/vorgang/{{ vorgang.id }}">Zur Delta-Ansicht</a></p>
+{% endblock %}

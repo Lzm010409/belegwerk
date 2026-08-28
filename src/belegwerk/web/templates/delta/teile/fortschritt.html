@@ -1,0 +1,4 @@
+<div id="fortschritt" {% if vorgang.status.value in ['angelegt','verarbeitung'] %}hx-get="/app/delta/vorgang/{{ vorgang.id }}/fortschritt" hx-trigger="every 1s" hx-swap="outerHTML"{% endif %}>
+  <p class="mono klein">{{ auftrag.schritt if auftrag and auftrag.schritt else 'Auftrag eingereiht' }} — {{ auftrag.fortschritt if auftrag else 0 }} %</p>
+  <div class="fortschritt"><div class="fortschritt-balken" style="width:{{ auftrag.fortschritt if auftrag else 0 }}%"></div></div>
+</div>

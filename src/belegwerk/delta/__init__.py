@@ -1,0 +1,1 @@
+"""Belegwerk Delta — Kalkulationsvergleich."""

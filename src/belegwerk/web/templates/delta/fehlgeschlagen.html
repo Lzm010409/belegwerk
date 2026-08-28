@@ -1,0 +1,10 @@
+{% extends "basis.html" %}
+{% block titel %}Verarbeitung fehlgeschlagen — Delta{% endblock %}
+{% block inhalt %}
+<div class="karte" style="max-width:40rem">
+  <div class="karte-kopf"><h1 style="font-size:1.3rem">Verarbeitung fehlgeschlagen</h1></div>
+  <div class="meldung meldung-fehler"><p>{{ vorgang.fehlertext or 'Die Dokumente ließen sich nicht auswerten.' }}</p></div>
+  <p class="klein">Was jetzt hilft: Prüfen Sie, ob beide Dateien vollständig sind und ob es sich wirklich um eine Kalkulation und einen Prüfbericht handelt. Kommt das Layout häufiger vor, kann ein Profil dafür ergänzt werden — melden Sie den Fall über <a href="/app/rueckmeldung">Rückmeldung</a>.</p>
+  <a class="knopf knopf-zweit" href="/app/delta">Neuen Vergleich anlegen</a>
+</div>
+{% endblock %}
