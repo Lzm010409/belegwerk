@@ -7,6 +7,7 @@ from collections.abc import Awaitable, Callable
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 from starlette.responses import Response
+from starlette.types import ASGIApp
 
 # Alle Skripte, Stile, Schriften und Bilder liegen im eigenen Image. Deshalb
 # reicht 'self'; 'unsafe-inline' ist nur fuer Stil-Attribute noetig, die HTMX
@@ -39,8 +40,8 @@ KOPFZEILEN = {
 class SicherheitsKopfzeilen(BaseHTTPMiddleware):
     """Setzt die Sicherheits-Kopfzeilen auf jede Antwort."""
 
-    def __init__(self, app: Callable[..., Awaitable[None]], hsts: bool = False) -> None:
-        super().__init__(app)  # type: ignore[arg-type]
+    def __init__(self, app: ASGIApp, hsts: bool = False) -> None:
+        super().__init__(app)
         self.hsts = hsts
 
     async def dispatch(

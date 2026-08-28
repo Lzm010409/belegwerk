@@ -6,6 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import Request
+from fastapi.responses import Response
 from fastapi.templating import Jinja2Templates
 from markupsafe import Markup
 
@@ -28,11 +29,12 @@ def seite(
     name: str,
     kontext: dict[str, Any] | None = None,
     status_code: int = 200,
-) -> Any:
+) -> Response:
     """Rendert eine Seite und reicht immer den Request mit."""
     daten: dict[str, Any] = {"request": request}
     daten.update(kontext or {})
-    return vorlagen.TemplateResponse(request, name, daten, status_code=status_code)
+    antwort: Response = vorlagen.TemplateResponse(request, name, daten, status_code=status_code)
+    return antwort
 
 
 def bruchteil_klasse(anteil: float) -> Markup:
