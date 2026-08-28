@@ -1,0 +1,167 @@
+{% extends "basis.html" %}
+{% block titel %}Einstellungen — {{ marke }}{% endblock %}
+{% block inhalt %}
+<h1>Einstellungen</h1>
+
+{% if mandant.loeschung_beantragt_am %}
+<div class="meldung meldung-fehler" role="alert">
+  <p><strong>Kontolöschung beantragt am {{ mandant.loeschung_beantragt_am|datum_zeit }}.</strong>
+     Nach Ablauf der Karenz von {{ karenz_tage }} Tagen werden alle Daten unwiderruflich entfernt.</p>
+  <form method="post" action="/app/einstellungen/loeschung-widerrufen">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <button class="knopf" type="submit">Löschung widerrufen</button>
+  </form>
+</div>
+{% endif %}
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Büro und Briefkopf</h2></div>
+  {% if benutzer.ist_inhaber %}
+  <form method="post" action="/app/einstellungen/buero">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="feld">
+      <label for="name">Name des Büros</label>
+      <input id="name" name="name" required value="{{ mandant.name }}">
+    </div>
+    <div class="feld">
+      <label for="briefkopf_zeilen">Briefkopf für Anlagen</label>
+      <textarea id="briefkopf_zeilen" name="briefkopf_zeilen" placeholder="Sachverständigenbüro Muster&#10;Musterstraße 1&#10;26123 Oldenburg">{{ mandant.briefkopf_zeilen or '' }}</textarea>
+      <p class="feld-hilfe">Erscheint auf jeder erzeugten PDF-Anlage.</p>
+    </div>
+    <div class="feld">
+      <label for="aktenzeichen_muster">Format Ihrer Aktenzeichen</label>
+      <input id="aktenzeichen_muster" name="aktenzeichen_muster" class="mono" value="{{ mandant.aktenzeichen_muster or '' }}" placeholder="\d{4}/\d{4}[A-Z]{2}">
+      <p class="feld-hilfe">Regulärer Ausdruck. Check meldet Aktenzeichen, die davon abweichen — als Hinweis, nicht als Fehler.</p>
+    </div>
+    <div class="feld">
+      <label>
+        <input type="checkbox" name="llm_pfad_aktiv" value="1" {{ 'checked' if mandant.llm_pfad_aktiv }} {{ 'disabled' if not llm_moeglich }}>
+        Sprachmodell für Zuordnung und Textprüfung nutzen
+      </label>
+      <p class="feld-hilfe">
+        {% if llm_moeglich %}
+          Betrifft ausschließlich die Zuordnung von Bezeichnungen und Textprüfungen. Zahlen werden nie von einem Sprachmodell erzeugt, geschätzt oder korrigiert. Ausgeschaltet arbeitet Belegwerk vollständig ohne externe Verarbeitung.
+        {% else %}
+          Für diese Installation ist kein Sprachmodell hinterlegt. Der Pfad bleibt aus.
+        {% endif %}
+      </p>
+    </div>
+    <button class="knopf" type="submit">Speichern</button>
+  </form>
+
+  <hr style="border:none;border-top:1px solid var(--rule);margin:1.2rem 0">
+  <form method="post" action="/app/einstellungen/logo" enctype="multipart/form-data">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="feld">
+      <label for="logo">Logo für den Briefkopf</label>
+      <input id="logo" name="logo" type="file" accept="image/png,image/jpeg" required>
+      <p class="feld-hilfe">PNG oder JPEG, bis 2 MB. {% if mandant.logo_pfad %}Ein Logo ist hinterlegt.{% endif %}</p>
+    </div>
+    <button class="knopf knopf-zweit" type="submit">Logo hochladen</button>
+  </form>
+  {% else %}
+  <p class="klein gedaempft">Diese Einstellungen ändert der Inhaber des Büros.</p>
+  <dl class="klein"><dt>Büro</dt><dd>{{ mandant.name }}</dd></dl>
+  {% endif %}
+</div>
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Module und Abonnements</h2></div>
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead><tr><th>Modul</th><th>Zustand</th><th>Läuft bis</th><th class="zahl">Preis/Monat</th></tr></thead>
+      <tbody>
+      {% for zugriff in zugriffe %}
+        <tr>
+          <td>{{ namen[zugriff.modul] }}<br><span class="klein gedaempft">{{ beschreibung[zugriff.modul] }}</span></td>
+          <td>
+            {% if zugriff.status and zugriff.status.value == 'testphase' %}<span class="marker marker-hinweis">Testphase</span>
+            {% elif not zugriff.lesen %}<span class="marker marker-hinweis">nicht gebucht</span>
+            {% elif not zugriff.schreiben %}<span class="marker marker-warnung">nur lesbar</span>
+            {% else %}<span class="marker marker-hold">aktiv</span>{% endif %}
+          </td>
+          <td class="mono klein">{{ zugriff.ende|datum if zugriff.ende else '—' }}</td>
+          <td class="zahl">{{ preise[zugriff.modul] }} €</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="klein gedaempft">Nach Ablauf der Testphase bleiben Ihre Daten vollständig lesbar und exportierbar. Gelöscht wird nichts.</p>
+</div>
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Personen im Büro</h2></div>
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead><tr><th>Name</th><th>E-Mail</th><th>Rolle</th><th>Zuletzt angemeldet</th>{% if benutzer.ist_inhaber %}<th>Verwaltung</th>{% endif %}</tr></thead>
+      <tbody>
+      {% for person in benutzer_liste %}
+        <tr class="{{ 'unveraendert' if not person.aktiv }}">
+          <td>{{ person.name }}{% if not person.aktiv %} <span class="marker marker-warnung">gesperrt</span>{% endif %}</td>
+          <td class="klein">{{ person.email }}</td>
+          <td>{{ 'Inhaber' if person.ist_inhaber else 'Mitarbeiter' }}</td>
+          <td class="mono klein">{{ person.letzte_anmeldung|datum_zeit if person.letzte_anmeldung else '—' }}</td>
+          {% if benutzer.ist_inhaber %}
+          <td>
+            <form method="post" action="/app/einstellungen/benutzer/{{ person.id }}/rolle" style="display:inline">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+              <input type="hidden" name="rolle" value="{{ 'mitarbeiter' if person.ist_inhaber else 'inhaber' }}">
+              <button class="knopf knopf-zweit" style="font-size:.75rem;padding:.2rem .45rem">{{ 'zu Mitarbeiter' if person.ist_inhaber else 'zu Inhaber' }}</button>
+            </form>
+            <form method="post" action="/app/einstellungen/benutzer/{{ person.id }}/sperren" style="display:inline">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+              <button class="knopf knopf-zweit" style="font-size:.75rem;padding:.2rem .45rem">{{ 'freischalten' if not person.aktiv else 'sperren' }}</button>
+            </form>
+          </td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if benutzer.ist_inhaber %}
+  <h3 style="margin-top:1rem">Person einladen</h3>
+  <form method="post" action="/app/einstellungen/einladen" class="knopfreihe">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label class="visuell-versteckt" for="email">E-Mail</label>
+    <input id="email" name="email" type="email" required placeholder="kollege@buero.de" style="max-width:20rem">
+    <label class="visuell-versteckt" for="rolle">Rolle</label>
+    <select id="rolle" name="rolle" style="max-width:12rem">
+      <option value="mitarbeiter">Mitarbeiter</option>
+      <option value="inhaber">Inhaber</option>
+    </select>
+    <button class="knopf" type="submit">Einladen</button>
+  </form>
+  {% if einladungen %}
+  <p class="klein gedaempft">Offene Einladungen: {% for einladung in einladungen %}{{ einladung.email }} (bis {{ einladung.laeuft_ab|datum }}){% if not loop.last %}, {% endif %}{% endfor %}</p>
+  {% endif %}
+  {% endif %}
+</div>
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Ihre Daten</h2></div>
+  <p class="klein">
+    Uploads werden nach {{ aufbewahrung_uploads }} Tagen automatisch gelöscht, erzeugte Anlagen nach
+    {{ aufbewahrung_ergebnisse }} Tagen. Die Datensätze selbst bleiben, damit Ihre Vorgänge nachvollziehbar sind.
+  </p>
+  <div class="knopfreihe">
+    <a class="knopf knopf-zweit" href="/app/einstellungen/datenexport.zip">Alle Daten als ZIP herunterladen</a>
+    {% if benutzer.ist_inhaber %}<a class="knopf knopf-zweit" href="/app/betreiber">Auswertung der Befunde</a>{% endif %}
+  </div>
+  <p class="klein gedaempft">Der Export enthält alle Datensätze als JSON und sämtliche Dateien. Er dient der Auskunft nach Artikel 15 DSGVO ebenso wie einem Anbieterwechsel.</p>
+
+  {% if benutzer.ist_inhaber and not mandant.loeschung_beantragt_am %}
+  <hr style="border:none;border-top:1px solid var(--rule);margin:1.2rem 0">
+  <h3>Konto löschen</h3>
+  <p class="klein">Nach {{ karenz_tage }} Tagen Karenz werden alle Daten und Dateien Ihres Büros unwiderruflich entfernt. Laden Sie vorher den Datenexport herunter.</p>
+  <form method="post" action="/app/einstellungen/konto-loeschen" class="knopfreihe">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label class="visuell-versteckt" for="bestaetigung">Bestätigung</label>
+    <input id="bestaetigung" name="bestaetigung" placeholder="LOESCHEN" class="mono" style="max-width:12rem" required>
+    <button class="knopf knopf-warn" type="submit">Konto löschen</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

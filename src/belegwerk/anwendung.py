@@ -33,16 +33,19 @@ async def lebenszyklus(app: FastAPI) -> AsyncIterator[None]:
     except Exception as fehler:  # noqa: BLE001 — Start darf daran nicht scheitern
         _log.error("Erststart fehlgeschlagen", extra={"fehlerart": type(fehler).__name__})
     from belegwerk.kern.auftraege import arbeiter_schleife
+    from belegwerk.kern.wartung import wartungsschleife
 
     stopp = asyncio.Event()
     arbeiter = asyncio.create_task(arbeiter_schleife(stopp), name="auftragsarbeiter")
+    wartung = asyncio.create_task(wartungsschleife(stopp), name="wartung")
     _log.info("Anwendung gestartet", extra={"version": __version__, "umgebung": konfiguration.umgebung})
     yield
     stopp.set()
-    try:
-        await asyncio.wait_for(arbeiter, timeout=15)
-    except (TimeoutError, asyncio.CancelledError):
-        arbeiter.cancel()
+    for aufgabe in (arbeiter, wartung):
+        try:
+            await asyncio.wait_for(aufgabe, timeout=15)
+        except (TimeoutError, asyncio.CancelledError):
+            aufgabe.cancel()
     from belegwerk.datenbank import engine_schliessen
 
     await engine_schliessen()
@@ -68,10 +71,12 @@ def anwendung_erzeugen() -> FastAPI:
     from belegwerk.atlas.router import router as atlas_router
     from belegwerk.check.router import router as check_router
     from belegwerk.delta.router import router as delta_router
+    from belegwerk.kern.einstellungen_router import router as einstellungen_router
     from belegwerk.kern.router import router as kern_router
 
     app.include_router(gesundheit_router)
     app.include_router(kern_router)
+    app.include_router(einstellungen_router)
     app.include_router(check_router)
     app.include_router(delta_router)
     app.include_router(atlas_router)
