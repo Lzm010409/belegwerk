@@ -45,10 +45,10 @@ def mandantentabellen() -> list[Table]:
     vergessen (Querschnitt 1.3).
     """
     tabellen: list[Table] = []
-    for modell in Basis.registry.mappers:
-        klasse = modell.class_
-        if issubclass(klasse, MandantMixin):
-            tabellen.append(klasse.__table__)
+    for mapper in Basis.registry.mappers:
+        tabelle = mapper.local_table
+        if issubclass(mapper.class_, MandantMixin) and isinstance(tabelle, Table):
+            tabellen.append(tabelle)
     return sorted(tabellen, key=lambda t: t.name)
 
 
