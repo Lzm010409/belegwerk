@@ -1,0 +1,16 @@
+{% extends "basis.html" %}
+{% block titel %}{{ code }} — {{ marke }}{% endblock %}
+{% block inhalt %}
+<div class="raster" style="max-width:44rem">
+  <div class="raster-zeile">
+    <div class="raster-nummer">{{ code }}</div>
+    <div class="raster-inhalt">
+      <h1>{{ ueberschrift }}</h1>
+      <p>{{ erlaeuterung }}</p>
+      <div class="knopfreihe">
+        {% for ziel, text in wege %}<a class="knopf knopf-zweit" href="{{ ziel }}">{{ text }}</a>{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
