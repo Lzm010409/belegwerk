@@ -61,3 +61,37 @@ def test_schriften_werden_lokal_ausgeliefert() -> None:
     assert css.status_code == 200
     assert "fonts.gstatic.com" not in css.text
     assert "/static/fonts/" in css.text
+
+
+def test_gesundheit_meldet_fehlendes_schema(monkeypatch: pytest.MonkeyPatch) -> None:
+    """Eine erreichbare Datenbank ohne Migrationen ist kein gesunder Zustand."""
+    import asyncio
+
+    import belegwerk.datenbank as db
+
+    class LeereVerbindung:
+        async def __aenter__(self) -> "LeereVerbindung":
+            return self
+
+        async def __aexit__(self, *_: object) -> None:
+            return None
+
+        async def execute(self, anweisung: object, *rest: object) -> object:
+            text = str(anweisung)
+
+            class Ergebnis:
+                @staticmethod
+                def scalar_one() -> object:
+                    return False if "alembic_version" in text else 1
+
+            return Ergebnis()
+
+    class Engine:
+        @staticmethod
+        def connect() -> LeereVerbindung:
+            return LeereVerbindung()
+
+    monkeypatch.setattr(db, "engine", lambda: Engine())
+    ergebnis = asyncio.run(db.datenbank_erreichbar())
+    assert ergebnis != True  # noqa: E712 — hier ist die Identität gemeint
+    assert "Migrationen" in str(ergebnis)

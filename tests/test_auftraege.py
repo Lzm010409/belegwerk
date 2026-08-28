@@ -93,3 +93,35 @@ async def test_auftrag_bleibt_beim_eigenen_mandanten(sitzung: AsyncSession) -> N
     async with mandanten_sitzung(fremder.id) as db:
         sichtbar = (await db.execute(select(Auftrag))).scalars().all()
     assert sichtbar == []
+
+
+async def test_arbeiter_zieht_sich_bei_stoerungen_zurueck(sitzung: AsyncSession) -> None:
+    """Ohne Rückzug schreibt eine kaputte Datenbank jede Sekunde dieselbe Zeile."""
+    import asyncio
+
+    pausen: list[float] = []
+
+    async def kaputt() -> bool:
+        raise RuntimeError("Datenbank weg")
+
+    async def kurz_warten(warten: Any, timeout: float) -> None:
+        # Die uebergebene Coroutine schliessen, sonst warnt asyncio zu Recht.
+        warten.close()
+        pausen.append(timeout)
+        if len(pausen) >= 4:
+            stopp.set()
+        raise TimeoutError
+
+    stopp = asyncio.Event()
+    original_abarbeiten = auftraege.einen_auftrag_abarbeiten
+    original_warten = asyncio.wait_for
+    auftraege.einen_auftrag_abarbeiten = kaputt  # type: ignore[assignment]
+    asyncio.wait_for = kurz_warten  # type: ignore[assignment]
+    try:
+        await auftraege.arbeiter_schleife(stopp)
+    finally:
+        auftraege.einen_auftrag_abarbeiten = original_abarbeiten  # type: ignore[assignment]
+        asyncio.wait_for = original_warten  # type: ignore[assignment]
+
+    assert pausen == [2.0, 4.0, 8.0, 16.0]
+    assert max(pausen) <= auftraege.RUECKZUG_MAX_SEKUNDEN

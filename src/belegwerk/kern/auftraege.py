@@ -32,6 +32,9 @@ _log = logging.getLogger(__name__)
 MAX_VERSUCHE = 3
 ZEITGRENZE = timedelta(minutes=10)
 RUHEZEIT_SEKUNDEN = 1.0
+# Bei anhaltenden Stoerungen (Datenbank weg, Schema fehlt) waechst die Pause,
+# statt jede Sekunde dieselbe Fehlermeldung ins Protokoll zu schreiben.
+RUECKZUG_MAX_SEKUNDEN = 60.0
 
 FortschrittMelder = Callable[[int, str], Awaitable[None]]
 Behandler = Callable[["Auftragskontext"], Awaitable[None]]
@@ -207,17 +210,31 @@ async def einen_auftrag_abarbeiten() -> bool:
 async def arbeiter_schleife(stopp: asyncio.Event) -> None:
     """Läuft als Hintergrundtask der Anwendung."""
     _log.info("Auftragsarbeiter gestartet", extra={"arten": list(bekannte_arten())})
+    stoerungen = 0
     while not stopp.is_set():
         try:
             hatte_arbeit = await einen_auftrag_abarbeiten()
+            stoerungen = 0
         except Exception as fehler:  # noqa: BLE001
-            _log.error("Arbeiterschleife gestört", extra={"fehlerart": type(fehler).__name__})
+            stoerungen += 1
+            # Nur die erste Störung und danach jede zehnte protokollieren.
+            if stoerungen == 1 or stoerungen % 10 == 0:
+                _log.error(
+                    "Arbeiterschleife gestört",
+                    extra={"fehlerart": type(fehler).__name__, "hintereinander": stoerungen},
+                )
             hatte_arbeit = False
-        if not hatte_arbeit:
-            try:
-                await asyncio.wait_for(stopp.wait(), timeout=RUHEZEIT_SEKUNDEN)
-            except TimeoutError:
-                pass
+        if hatte_arbeit:
+            continue
+        pause = (
+            min(RUECKZUG_MAX_SEKUNDEN, RUHEZEIT_SEKUNDEN * 2**stoerungen)
+            if stoerungen
+            else RUHEZEIT_SEKUNDEN
+        )
+        try:
+            await asyncio.wait_for(stopp.wait(), timeout=pause)
+        except TimeoutError:
+            pass
     _log.info("Auftragsarbeiter beendet")
 
 

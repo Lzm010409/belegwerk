@@ -51,10 +51,23 @@ async def engine_schliessen() -> None:
 
 
 async def datenbank_erreichbar() -> Any:
-    """``True`` bei erreichbarer Datenbank, sonst eine kurze Fehlerangabe."""
+    """``True`` bei erreichbarer **und migrierter** Datenbank.
+
+    Eine erreichbare Datenbank ohne Schema ist kein gesunder Zustand: die
+    Anwendung nimmt Anfragen an und scheitert an jeder einzelnen. Deshalb wird
+    zusätzlich geprüft, dass die Migrationen gelaufen sind — genau dieser Fall
+    trat beim ersten Deployment auf, weil der Pre-Deploy-Command fehlte.
+    """
     try:
         async with engine().connect() as verbindung:
             await verbindung.execute(text("SELECT 1"))
+            stand = (
+                await verbindung.execute(
+                    text("SELECT to_regclass('public.alembic_version') IS NOT NULL")
+                )
+            ).scalar_one()
+            if not stand:
+                return "Schema fehlt — die Migrationen sind nicht gelaufen"
         return True
     except Exception as fehler:  # noqa: BLE001 — Health darf nie werfen
         _log.warning("Datenbank nicht erreichbar", extra={"fehlerart": type(fehler).__name__})
