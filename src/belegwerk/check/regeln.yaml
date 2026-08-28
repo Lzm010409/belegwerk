@@ -1,0 +1,225 @@
+# Startkatalog, 20 Regeln (Check-Briefing Abschnitt 3).
+#
+# schwere: fehler (nicht versenden) | warnung (pruefen) | hinweis (Stilfrage)
+#
+# Die Regeln 02, 03, 06 und 07 beruehren rechtliche Bewertungen. Ihre
+# Formulierung ist deshalb durchgehend eine Rueckfrage („Pruefen Sie …"), nie
+# eine Feststellung („Sie muessen …"). Das ist keine Stilfrage, sondern die
+# RDG-Grenze aus Abschnitt 9 der Plattformdatei.
+
+regeln:
+  - id: restwert_ueber_wbw
+    nummer: 1
+    schwere: fehler
+    titel: Restwert erreicht oder uebersteigt den Wiederbeschaffungswert
+    wenn: restwert >= wiederbeschaffungswert_brutto
+    meldung: >-
+      Der Restwert liegt auf oder über dem Wiederbeschaffungswert. Prüfen Sie
+      beide Werte; in dieser Konstellation ergibt die Differenzrechnung keinen
+      Schadenbetrag.
+    felder: [restwert, wiederbeschaffungswert_brutto]
+
+  - id: reparaturfall_ueber_130
+    nummer: 2
+    schwere: fehler
+    titel: Reparaturkosten ueber 130 Prozent, aber als Reparaturfall bezeichnet
+    wenn: reparaturkosten_anteil_wbw > 130 und schadenfall == 'reparaturfall'
+    meldung: >-
+      Die Reparaturkosten liegen über 130 % des Wiederbeschaffungswerts, das
+      Gutachten weist den Fall aber als Reparaturfall aus. Prüfen Sie die
+      Einordnung und die zugrunde gelegten Werte.
+    felder: [reparaturkosten_vergleich, wiederbeschaffungswert_brutto, schadenfall]
+
+  - id: hundert_bis_130_ohne_weiterbenutzung
+    nummer: 3
+    schwere: warnung
+    titel: Reparaturkosten zwischen 100 und 130 Prozent ohne Hinweis auf Weiterbenutzung
+    wenn: >-
+      reparaturkosten_anteil_wbw >= 100 und reparaturkosten_anteil_wbw <= 130
+      und fehlt(weiterbenutzung)
+    meldung: >-
+      Die Reparaturkosten liegen zwischen 100 % und 130 % des
+      Wiederbeschaffungswerts. Prüfen Sie, ob ein Hinweis auf die
+      Weiterbenutzung des Fahrzeugs aufzunehmen ist.
+    felder: [reparaturkosten_anteil_wbw, weiterbenutzung]
+
+  - id: totalschaden_ohne_wiederbeschaffungsdauer
+    nummer: 4
+    schwere: fehler
+    titel: Totalschaden ohne Wiederbeschaffungsdauer
+    wenn: schadenfall == 'totalschaden' und fehlt(wiederbeschaffungsdauer)
+    meldung: >-
+      Das Gutachten weist einen Totalschaden aus, nennt aber keine
+      Wiederbeschaffungsdauer. Ergänzen Sie die Angabe.
+    felder: [schadenfall, wiederbeschaffungsdauer]
+
+  - id: wertminderung_ohne_methode
+    nummer: 5
+    schwere: warnung
+    titel: Wertminderung ohne Angabe der Berechnungsmethode
+    wenn: wertminderung > 0 und fehlt(wertminderung_methode)
+    meldung: >-
+      Es ist eine Wertminderung ausgewiesen, die Berechnungsmethode ist nicht
+      genannt. Prüfen Sie, ob die Methode zu ergänzen ist.
+    felder: [wertminderung, wertminderung_methode]
+
+  - id: wertminderung_bei_altem_fahrzeug
+    nummer: 6
+    schwere: hinweis
+    titel: Wertminderung bei Fahrzeugalter ueber fuenf Jahren
+    wenn: wertminderung > 0 und fahrzeugalter_jahre > 5 und fehlt(wertminderung_begruendung)
+    meldung: >-
+      Das Fahrzeug ist älter als fünf Jahre und es ist eine Wertminderung
+      ausgewiesen. Prüfen Sie, ob eine Begründung aufzunehmen ist.
+    felder: [wertminderung, fahrzeugalter_jahre, wertminderung_begruendung]
+
+  - id: wertminderung_ueber_zehn_prozent
+    nummer: 7
+    schwere: warnung
+    titel: Wertminderung ueber zehn Prozent des Wiederbeschaffungswerts
+    wenn: wertminderung_anteil_wbw > 10
+    meldung: >-
+      Die Wertminderung übersteigt 10 % des Wiederbeschaffungswerts. Prüfen Sie
+      Höhe und Herleitung.
+    felder: [wertminderung, wiederbeschaffungswert_brutto, wertminderung_anteil_wbw]
+
+  - id: umsatzsteuerregime_widerspruechlich
+    nummer: 8
+    schwere: fehler
+    titel: Umsatzsteuerregime in Kalkulation und Bewertung widerspruechlich
+    wenn: >-
+      vorhanden(umsatzsteuer_regime) und vorhanden(umsatzsteuer_regime_bewertung)
+      und umsatzsteuer_regime != umsatzsteuer_regime_bewertung
+    meldung: >-
+      Kalkulation und Bewertung nennen unterschiedliche Umsatzsteuerregime.
+      Prüfen Sie beide Angaben.
+    felder: [umsatzsteuer_regime, umsatzsteuer_regime_bewertung]
+
+  - id: wbw_differenz_kein_steuersatz
+    nummer: 9
+    schwere: fehler
+    titel: Differenz zwischen WBW brutto und netto entspricht keinem gueltigen Steuersatz
+    wenn: >-
+      vorhanden(wbw_aufschlag_prozent) und nicht (
+        wbw_aufschlag_prozent < 0,5
+        oder (wbw_aufschlag_prozent > 1,9 und wbw_aufschlag_prozent < 2,9)
+        oder (wbw_aufschlag_prozent > 6,5 und wbw_aufschlag_prozent < 7,5)
+        oder (wbw_aufschlag_prozent > 18,5 und wbw_aufschlag_prozent < 19,5))
+    meldung: >-
+      Die Differenz zwischen Wiederbeschaffungswert brutto und netto entspricht
+      weder 19 %, noch 7 %, noch der Differenzbesteuerung, noch null. Prüfen Sie
+      beide Werte.
+    felder: [wiederbeschaffungswert_brutto, wiederbeschaffungswert_netto, wbw_aufschlag_prozent]
+
+  - id: differenzbesteuert_mit_neunzehn
+    nummer: 10
+    schwere: fehler
+    titel: Differenzbesteuerung ausgewiesen, aber 19 Prozent gerechnet
+    wenn: umsatzsteuer_regime == 'differenzbesteuert' und mehrwertsteuersatz > 18,5
+    meldung: >-
+      Das Gutachten weist Differenzbesteuerung aus, rechnet in der Bewertung
+      aber mit 19 %. Prüfen Sie Regime und Rechenweg.
+    felder: [umsatzsteuer_regime, mehrwertsteuersatz]
+
+  - id: reparaturfall_ohne_reparaturdauer
+    nummer: 11
+    schwere: fehler
+    titel: Reparaturdauer fehlt bei Reparaturfall
+    wenn: schadenfall == 'reparaturfall' und fehlt(reparaturdauer)
+    meldung: >-
+      Der Fall ist als Reparaturfall eingeordnet, eine Reparaturdauer ist nicht
+      angegeben. Ergänzen Sie die Angabe.
+    felder: [schadenfall, reparaturdauer]
+
+  - id: vorschaden_nicht_bewertet
+    nummer: 12
+    schwere: warnung
+    titel: Vorschaden erwaehnt, aber nicht bewertet
+    wenn: vorschaden und (fehlt(vorschaden_bewertet) oder vorschaden_bewertet == falsch)
+    meldung: >-
+      Das Gutachten erwähnt einen Vorschaden, eine Bewertung dazu ist nicht
+      erkennbar. Prüfen Sie, ob eine Bewertung aufzunehmen ist.
+    felder: [vorschaden, vorschaden_bewertet]
+
+  - id: altschaden_nicht_abgegrenzt
+    nummer: 13
+    schwere: warnung
+    titel: Altschaden erwaehnt, aber nicht vom Neuschaden abgegrenzt
+    wenn: altschaden und (fehlt(altschaden_abgegrenzt) oder altschaden_abgegrenzt == falsch)
+    meldung: >-
+      Das Gutachten erwähnt einen Altschaden, eine Abgrenzung zum Neuschaden ist
+      nicht erkennbar. Prüfen Sie, ob die Abgrenzung zu ergänzen ist.
+    felder: [altschaden, altschaden_abgegrenzt]
+
+  - id: besichtigung_vor_schaden
+    nummer: 14
+    schwere: fehler
+    titel: Besichtigungsdatum liegt vor dem Schadendatum
+    wenn: besichtigungsdatum < schadendatum
+    meldung: >-
+      Das Besichtigungsdatum liegt vor dem Schadendatum. Eines der beiden Daten
+      ist falsch erfasst.
+    felder: [besichtigungsdatum, schadendatum]
+
+  - id: besichtigung_spaet
+    nummer: 15
+    schwere: hinweis
+    titel: Besichtigung mehr als 60 Tage nach dem Schaden
+    wenn: tage_bis_besichtigung > 60 und fehlt(besichtigung_erlaeuterung)
+    meldung: >-
+      Zwischen Schaden und Besichtigung liegen mehr als 60 Tage. Prüfen Sie, ob
+      eine Erläuterung zum Zeitpunkt aufzunehmen ist.
+    felder: [schadendatum, besichtigungsdatum, tage_bis_besichtigung]
+
+  - id: laufleistung_abweichend
+    nummer: 16
+    schwere: fehler
+    titel: Laufleistung im Text weicht von der Bewertung ab
+    wenn: vorhanden(laufleistung_bewertung) und laufleistung != laufleistung_bewertung
+    meldung: >-
+      Die Laufleistung im Text und die der Bewertung zugrunde gelegte
+      Laufleistung stimmen nicht überein. Prüfen Sie beide Angaben.
+    felder: [laufleistung, laufleistung_bewertung]
+
+  - id: vin_unplausibel
+    nummer: 17
+    schwere: warnung
+    titel: Fahrzeug-Identifizierungsnummer unplausibel
+    wenn: vin_unplausibel
+    meldung: >-
+      Die Fahrzeug-Identifizierungsnummer hat nicht 17 Stellen oder enthält die
+      Zeichen I, O oder Q, die in einer FIN nicht vorkommen. Prüfen Sie die
+      Angabe.
+    felder: [vin, vin_laenge]
+
+  - id: kennzeichen_abweichend
+    nummer: 18
+    schwere: fehler
+    titel: Kennzeichen im Text weicht vom Kennzeichen im Kopf ab
+    wenn: kennzeichen_abweichend
+    meldung: >-
+      Das Kennzeichen im Fließtext stimmt nicht mit dem Kennzeichen im
+      Gutachtenkopf überein. Prüfen Sie beide Stellen.
+    felder: [kennzeichen, kennzeichen_text]
+
+  - id: stundensatz_abweichend
+    nummer: 19
+    schwere: fehler
+    titel: Stundensatz in der Kalkulation weicht vom Stundensatz im Text ab
+    wenn: >-
+      vorhanden(stundensatz_text) und vorhanden(stundensatz_karosserie)
+      und stundensatz_text != stundensatz_karosserie
+    meldung: >-
+      Der im Text genannte Stundenverrechnungssatz weicht vom Satz der
+      Kalkulation ab. Prüfen Sie beide Angaben.
+    felder: [stundensatz_text, stundensatz_karosserie]
+
+  - id: aktenzeichen_format
+    nummer: 20
+    schwere: hinweis
+    titel: Aktenzeichen entspricht nicht dem Format des Bueros
+    wenn: aktenzeichen_muster_verletzt
+    meldung: >-
+      Das Aktenzeichen entspricht nicht dem in den Einstellungen hinterlegten
+      Format Ihres Büros. Prüfen Sie die Schreibweise.
+    felder: [aktenzeichen]

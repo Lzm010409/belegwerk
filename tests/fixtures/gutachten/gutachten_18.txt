@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0361/2362TG
+Gutachtenart                      Kaskoschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-PW 978
+Fahrzeug-Identifizierungsnummer   WVWZZZKE8MC3D2HB5
+Erstzulassung                     19.11.2019
+Laufleistung                      127.420 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        10.03.2026
+Besichtigungstag                  24.03.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-PW 978 wurde am 24.03.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     125,00 EUR
+Lohn Karosserie                   152,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             13.246,80 EUR
+Reparaturkosten brutto            15.763,69 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     23.240,00 EUR
+Wiederbeschaffungswert netto      19.529,41 EUR
+Restwert                          4.648,00 EUR
+Merkantile Wertminderung          450,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

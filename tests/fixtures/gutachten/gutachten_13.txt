@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0656/1231TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-OC 7396
+FIN                               WVWZZZHAZ4ZB6RYZT
+EZ                                02.02.2021
+Kilometerstand                    153.960 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      01.03.2026
+Besichtigt am                     11.03.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-OC 7396 wurde am 11.03.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     168,00 EUR
+Lohn Karosserie                   134,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         8.118,40 EUR
+Reparaturkosten inkl. MwSt        9.660,90 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        13.760,00 EUR
+WBW netto                         11.563,03 EUR
+Restwert brutto                   5.916,80 EUR
+Minderwert                        200,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

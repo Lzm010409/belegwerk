@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0574/7563TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-FE 2348
+FIN                               WVWZZZX4RRZ8GVSPU
+EZ                                18.10.2020
+Kilometerstand                    113.270 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      15.01.2026
+Besichtigt am                     08.02.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-FE 2348 wurde am 08.02.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     132,00 EUR
+Lohn Karosserie                   177,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         4.522,50 EUR
+Reparaturkosten inkl. MwSt        5.381,78 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        18.090,00 EUR
+WBW netto                         15.201,68 EUR
+Restwert brutto                   5.246,10 EUR
+Minderwert                        650,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

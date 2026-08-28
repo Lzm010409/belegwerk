@@ -1,0 +1,54 @@
+{% extends "basis.html" %}
+{% block titel %}Prüfen — Check{% endblock %}
+{% block inhalt %}
+<h1>Gutachten prüfen</h1>
+<p class="klein gedaempft">Geprüft wird das fertige PDF. Kein Eingriff in Ihre Gutachtensoftware, keine Schnittstelle.</p>
+
+{% if nur_lesbar %}
+<div class="meldung meldung-hinweis"><p>Die Testphase für Check ist abgelaufen. Ihre bisherigen Prüfungen bleiben lesbar; neue Prüfungen legen Sie nach Abschluss eines Abonnements wieder an.</p></div>
+{% else %}
+<form method="post" action="/app/check" enctype="multipart/form-data" class="karte"
+      x-data="{aktiv:false, name:''}"
+      @dragover.prevent="aktiv=true" @dragleave.prevent="aktiv=false"
+      @drop.prevent="aktiv=false; $refs.datei.files=$event.dataTransfer.files; name=$refs.datei.files[0]?.name||''">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <div class="dropzone" :class="aktiv && 'aktiv'">
+    <p><strong>Gutachten hier ablegen</strong> oder auswählen.</p>
+    <label class="visuell-versteckt" for="datei">Gutachten als PDF</label>
+    <input id="datei" x-ref="datei" type="file" name="datei" accept="application/pdf,.pdf,.txt" required
+           @change="name=$refs.datei.files[0]?.name||''">
+    <p class="klein gedaempft" x-show="name" x-text="name"></p>
+    <p class="klein gedaempft">PDF oder Text, bis 25 MB. Die Prüfung läuft sofort, ohne weitere Eingabe.</p>
+  </div>
+  <div class="knopfreihe" style="margin-top:1rem">
+    <button class="knopf" type="submit">{{ anzahl_regeln }} Regeln prüfen</button>
+  </div>
+</form>
+{% endif %}
+
+{% if fehlerhafte_regeln %}
+<div class="meldung meldung-hinweis"><p>Diese eigenen Regeln sind nicht lesbar und werden übersprungen: {{ fehlerhafte_regeln|join(', ') }}. <a href="/app/check/regeln">Regeln prüfen</a>.</p></div>
+{% endif %}
+
+<h2 style="margin-top:2rem">Zuletzt geprüft</h2>
+{% if letzte %}
+<div class="raster">
+  {% for pruefung in letzte %}
+  <div class="raster-zeile">
+    <div class="raster-nummer">{{ '%02d'|format(loop.index) }}</div>
+    <div class="raster-inhalt">
+      <a href="/app/check/pruefung/{{ pruefung.id }}"><strong>{{ pruefung.aktenzeichen or pruefung.dateiname }}</strong></a>
+      <p class="klein gedaempft">
+        {{ pruefung.angelegt_am|datum_zeit }} · {{ pruefung.geprueft_regeln }} Regeln geprüft ·
+        {% if pruefung.befunde %}{{ pruefung.befunde|length }} Befund{{ 'e' if pruefung.befunde|length != 1 }}{% else %}keine Befunde{% endif %}
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="leer">
+  <p>Noch keine Prüfung. Legen Sie ein fertiges Gutachten oben ab — das Protokoll steht in wenigen Sekunden.</p>
+</div>
+{% endif %}
+{% endblock %}

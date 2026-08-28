@@ -1,0 +1,108 @@
+{% extends "basis.html" %}
+{% block titel %}Regeln — Check{% endblock %}
+{% block inhalt %}
+<h1>Regeln</h1>
+<p class="klein gedaempft">Jede Regel lässt sich einzeln abschalten. Eigene Regeln gelten nur für Ihr Büro.</p>
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Startkatalog ({{ global_regeln|length }})</h2></div>
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead><tr><th>Nr</th><th>Regel</th><th>Schwere</th><th>Bedingung</th><th>Zustand</th></tr></thead>
+      <tbody>
+      {% for eintrag in global_regeln %}
+        <tr>
+          <td class="zahl">{{ '%02d'|format(eintrag.regel.nummer) }}</td>
+          <td>{{ eintrag.regel.titel }}<br><span class="klein gedaempft">{{ eintrag.regel.meldung }}</span></td>
+          <td><span class="marker marker-{{ eintrag.regel.schwere.value }}">{{ eintrag.regel.schwere.beschriftung }}</span></td>
+          <td class="mono klein">{{ eintrag.regel.wenn }}</td>
+          <td>
+            <form method="post" action="/app/check/regeln/{{ eintrag.regel.id }}/schalten">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+              <button class="knopf {{ 'knopf-zweit' if eintrag.aktiv else '' }}" type="submit">
+                {{ 'aktiv — abschalten' if eintrag.aktiv else 'aus — einschalten' }}
+              </button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Eigene Regeln ({{ eigene|length }})</h2></div>
+  {% if eigene %}
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead><tr><th>Kennung</th><th>Fassung</th><th>Zustand</th></tr></thead>
+      <tbody>
+      {% for regel in eigene %}
+        <tr>
+          <td class="mono">{{ regel.kennung }}</td>
+          <td><pre class="klein mono" style="margin:0;white-space:pre-wrap">{{ regel.yaml_quelle }}</pre></td>
+          <td>
+            <form method="post" action="/app/check/regeln/{{ regel.kennung }}/schalten">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+              <button class="knopf knopf-zweit" type="submit">{{ 'abschalten' if regel.aktiv else 'einschalten' }}</button>
+            </form>
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="leer"><p>Noch keine eigene Regel. Jedes Büro hat Eigenheiten — die erste Regel entsteht meist aus einem echten Fehler.</p></div>
+  {% endif %}
+
+  <h3 style="margin-top:1.2rem">Neue Regel</h3>
+  <form method="post" action="/app/check/regeln/eigene">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="gitter gitter-2">
+      <div class="feld">
+        <label for="kennung">Kennung</label>
+        <input id="kennung" name="kennung" class="mono" required pattern="[a-z0-9_]{3,60}"
+               placeholder="restwert_unter_zehn_prozent">
+        <p class="feld-hilfe">Kleinbuchstaben, Ziffern und Unterstriche.</p>
+      </div>
+      <div class="feld">
+        <label for="titel">Titel</label>
+        <input id="titel" name="titel" required placeholder="Restwert unter zehn Prozent des WBW">
+      </div>
+    </div>
+    <div class="feld">
+      <label for="schwere">Schwere</label>
+      <select id="schwere" name="schwere">
+        <option value="fehler">Fehler — nicht versenden</option>
+        <option value="warnung" selected>Warnung — prüfen</option>
+        <option value="hinweis">Hinweis — Stilfrage</option>
+      </select>
+    </div>
+    <div class="feld">
+      <label for="wenn">Bedingung</label>
+      <input id="wenn" name="wenn" class="mono" required
+             placeholder="restwert &lt; 10 % von wiederbeschaffungswert_brutto">
+      <p class="feld-hilfe">
+        Erlaubt sind Vergleiche (=, !=, &lt;, &lt;=, &gt;, &gt;=), <span class="mono">und</span>,
+        <span class="mono">oder</span>, <span class="mono">nicht</span>, Klammern, Grundrechenarten,
+        <span class="mono">X % von Y</span> sowie <span class="mono">vorhanden(feld)</span> und
+        <span class="mono">fehlt(feld)</span>. Kein Programmcode.
+      </p>
+    </div>
+    <div class="feld">
+      <label for="meldung">Meldung</label>
+      <textarea id="meldung" name="meldung" required
+                placeholder="Prüfen Sie …"></textarea>
+      <p class="feld-hilfe">Als Rückfrage formulieren, nicht als Feststellung — die Verantwortung bleibt beim Sachverständigen.</p>
+    </div>
+    <button class="knopf" type="submit">Regel anlegen</button>
+  </form>
+
+  <details style="margin-top:1rem">
+    <summary class="klein">Verfügbare Felder ({{ felder|length }})</summary>
+    <p class="klein mono">{{ felder|join(' · ') }}</p>
+  </details>
+</div>
+{% endblock %}

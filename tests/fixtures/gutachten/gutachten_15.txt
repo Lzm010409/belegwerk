@@ -1,0 +1,41 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0606/2924TG
+Art des Gutachtens                Kaskoschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-TX 1625
+FIN                               WVWZZZTBW23UW07N5
+EZ                                23.03.2020
+Kilometerstand                    47.830 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      17.07.2026
+Besichtigt am                     20.07.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-TX 1625 wurde am 20.07.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     116,00 EUR
+Lohn Karosserie                   170,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         13.460,20 EUR
+Reparaturkosten inkl. MwSt        16.017,64 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        21.710,00 EUR
+WBW netto                         18.243,70 EUR
+Restwert brutto                   8.684,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

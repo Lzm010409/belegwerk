@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0158/2667TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-ET 5647
+FIN                               WVWZZZZUUHC0MZ3LY
+EZ                                20.05.2020
+Kilometerstand                    22.380 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      26.01.2026
+Besichtigt am                     17.02.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-ET 5647 wurde am 17.02.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     162,00 EUR
+Lohn Karosserie                   150,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         14.445,20 EUR
+Reparaturkosten inkl. MwSt        17.189,79 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        21.560,00 EUR
+WBW netto                         18.117,65 EUR
+Restwert brutto                   8.624,00 EUR
+Minderwert                        300,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

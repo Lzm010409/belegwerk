@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0984/8937TG
+Gutachtenart                      Haftpflichtschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-ZT 3657
+Fahrzeug-Identifizierungsnummer   WVWZZZ60VHKBBMD96
+Erstzulassung                     29.11.2023
+Laufleistung                      83.030 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        27.02.2026
+Besichtigungstag                  06.03.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-ZT 3657 wurde am 06.03.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     151,00 EUR
+Lohn Karosserie                   167,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             2.627,40 EUR
+Reparaturkosten brutto            3.126,61 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     9.060,00 EUR
+Wiederbeschaffungswert netto      7.613,45 EUR
+Restwert                          2.265,00 EUR
+Merkantile Wertminderung          150,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

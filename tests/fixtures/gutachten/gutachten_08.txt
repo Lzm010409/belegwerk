@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0832/6226TG
+Gutachtenart                      Haftpflichtschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-CC 2088
+Fahrzeug-Identifizierungsnummer   WVWZZZGSRJAX8B32K
+Erstzulassung                     20.11.2020
+Laufleistung                      189.790 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        09.03.2026
+Besichtigungstag                  12.03.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-CC 2088 wurde am 12.03.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     117,00 EUR
+Lohn Karosserie                   176,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             6.444,90 EUR
+Reparaturkosten brutto            7.669,43 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     10.230,00 EUR
+Wiederbeschaffungswert netto      8.596,64 EUR
+Restwert                          3.171,30 EUR
+Merkantile Wertminderung          700,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

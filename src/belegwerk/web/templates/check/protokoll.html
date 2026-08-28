@@ -1,0 +1,104 @@
+{% extends "basis.html" %}
+{% block titel %}Prüfprotokoll {{ pruefung.aktenzeichen or '' }} — Check{% endblock %}
+{% block inhalt %}
+<div class="karte">
+  <div class="karte-kopf">
+    <h1 style="font-size:1.4rem">Prüfprotokoll</h1>
+    <span class="mono klein">{{ pruefung.aktenzeichen or pruefung.dateiname }}</span>
+    <span class="knopfreihe" style="margin-left:auto">
+      <a class="knopf knopf-zweit" href="/app/check/pruefung/{{ pruefung.id }}/protokoll.pdf">Als PDF für die Akte</a>
+    </span>
+  </div>
+
+  {% set offen = pruefung.offene_befunde %}
+  {% if not pruefung.befunde %}
+    <div class="meldung meldung-erfolg" role="status">
+      <p><strong>{{ pruefung.geprueft_regeln }} Regeln geprüft, keine Befunde.</strong></p>
+      <p class="klein">Das heißt: widerspruchsfrei nach {{ pruefung.geprueft_regeln }} Regeln. Es heißt nicht, dass das Gutachten fehlerfrei ist — die fachliche Verantwortung bleibt bei Ihnen.</p>
+    </div>
+  {% else %}
+    <div class="meldung {{ 'meldung-fehler' if offen|selectattr('schwere.value','equalto','fehler')|list else 'meldung-hinweis' }}">
+      <p><strong>{{ pruefung.geprueft_regeln }} Regeln geprüft, {{ pruefung.befunde|length }} Befund{{ 'e' if pruefung.befunde|length != 1 }}</strong>{% if offen|length != pruefung.befunde|length %}, davon {{ pruefung.befunde|length - offen|length }} quittiert{% endif %}.</p>
+    </div>
+  {% endif %}
+
+  <div class="kennzahlen">
+    <div class="kennzahl"><span class="kennzahl-wert">{{ pruefung.seiten }}</span><span class="kennzahl-label">Seiten</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ pruefung.geprueft_regeln }}</span><span class="kennzahl-label">Regeln geprüft</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ pruefung.befunde|length }}</span><span class="kennzahl-label">Befunde</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ (pruefung.konfidenz * 100)|round|int }} %</span><span class="kennzahl-label">Pflichtfelder gefunden</span></div>
+  </div>
+
+  {% if pruefung.fehlende_pflichtfelder %}
+  <div class="meldung meldung-hinweis" style="margin-top:1rem">
+    <p><strong>Nicht gefundene Pflichtfelder:</strong> {{ pruefung.fehlende_pflichtfelder | map('replace','_',' ') | join(', ') }}.</p>
+    <p class="klein">Das ist selbst ein Prüfergebnis, kein Fehler des Werkzeugs: entweder fehlt die Angabe im Gutachten, oder Ihre Software beschriftet sie anders. Im zweiten Fall ergänzen Sie das Muster unter <a href="/app/check/regeln">Regeln</a>.</p>
+  </div>
+  {% endif %}
+</div>
+
+{% if unterschied and vorherige %}
+<div class="karte">
+  <div class="karte-kopf"><h2>Vergleich zur Prüfung vom {{ vorherige.angelegt_am|datum_zeit }}</h2></div>
+  <p class="klein">
+    <span class="marker marker-hold">{{ unterschied.behoben|length }} behoben</span>
+    <span class="marker marker-fehler">{{ unterschied.neu|length }} neu</span>
+    <span class="marker marker-hinweis">{{ unterschied.unveraendert|length }} unverändert</span>
+  </p>
+</div>
+{% endif %}
+
+{% for schwere, befunde in gruppen.items() %}
+  {% if befunde %}
+  <div class="karte">
+    <div class="karte-kopf"><h2>{{ schwere.beschriftung }}{{ 'e' if befunde|length != 1 and schwere.value == 'fehler' }} ({{ befunde|length }})</h2></div>
+    <div class="raster">
+      {% for befund in befunde %}
+      <div class="raster-zeile">
+        <div class="raster-nummer">{{ '%02d'|format(befund.nummer) }}</div>
+        <div class="raster-inhalt">
+          <p style="margin-bottom:.25rem">
+            <span class="marker marker-{{ schwere.value }}">{{ schwere.beschriftung }}</span>
+            <strong>{{ befund.titel }}</strong>
+          </p>
+          <p>{{ befund.meldung }}</p>
+          {% if befund.feldwerte %}
+          <p class="klein mono">{% for name, wert in befund.feldwerte.items() %}{{ katalog.get(name, name) }}: {{ wert }}{% if not loop.last %} · {% endif %}{% endfor %}</p>
+          {% endif %}
+          {% if befund.seite %}
+          <p class="klein gedaempft">Fundort: Seite {{ befund.seite }} — „{{ befund.ausschnitt }}“</p>
+          {% endif %}
+
+          {% if befund.quittiert_am %}
+            <p class="klein hold-farbe">Quittiert am {{ befund.quittiert_am|datum_zeit }}: {{ befund.quittierungsgrund }}</p>
+          {% else %}
+            <form method="post" action="/app/check/befund/{{ befund.id }}/quittieren" style="margin-top:.4rem">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+              <input type="hidden" name="pruefung_id" value="{{ pruefung.id }}">
+              <label class="visuell-versteckt" for="grund-{{ befund.id }}">Begründung der Quittierung</label>
+              <div class="knopfreihe">
+                <input id="grund-{{ befund.id }}" name="grund" type="text" required
+                       placeholder="Begründung, warum der Befund bewusst stehen bleibt" style="max-width:34rem">
+                <button class="knopf knopf-zweit" type="submit">Quittieren</button>
+              </div>
+            </form>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}
+
+{% if pruefung.nicht_entscheidbar %}
+<div class="karte">
+  <div class="karte-kopf"><h2>Nicht entscheidbar ({{ pruefung.nicht_entscheidbar|length }})</h2></div>
+  <p class="klein">Diesen Regeln fehlte mindestens ein Wert. Sie melden bewusst nichts — eine Meldung ohne Datengrundlage wäre eine Behauptung.</p>
+  <p class="klein mono gedaempft">{{ pruefung.nicht_entscheidbar|join(' · ') }}</p>
+</div>
+{% endif %}
+
+<p class="knopfreihe"><a class="knopf knopf-zweit" href="/app/check">Nächstes Gutachten prüfen</a>
+{% if pruefung.aktenzeichen %}<a class="knopf knopf-zweit" href="/app/check/historie?suche={{ pruefung.aktenzeichen }}">Historie zu diesem Aktenzeichen</a>{% endif %}</p>
+{% endblock %}

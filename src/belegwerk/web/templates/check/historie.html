@@ -1,0 +1,35 @@
+{% extends "basis.html" %}
+{% block titel %}Historie — Check{% endblock %}
+{% block inhalt %}
+<h1>Prüfhistorie</h1>
+<form method="get" action="/app/check/historie" class="knopfreihe" style="margin-bottom:1rem">
+  <label class="visuell-versteckt" for="suche">Aktenzeichen</label>
+  <input id="suche" name="suche" type="search" value="{{ suche }}" placeholder="Aktenzeichen" style="max-width:22rem">
+  <button class="knopf knopf-zweit" type="submit">Suchen</button>
+</form>
+
+{% if pruefungen %}
+<div class="tabellenrahmen">
+  <table class="protokoll">
+    <thead><tr><th>Aktenzeichen</th><th>Datei</th><th>Geprüft</th><th class="zahl">Regeln</th><th class="zahl">Befunde</th><th class="zahl">offen</th></tr></thead>
+    <tbody>
+    {% for pruefung in pruefungen %}
+      <tr>
+        <td class="mono"><a href="/app/check/pruefung/{{ pruefung.id }}">{{ pruefung.aktenzeichen or '—' }}</a></td>
+        <td class="klein">{{ pruefung.dateiname }}</td>
+        <td class="mono klein">{{ pruefung.angelegt_am|datum_zeit }}</td>
+        <td class="zahl">{{ pruefung.geprueft_regeln }}</td>
+        <td class="zahl">{{ pruefung.befunde|length }}</td>
+        <td class="zahl {{ 'delta-farbe' if pruefung.offene_befunde else 'hold-farbe' }}">{{ pruefung.offene_befunde|length }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="leer">
+  <p>{% if suche %}Zu „{{ suche }}“ gibt es keine Prüfung.{% else %}Noch keine Prüfung.{% endif %}</p>
+  <p><a class="knopf knopf-zweit" href="/app/check">Gutachten prüfen</a></p>
+</div>
+{% endif %}
+{% endblock %}

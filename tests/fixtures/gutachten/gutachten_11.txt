@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0636/3093TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-SV 2643
+FIN                               WVWZZZFHMUVAF77GC
+EZ                                25.04.2023
+Kilometerstand                    87.240 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      30.04.2026
+Besichtigt am                     21.05.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-SV 2643 wurde am 21.05.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     138,00 EUR
+Lohn Karosserie                   178,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         5.775,70 EUR
+Reparaturkosten inkl. MwSt        6.873,08 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        15.610,00 EUR
+WBW netto                         13.117,65 EUR
+Restwert brutto                   4.214,70 EUR
+Minderwert                        450,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+
