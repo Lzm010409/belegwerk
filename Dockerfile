@@ -11,7 +11,8 @@ COPY pyproject.toml README.md ./
 COPY src ./src
 RUN python -m venv /opt/venv \
  && /opt/venv/bin/pip install --upgrade pip setuptools wheel \
- && /opt/venv/bin/pip install .
+ && /opt/venv/bin/pip install . \
+ && /opt/venv/bin/python -c "import belegwerk.anwendung"
 
 # Stufe 2: schlanke Laufzeit mit den Systemabhaengigkeiten fuer WeasyPrint und poppler.
 FROM python:3.12-slim-bookworm AS laufzeit
@@ -31,9 +32,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY --from=bau /opt/venv /opt/venv
 
 WORKDIR /app
+# Die Anwendung selbst steckt im venv aus Stufe 1. Hierher kommt nur, was zur
+# Laufzeit als Datei gebraucht wird: die Migrationen und das Pre-Deploy-Skript.
 COPY alembic.ini ./
 COPY migrationen ./migrationen
-COPY src ./src
 COPY skripte ./skripte
 
 RUN mkdir -p /data/uploads /data/ausgaben && chown -R belegwerk:belegwerk /data /app
