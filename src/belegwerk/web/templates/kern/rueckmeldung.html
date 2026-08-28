@@ -1,0 +1,18 @@
+{% extends "basis.html" %}
+{% block titel %}Rückmeldung — {{ marke }}{% endblock %}
+{% block inhalt %}
+<div style="max-width:34rem">
+  <h1>Rückmeldung</h1>
+  <p class="klein">Was fehlt, was stört, was war falsch? In der Anfangszeit ist Widerspruch das Wertvollste, was wir bekommen können.</p>
+  <form method="post" action="/app/rueckmeldung" class="karte">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="seite" value="{{ von }}">
+    <div class="feld">
+      <label for="text">Ihre Rückmeldung</label>
+      <textarea id="text" name="text" required rows="8" autofocus></textarea>
+      <p class="feld-hilfe">Bitte keine Namen, Kennzeichen oder Fahrzeugdaten hineinschreiben — bei einem Vorgang genügt das Aktenzeichen.</p>
+    </div>
+    <button class="knopf" type="submit">Absenden</button>
+  </form>
+</div>
+{% endblock %}
