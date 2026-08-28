@@ -1,0 +1,23 @@
+{% extends "basis.html" %}
+{% block titel %}Passwort zurücksetzen — {{ marke }}{% endblock %}
+{% block inhalt %}
+<div style="max-width:26rem">
+  <h1>Passwort zurücksetzen</h1>
+  {% if fehler %}<div class="meldung meldung-fehler" role="alert"><p>{{ fehler }}</p></div>{% endif %}
+  {% if versendet %}
+    <div class="meldung meldung-erfolg" role="status">
+      <p>Besteht zu dieser Adresse ein Konto, ist eine Nachricht mit dem Rücksetzlink unterwegs. Der Link gilt zwei Stunden.</p>
+    </div>
+    <a class="knopf knopf-zweit" href="/anmelden">Zur Anmeldung</a>
+  {% else %}
+  <form method="post" action="/passwort-vergessen" class="karte">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="feld">
+      <label for="email">E-Mail</label>
+      <input id="email" name="email" type="email" required autocomplete="username" autofocus>
+    </div>
+    <button class="knopf" type="submit">Rücksetzlink anfordern</button>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

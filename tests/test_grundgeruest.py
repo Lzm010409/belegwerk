@@ -2,19 +2,32 @@
 
 from __future__ import annotations
 
+import pytest
 from fastapi.testclient import TestClient
 
 from belegwerk.anwendung import anwendung_erzeugen
 
 
-def test_gesundheit_meldet_gestoert_ohne_datenbank() -> None:
+def test_gesundheit_meldet_gestoert_ohne_datenbank(monkeypatch: pytest.MonkeyPatch) -> None:
     """Der Health-Endpoint prueft die Abhaengigkeiten, nicht nur den Prozess."""
+    import belegwerk.datenbank as db
+    from belegwerk.konfiguration import einstellungen
+
+    monkeypatch.setenv(
+        "DATABASE_URL", "postgresql+asyncpg://niemand@127.0.0.1:1/gibtesnicht"
+    )
+    einstellungen.cache_clear()
+    db._engine = None
+    db._sitzungsfabrik = None
     with TestClient(anwendung_erzeugen(), raise_server_exceptions=False) as klient:
         antwort = klient.get("/gesundheit")
     assert antwort.status_code == 503
     inhalt = antwort.json()
     assert inhalt["status"] == "gestoert"
     assert inhalt["pruefungen"]["datenbank"] is not True
+    einstellungen.cache_clear()
+    db._engine = None
+    db._sitzungsfabrik = None
 
 
 def test_sicherheits_kopfzeilen_auf_jeder_antwort() -> None:

@@ -1,0 +1,25 @@
+{% extends "basis.html" %}
+{% block titel %}Anmelden — {{ marke }}{% endblock %}
+{% block inhalt %}
+<div style="max-width:26rem">
+  <h1>Anmelden</h1>
+  {% if fehler %}<div class="meldung meldung-fehler" role="alert"><p>{{ fehler }}</p></div>{% endif %}
+  <form method="post" action="/anmelden" class="karte">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="weiter" value="{{ weiter }}">
+    <div class="feld">
+      <label for="email">E-Mail</label>
+      <input id="email" name="email" type="email" autocomplete="username" required value="{{ email or '' }}" autofocus>
+    </div>
+    <div class="feld">
+      <label for="passwort">Passwort</label>
+      <input id="passwort" name="passwort" type="password" autocomplete="current-password" required>
+    </div>
+    <div class="knopfreihe">
+      <button class="knopf" type="submit">Anmelden</button>
+      <a class="klein" href="/passwort-vergessen">Passwort vergessen</a>
+    </div>
+  </form>
+  <p class="klein gedaempft">Ein Zugang entsteht über eine Einladung des Büros. Ohne Einladung <a href="/">Testzugang anfordern</a>.</p>
+</div>
+{% endblock %}

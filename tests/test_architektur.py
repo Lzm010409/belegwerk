@@ -16,9 +16,13 @@ QUELLE = Path(__file__).resolve().parents[1] / "src" / "belegwerk"
 
 PDF_BIBLIOTHEKEN = {"pdfplumber", "pypdf", "fitz", "pdfminer"}
 
-# Diese Stellen dürfen mandantenübergreifend arbeiten und sind einzeln begründet.
+# Der rohe Datenbankzugang umgeht die Mandantentrennung. Diese Stellen müssen
+# mandantenübergreifend arbeiten und sind einzeln begründet.
+ROHER_ZUGANG = ("rohe_sitzung", "sitzungsfabrik")
 ROH_ERLAUBT = {
-    "datenbank.py",  # stellt die Funktion bereit
+    "datenbank.py",  # stellt den Zugang bereit
+    "kern/mandantentrennung.py",  # baut die mandantengebundene Sitzung darauf
+    "kern/benutzerverwaltung.py",  # E-Mail-Eindeutigkeit gilt ueber alle Mandanten
     "kern/anmeldung.py",  # vor der Anmeldung ist kein Mandant bekannt
     "kern/auftraege.py",  # der Arbeiter holt Aufträge aller Mandanten
     "kern/wartung.py",  # Aufbewahrungs- und Löschjobs
@@ -72,15 +76,16 @@ def _benutzt_namen(datei: Path, gesucht: str) -> bool:
     return False
 
 
-def test_rohe_sitzung_nur_an_begruendeten_stellen() -> None:
+def test_roher_datenbankzugang_nur_an_begruendeten_stellen() -> None:
     verstoesse = [
         _relativ(datei)
         for datei in _dateien()
-        if _benutzt_namen(datei, "rohe_sitzung") and _relativ(datei) not in ROH_ERLAUBT
+        if any(_benutzt_namen(datei, name) for name in ROHER_ZUGANG)
+        and _relativ(datei) not in ROH_ERLAUBT
     ]
     assert not verstoesse, (
-        "rohe_sitzung umgeht die Mandantentrennung und ist hier nicht vorgesehen: "
-        + ", ".join(verstoesse)
+        "Roher Datenbankzugang umgeht die Mandantentrennung und ist hier nicht "
+        "vorgesehen: " + ", ".join(verstoesse)
     )
 
 

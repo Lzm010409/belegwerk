@@ -1,0 +1,28 @@
+{% extends "basis.html" %}
+{% block titel %}Übersicht — {{ marke }}{% endblock %}
+{% block inhalt %}
+<h1>{{ benutzer.mandant_name }}</h1>
+<p class="klein gedaempft">Angemeldet als {{ benutzer.name }} ({{ 'Inhaber' if benutzer.ist_inhaber else 'Mitarbeiter' }}).</p>
+
+<div class="raster">
+  {% for zugriff in zugriffe %}
+  <div class="raster-zeile">
+    <div class="raster-nummer">{{ '%02d'|format(loop.index) }}</div>
+    <div class="raster-inhalt">
+      <h2 style="margin-bottom:.15em">{{ namen[zugriff.modul] }}
+        {% if zugriff.status and zugriff.status.value == 'testphase' %}<span class="marker marker-hinweis">Testphase</span>
+        {% elif not zugriff.lesen %}<span class="marker marker-hinweis">nicht gebucht</span>
+        {% elif not zugriff.schreiben %}<span class="marker marker-warnung">nur lesbar</span>
+        {% else %}<span class="marker marker-hold">aktiv</span>{% endif %}
+      </h2>
+      <p class="klein">{{ beschreibung[zugriff.modul] }}{% if zugriff.ende and zugriff.lesen %} · läuft bis {{ zugriff.ende|datum }}{% if zugriff.tage_bis_ende is not none and zugriff.tage_bis_ende >= 0 %} ({{ zugriff.tage_bis_ende }} Tage){% endif %}{% endif %}</p>
+      {% if zugriff.lesen %}
+        <a class="knopf knopf-zweit" href="/app/{{ zugriff.modul.value }}">{{ namen[zugriff.modul] }} öffnen</a>
+      {% else %}
+        <p class="klein gedaempft">{{ preise[zugriff.modul] }} € im Monat. Der Inhaber schaltet das Modul in den <a href="/app/einstellungen">Einstellungen</a> frei.</p>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
