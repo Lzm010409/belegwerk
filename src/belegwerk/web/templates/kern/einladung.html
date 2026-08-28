@@ -1,0 +1,34 @@
+{% extends "basis.html" %}
+{% block titel %}Konto einrichten — {{ marke }}{% endblock %}
+{% block inhalt %}
+<div style="max-width:26rem">
+  <h1>Konto einrichten</h1>
+  {% if fehler %}<div class="meldung meldung-fehler" role="alert"><p>{{ fehler }}</p></div>{% endif %}
+  {% if email %}
+  <form method="post" action="/einladung/{{ code }}" class="karte">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="feld">
+      <label for="adresse">E-Mail</label>
+      <input id="adresse" type="email" value="{{ email }}" disabled>
+      <p class="feld-hilfe">Die Adresse steht in der Einladung fest.</p>
+    </div>
+    <div class="feld">
+      <label for="name">Ihr Name</label>
+      <input id="name" name="name" type="text" required value="{{ name or '' }}" autocomplete="name">
+    </div>
+    <div class="feld">
+      <label for="passwort">Passwort</label>
+      <input id="passwort" name="passwort" type="password" required autocomplete="new-password">
+      <p class="feld-hilfe">Mindestens {{ mindestlaenge }} Zeichen. Eine Wortfolge aus vier Wörtern erfüllt das mühelos.</p>
+    </div>
+    <div class="feld">
+      <label for="wdh">Passwort wiederholen</label>
+      <input id="wdh" name="passwort_wiederholung" type="password" required autocomplete="new-password">
+    </div>
+    <button class="knopf" type="submit">Konto anlegen</button>
+  </form>
+  {% else %}
+  <p><a class="knopf knopf-zweit" href="/anmelden">Zur Anmeldung</a></p>
+  {% endif %}
+</div>
+{% endblock %}

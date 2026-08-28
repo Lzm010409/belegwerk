@@ -25,6 +25,12 @@ async def lebenszyklus(app: FastAPI) -> AsyncIterator[None]:
     konfiguration = einstellungen()
     for verzeichnis in (konfiguration.upload_verzeichnis, konfiguration.ausgabe_verzeichnis):
         verzeichnis.mkdir(parents=True, exist_ok=True)
+    try:
+        from belegwerk.kern.erststart import ersten_mandanten_anlegen
+
+        await ersten_mandanten_anlegen()
+    except Exception as fehler:  # noqa: BLE001 — Start darf daran nicht scheitern
+        _log.error("Erststart fehlgeschlagen", extra={"fehlerart": type(fehler).__name__})
     _log.info("Anwendung gestartet", extra={"version": __version__, "umgebung": konfiguration.umgebung})
     yield
     from belegwerk.datenbank import engine_schliessen
@@ -49,7 +55,10 @@ def anwendung_erzeugen() -> FastAPI:
     app.add_middleware(SicherheitsKopfzeilen, hsts=konfiguration.ist_produktion)
     app.mount("/static", StaticFiles(directory=str(STATIK_VERZEICHNIS)), name="static")
 
+    from belegwerk.kern.router import router as kern_router
+
     app.include_router(gesundheit_router)
+    app.include_router(kern_router)
     fehlerseiten_registrieren(app)
     return app
 

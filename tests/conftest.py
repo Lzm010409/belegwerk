@@ -93,3 +93,92 @@ def mandant_ids() -> tuple[uuid.UUID, uuid.UUID]:
 @pytest.fixture(scope="session")
 def anyio_backend() -> str:
     return "asyncio"
+
+
+# ---------------------------------------------------------------------------
+# Hilfen fuer HTTP-Tests: eigener Ereignisschleifen-Kontext, damit die
+# asyncpg-Verbindungen des Testclients nicht an die pytest-Schleife gebunden
+# sind.
+# ---------------------------------------------------------------------------
+
+
+def _mit_engine(url: str, arbeit: object) -> object:
+    import asyncio
+
+    from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
+
+    async def lauf() -> object:
+        engine = create_async_engine(url, poolclass=None)
+        fabrik = async_sessionmaker(engine, expire_on_commit=False)
+        try:
+            async with fabrik() as s:
+                ergebnis = await arbeit(s)  # type: ignore[operator]
+                await s.commit()
+                return ergebnis
+        finally:
+            await engine.dispose()
+
+    return asyncio.run(lauf())
+
+
+def datenbank_leeren(url: str) -> None:
+    from sqlalchemy import text
+
+    from belegwerk.basis import Basis
+    import belegwerk.modellregister  # noqa: F401
+
+    async def arbeit(s: object) -> None:
+        tabellen = ", ".join(t.name for t in reversed(Basis.metadata.sorted_tables))
+        await s.execute(text(f"TRUNCATE {tabellen} RESTART IDENTITY CASCADE"))  # type: ignore[attr-defined]
+
+    _mit_engine(url, arbeit)
+
+
+def buero_anlegen(
+    url: str, name: str, email: str, passwort: str, rolle: str = "inhaber"
+) -> tuple[str, str]:
+    """Legt Mandant, Benutzer und die Testphase an. Gibt (mandant_id, benutzer_id)."""
+    from belegwerk.kern import passwoerter
+    from belegwerk.kern.abrechnung import testphase_starten
+    from belegwerk.kern.modelle import Benutzer, Mandant, Rolle
+
+    hash_wert = passwoerter.hashen(passwort)
+
+    async def arbeit(s: object) -> tuple[str, str]:
+        mandant = Mandant(name=name)
+        s.add(mandant)  # type: ignore[attr-defined]
+        await s.flush()  # type: ignore[attr-defined]
+        benutzer = Benutzer(
+            mandant_id=mandant.id,
+            email=email.lower(),
+            name=name + " Inhaber",
+            passwort_hash=hash_wert,
+            rolle=Rolle(rolle),
+        )
+        s.add(benutzer)  # type: ignore[attr-defined]
+        await testphase_starten(s, mandant.id)  # type: ignore[arg-type]
+        await s.flush()  # type: ignore[attr-defined]
+        return str(mandant.id), str(benutzer.id)
+
+    return _mit_engine(url, arbeit)  # type: ignore[return-value]
+
+
+@pytest.fixture()
+def klient(migrierte_datenbank: str) -> Iterator["object"]:
+    """TestClient auf leerer Datenbank."""
+    import os
+
+    from fastapi.testclient import TestClient
+
+    os.environ["DATABASE_URL"] = migrierte_datenbank
+    from belegwerk.konfiguration import einstellungen
+
+    einstellungen.cache_clear()
+    datenbank_leeren(migrierte_datenbank)
+
+    from belegwerk.anwendung import anwendung_erzeugen
+    from belegwerk.kern import ratenbegrenzung
+
+    ratenbegrenzung.alles_zuruecksetzen()
+    with TestClient(anwendung_erzeugen(), raise_server_exceptions=False) as c:
+        yield c

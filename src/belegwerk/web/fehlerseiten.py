@@ -10,7 +10,7 @@ from typing import Any
 
 from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse, Response
+from fastapi.responses import JSONResponse, RedirectResponse, Response
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from belegwerk.web.vorlagen import seite
@@ -94,8 +94,23 @@ async def serverfehler(request: Request, ausnahme: Exception) -> Response:
     )
 
 
+async def anmeldung_noetig(request: Request, ausnahme: Exception) -> Response:
+    """Umleitung statt Fehlerseite — der Benutzer soll sich anmelden können."""
+    from belegwerk.kern.abhaengigkeiten import AnmeldungNoetig
+
+    assert isinstance(ausnahme, AnmeldungNoetig)
+    if _ist_json(request):
+        return JSONResponse(
+            {"fehler": TEXTE[401][0], "erlaeuterung": TEXTE[401][1]}, status_code=401
+        )
+    return RedirectResponse(f"/anmelden?weiter={ausnahme.ziel}", status_code=303)
+
+
 def fehlerseiten_registrieren(app: FastAPI) -> None:
+    from belegwerk.kern.abhaengigkeiten import AnmeldungNoetig
+
     handler: dict[Any, Any] = {
+        AnmeldungNoetig: anmeldung_noetig,
         StarletteHTTPException: http_fehler,
         RequestValidationError: validierungsfehler,
         Exception: serverfehler,
