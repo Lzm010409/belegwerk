@@ -1,0 +1,207 @@
+# Ersetzungstabelle fuer die Bezeichnungsnormalisierung (Delta-Todo 3.1).
+#
+# Diese Tabelle waechst mit jedem Fall — sie ist der eigentliche Wert des
+# Produkts nach einem Jahr. Deshalb Daten, nicht Code.
+#
+# Angewandt wird: Kleinschreibung, Umlaute vereinheitlichen, dann diese
+# Ersetzungen auf Wortebene, dann Sortierung der Wortmenge fuer den Vergleich.
+
+abkuerzungen:
+  # Lage und Richtung
+  v: vorn
+  vo: vorn
+  vorne: vorn
+  h: hinten
+  hi: hinten
+  hint: hinten
+  li: links
+  lks: links
+  l: links
+  re: rechts
+  rechts: rechts
+  r: rechts
+  aussen: aussen
+  innen: innen
+  ob: oben
+  un: unten
+  mi: mitte
+  seitl: seitlich
+  fahrers: fahrerseite
+  beifs: beifahrerseite
+
+  # Baugruppen
+  kotfl: kotfluegel
+  kotfluegel: kotfluegel
+  kotfl.: kotfluegel
+  stossf: stossfaenger
+  stossfg: stossfaenger
+  stossfaenger: stossfaenger
+  stf: stossfaenger
+  sto: stossfaenger
+  motorh: motorhaube
+  mohaube: motorhaube
+  heckkl: heckklappe
+  heckdeckel: heckklappe
+  kofferraumdeckel: heckklappe
+  seitenw: seitenwand
+  seitw: seitenwand
+  radh: radhaus
+  radhausschale: radhausschale
+  einstieg: einstiegsblech
+  schweller: schweller
+  daempfer: stossdaempfer
+  stossd: stossdaempfer
+  federb: federbein
+  querlenk: querlenker
+  qlenker: querlenker
+  spurst: spurstange
+  achsschenk: achsschenkel
+  antriebsw: antriebswelle
+  gelenkw: gelenkwelle
+  bremssch: bremsscheibe
+  bremsbel: bremsbelag
+  bremssat: bremssattel
+
+  # Achsen und Systeme
+  va: vorderachse
+  ha: hinterachse
+  vah: vorderachse
+  klima: klimaanlage
+  kuehl: kuehler
+  kuehlergr: kuehlergrill
+  kuehlerg: kuehlergrill
+  wasserk: wasserkuehler
+  ladeluftk: ladeluftkuehler
+  luftfilterk: luftfilterkasten
+  ansaugr: ansaugrohr
+  auspuff: abgasanlage
+  kat: katalysator
+  esp: fahrdynamikregelung
+  abs: bremsregelsystem
+  srs: rueckhaltesystem
+  airb: airbag
+  steuerg: steuergeraet
+  sg: steuergeraet
+  kabelb: kabelbaum
+  kabelstr: kabelstrang
+
+  # Licht und Glas
+  schwerf: scheinwerfer
+  scheinw: scheinwerfer
+  sw: scheinwerfer
+  nebelschw: nebelscheinwerfer
+  nsw: nebelscheinwerfer
+  blinkl: blinkleuchte
+  heckl: heckleuchte
+  rueckl: heckleuchte
+  schlussl: heckleuchte
+  kennzl: kennzeichenleuchte
+  windschutzsch: windschutzscheibe
+  wss: windschutzscheibe
+  frontsch: windschutzscheibe
+  heckscheibe: heckscheibe
+  seitensch: seitenscheibe
+  tuersch: tuerscheibe
+  spiegelgl: spiegelglas
+  aussensp: aussenspiegel
+  ausssp: aussenspiegel
+  ruecksp: rueckspiegel
+
+  # Tueren und Innenraum
+  tuer: tuer
+  t: tuer
+  tuerverkl: tuerverkleidung
+  verkl: verkleidung
+  innenverkl: innenverkleidung
+  dachhimm: dachhimmel
+  armaturenbr: armaturenbrett
+  armaturent: armaturentafel
+  mittelkons: mittelkonsole
+  sitzbez: sitzbezug
+  gurtstr: gurtstraffer
+  sicherheitsg: sicherheitsgurt
+  handschuhf: handschuhfach
+
+  # Karosserie und Struktur
+  laengstr: laengstraeger
+  querstr: quertraeger
+  quertr: quertraeger
+  traeger: traeger
+  radlauf: radlauf
+  bodenbl: bodenblech
+  reserveradm: reserveradmulde
+  a-saeule: a_saeule
+  b-saeule: b_saeule
+  c-saeule: c_saeule
+  dachrahm: dachrahmen
+  stirnw: stirnwand
+
+  # Arbeiten
+  aus: ausbauen
+  ausbau: ausbauen
+  ein: einbauen
+  einbau: einbauen
+  a/e: aus_und_einbauen
+  aus-/einbau: aus_und_einbauen
+  a+e: aus_und_einbauen
+  ers: ersetzen
+  erneuern: ersetzen
+  tausch: ersetzen
+  austausch: ersetzen
+  instands: instandsetzen
+  instandsetzung: instandsetzen
+  richten: instandsetzen
+  ausbeulen: instandsetzen
+  lack: lackieren
+  lackier: lackieren
+  lackierung: lackieren
+  beilack: beilackierung
+  beilackierg: beilackierung
+  grundier: grundieren
+  vorbereit: vorbereiten
+  pruefen: pruefen
+  einstell: einstellen
+  justier: einstellen
+  verm: vermessen
+  achsverm: achsvermessung
+  probef: probefahrt
+  reinig: reinigen
+  entsorg: entsorgung
+  verbring: verbringung
+  verbringungsk: verbringungskosten
+
+  # Kaufmaennisches
+  upe: unverbindliche_preisempfehlung
+  aufschl: aufschlag
+  zuschl: aufschlag
+  nk: nebenkosten
+  aw: arbeitswert
+  awe: arbeitswert
+  std: stunde
+  stk: stueck
+  ers.teil: ersatzteil
+  et: ersatzteil
+  orig: original
+  originalteil: original
+  ident: identteil
+  identteil: identteil
+  gebr: gebraucht
+  gebrauchtteil: gebraucht
+  zubeh: zubehoer
+
+# Woerter ohne Unterscheidungswert; sie fallen vor dem Vergleich heraus.
+fuellwoerter:
+  - und
+  - oder
+  - der
+  - die
+  - das
+  - fuer
+  - von
+  - mit
+  - am
+  - im
+  - inkl
+  - zzgl
+  - stueck
+  - komplett

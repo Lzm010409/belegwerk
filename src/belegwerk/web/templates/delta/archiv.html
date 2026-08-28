@@ -1,0 +1,35 @@
+{% extends "basis.html" %}
+{% block titel %}Archiv — Delta{% endblock %}
+{% block inhalt %}
+<h1>Archiv</h1>
+<form method="get" action="/app/delta/archiv" class="knopfreihe" style="margin-bottom:1rem">
+  <label class="visuell-versteckt" for="suche">Aktenzeichen oder Kennzeichen</label>
+  <input id="suche" name="suche" type="search" value="{{ suche }}" placeholder="Aktenzeichen oder Kennzeichen" style="max-width:24rem">
+  <button class="knopf knopf-zweit" type="submit">Suchen</button>
+</form>
+
+{% if vorgaenge %}
+<div class="tabellenrahmen">
+  <table class="protokoll">
+    <thead><tr><th>Aktenzeichen</th><th>Kennzeichen</th><th>Angelegt</th><th class="zahl">Abweichungen</th><th class="zahl">Differenz netto</th><th>Kontrolle</th></tr></thead>
+    <tbody>
+    {% for vorgang in vorgaenge %}
+      <tr>
+        <td class="mono"><a href="/app/delta/vorgang/{{ vorgang.id }}">{{ vorgang.aktenzeichen or '—' }}</a></td>
+        <td class="mono">{{ vorgang.kennzeichen or '—' }}</td>
+        <td class="mono klein">{{ vorgang.angelegt_am|datum_zeit }}</td>
+        <td class="zahl">{{ vorgang.abweichungen|length }}</td>
+        <td class="zahl">{{ (vorgang.ergebnis or {}).get('differenz_netto','—') }}</td>
+        <td>{% if (vorgang.ergebnis or {}).get('kontrolle_geht_auf') %}<span class="marker marker-hold">geht auf</span>{% else %}<span class="marker marker-fehler">prüfen</span>{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="leer">
+  <p>{% if suche %}Zu „{{ suche }}“ gibt es keinen Vorgang.{% else %}Noch kein Vorgang im Archiv.{% endif %}</p>
+  <p><a class="knopf knopf-zweit" href="/app/delta">Vergleich anlegen</a></p>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><title>Delta {{ vorgang.aktenzeichen or '' }}</title></head>
+<body>
+<div class="briefkopf">
+  <div class="absender">{{ mandant.briefkopf_zeilen or mandant.name }}</div>
+  {% if logo %}<img src="{{ logo }}" alt="">{% endif %}
+</div>
+
+<h1>Anlage: Abgleich Kalkulation und Prüfbericht</h1>
+<dl class="kopfdaten">
+  <dt>Aktenzeichen</dt><dd class="mono">{{ vorgang.aktenzeichen or '—' }}</dd>
+  <dt>Fahrzeug</dt><dd>{{ (eigen.fahrzeug or {}).get('hersteller') or '—' }} {{ (eigen.fahrzeug or {}).get('modell') or '' }}</dd>
+  <dt>Kennzeichen</dt><dd class="mono">{{ vorgang.kennzeichen or '—' }}</dd>
+  <dt>FIN</dt><dd class="mono">{{ (eigen.fahrzeug or {}).get('vin') or '—' }}</dd>
+  <dt>Erstellt am</dt><dd class="mono">{{ vorgang.angelegt_am|datum }}</dd>
+  <dt>Kalkulation</dt><dd>{{ eigen.dateiname }} ({{ eigen.adapter }})</dd>
+  <dt>Prüfbericht</dt><dd>{{ pruefbericht.dateiname }} ({{ pruefbericht.adapter }})</dd>
+</dl>
+
+{% if not ergebnis.get('kontrolle_geht_auf') %}
+<p><strong>Hinweis zur Kontrollrechnung:</strong>
+{% for hinweis in ergebnis.get('hinweise', []) %}{{ hinweis }} {% endfor %}</p>
+{% endif %}
+
+{% if ergebnis.get('saetze') %}
+<h2>Verrechnungssätze</h2>
+<table>
+  <thead><tr><th>Satz</th><th class="zahl">Kalkulation</th><th class="zahl">Prüfbericht</th></tr></thead>
+  <tbody>
+  {% for satz in ergebnis.saetze %}
+    <tr><td>{{ satz.beschriftung }}</td><td class="zahl">{{ satz.eigen }}</td><td class="zahl">{{ satz.pruefbericht }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+
+{% for klasse, abweichungen in gruppen.items() %}
+<h2>{{ klasse.beschriftung }} ({{ abweichungen|length }})</h2>
+<p class="klein">{{ klasse.erlaeuterung }}</p>
+<table>
+  <thead>
+    <tr><th style="width:10mm" class="zahl">Pos</th><th>Bezeichnung und Beleg</th>
+        <th style="width:22mm" class="zahl">Kalkulation</th><th style="width:22mm" class="zahl">Prüfbericht</th>
+        <th style="width:24mm" class="zahl">Differenz netto</th></tr>
+  </thead>
+  <tbody>
+  {% for abweichung in abweichungen %}
+    <tr>
+      <td class="zahl mono">{{ '%03d'|format(abweichung.laufnummer) }}</td>
+      <td>{{ abweichung.bezeichnung }}
+        {% if abweichung.beleg_eigen %}<br><span class="mono" style="font-size:6.5pt">K: {{ abweichung.beleg_eigen[:120] }}</span>{% endif %}
+        {% if abweichung.beleg_pruefbericht %}<br><span class="mono" style="font-size:6.5pt">P: {{ abweichung.beleg_pruefbericht[:120] }}</span>{% endif %}
+      </td>
+      <td class="zahl">{{ abweichung.wert_eigen or '—' }}</td>
+      <td class="zahl">{{ abweichung.wert_pruefbericht or '—' }}</td>
+      <td class="zahl">{{ abweichung.differenz_netto|geld }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endfor %}
+
+<h2>Summen</h2>
+<table>
+  <tbody>
+  {% for gruppe in ergebnis.get('gruppen', []) %}
+    <tr><td>Differenz {{ gruppe.beschriftung }}</td><td class="zahl">{{ gruppe.differenz }} €</td></tr>
+  {% endfor %}
+  <tr class="summenzeile"><td>Gesamtdifferenz netto</td><td class="zahl">{{ ergebnis.get('differenz_netto','—') }} €</td></tr>
+  <tr class="summenzeile"><td>Gesamtdifferenz brutto ({{ ergebnis.get('mehrwertsteuersatz','19.0') }} %)</td><td class="zahl">{{ ergebnis.get('differenz_brutto','—') }} €</td></tr>
+  </tbody>
+</table>
+
+<div class="methodik">
+  <p><strong>Zur Methodik.</strong> Verglichen wurden die Positionen der vorgelegten
+  Kalkulation mit denen des Prüfberichts. Die Zuordnung erfolgte deterministisch in
+  vier Stufen: identische Teilenummer, identische Laufnummer bei identischem Betrag,
+  identische Bezeichnung nach Normalisierung, Ähnlichkeit der Bezeichnung. Je Abweichung
+  ist die Differenz der Nettobeträge ausgewiesen und die Originalzeile beider Dokumente
+  als Beleg beigefügt.
+  {% if ergebnis.get('kontrolle_geht_auf') %}Die Summe der Positionsdifferenzen entspricht
+  der Differenz der in beiden Dokumenten ausgewiesenen Nettoendsummen.{% else %}
+  <strong>Die Kontrollrechnung geht nicht auf; der unerklärte Restbetrag ist oben genannt.</strong>{% endif %}
+  Die fachliche Bewertung der Abweichungen trifft der unterzeichnende Sachverständige.</p>
+</div>
+<span class="fuss">Delta-Anlage {{ vorgang.aktenzeichen or '' }} · erstellt {{ vorgang.angelegt_am|datum }}</span>
+</body></html>

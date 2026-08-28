@@ -1,0 +1,9 @@
+{% extends "basis.html" %}
+{% block titel %}Verarbeitung — Delta{% endblock %}
+{% block inhalt %}
+<div class="karte" style="max-width:36rem">
+  <div class="karte-kopf"><h1 style="font-size:1.3rem">Dokumente werden gelesen</h1></div>
+  <p class="klein">Das Parsen läuft im Hintergrund, damit ein umfangreiches PDF die Oberfläche nicht blockiert. Diese Seite aktualisiert sich selbst.</p>
+  {% include "delta/teile/fortschritt.html" %}
+</div>
+{% endblock %}

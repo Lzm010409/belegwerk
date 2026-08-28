@@ -1,0 +1,54 @@
+{% extends "basis.html" %}
+{% block titel %}Neuer Vergleich — Delta{% endblock %}
+{% block inhalt %}
+<h1>Neuer Vergleich</h1>
+<p class="klein gedaempft">Zwei Dokumente hochladen. Format und Absender erkennt Delta selbst.</p>
+
+{% if nur_lesbar %}
+<div class="meldung meldung-hinweis"><p>Die Testphase für Delta ist abgelaufen. Ihre bisherigen Vorgänge bleiben lesbar und exportierbar; neue legen Sie nach Abschluss eines Abonnements wieder an.</p></div>
+{% else %}
+<form method="post" action="/app/delta" enctype="multipart/form-data" class="gitter gitter-2">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <div class="karte" x-data="{name:''}">
+    <div class="karte-kopf"><h2>Ihre Kalkulation</h2></div>
+    <div class="dropzone">
+      <label for="eigen"><strong>DAT oder Audatex</strong></label>
+      <input id="eigen" type="file" name="eigen" required accept=".pdf,.txt,.xml,.vxs,application/pdf"
+             @change="name=$event.target.files[0]?.name||''">
+      <p class="klein gedaempft" x-text="name"></p>
+      <p class="klein gedaempft">DAT als PDF, TXT oder VXS. Audatex als PDF.</p>
+    </div>
+  </div>
+  <div class="karte" x-data="{name:''}">
+    <div class="karte-kopf"><h2>Prüfbericht des Versicherers</h2></div>
+    <div class="dropzone">
+      <label for="pruefbericht"><strong>Prüfbericht</strong></label>
+      <input id="pruefbericht" type="file" name="pruefbericht" required accept=".pdf,.txt,application/pdf"
+             @change="name=$event.target.files[0]?.name||''">
+      <p class="klein gedaempft" x-text="name"></p>
+      <p class="klein gedaempft">ControlExpert und weitere gängige Absender.</p>
+    </div>
+  </div>
+  <div><button class="knopf" type="submit">Vergleich starten</button></div>
+</form>
+{% endif %}
+
+<h2 style="margin-top:2rem">Zuletzt verglichen</h2>
+{% if letzte %}
+<div class="raster">
+  {% for vorgang in letzte %}
+  <div class="raster-zeile">
+    <div class="raster-nummer">{{ '%02d'|format(loop.index) }}</div>
+    <div class="raster-inhalt">
+      <a href="/app/delta/vorgang/{{ vorgang.id }}"><strong>{{ vorgang.aktenzeichen or 'ohne Aktenzeichen' }}</strong></a>
+      {% if vorgang.kennzeichen %}<span class="mono klein">{{ vorgang.kennzeichen }}</span>{% endif %}
+      <p class="klein gedaempft">{{ vorgang.angelegt_am|datum_zeit }} ·
+        {% if vorgang.ergebnis and vorgang.ergebnis.differenz_netto %}Differenz {{ vorgang.ergebnis.differenz_netto|float|round(2) }} € netto{% else %}{{ vorgang.status.value }}{% endif %}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<div class="leer"><p>Noch kein Vergleich. Laden Sie Ihre Kalkulation und den Prüfbericht hoch — das Ergebnis ist direkt die Anlage zur Stellungnahme.</p></div>
+{% endif %}
+{% endblock %}
