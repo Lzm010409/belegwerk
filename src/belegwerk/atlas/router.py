@@ -62,7 +62,7 @@ async def erfassen_ansicht(
             "heute": date.today().isoformat(),
             "nur_lesbar": not zugriff.schreiben,
             "beitraege": beitraege,
-            "pool_freigegeben": pool.POOL_FREIGEGEBEN,
+            "pool_freigegeben": pool.pool_freigegeben(),
         },
         benutzer=benutzer,
         modul="Atlas",
@@ -119,7 +119,7 @@ async def erfassen(
                 "entsorgung": satz("entsorgung"),
             },
             bemerkung=bemerkung,
-            im_pool=bool(im_pool) and pool.POOL_FREIGEGEBEN,
+            im_pool=bool(im_pool) and pool.pool_freigegeben(),
         )
         beleg: tuple[str, bytes] | None = None
         if nachweis is not None and nachweis.filename:
@@ -303,7 +303,7 @@ async def eigene_erhebungen(
         {
             "erhebungen": erhebungen,
             "beitraege": await pool.beitragszaehler(benutzer.mandant_id),
-            "pool_freigegeben": pool.POOL_FREIGEGEBEN,
+            "pool_freigegeben": pool.pool_freigegeben(),
             "alterung_monate": dienst.ALTERUNG_MONATE,
         },
         benutzer=benutzer,
@@ -317,7 +317,7 @@ async def pool_schalten(
     _csrf: CsrfAbh, benutzer: BenutzerAbh, sitzung: DatenbankAbh, erhebung_id: uuid.UUID
 ) -> Response:
     await schreibzugriff_pruefen(sitzung, Modul.ATLAS)
-    if not pool.POOL_FREIGEGEBEN:
+    if not pool.pool_freigegeben():
         return antwort_mit_meldung(
             "/app/atlas/erhebungen",
             "hinweis",

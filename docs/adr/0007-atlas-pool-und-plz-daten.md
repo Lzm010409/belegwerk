@@ -22,10 +22,16 @@ Der Test dazu prüft nicht eine Beispielausgabe, sondern die Struktur: keines de
 `__slots__` enthält „mandant" oder „nachweis". Ein neues Feld, das die Herkunft
 verriete, fällt damit beim ersten Testlauf auf.
 
-`POOL_FREIGEGEBEN` steht auf `False`. Bis zur wettbewerbsrechtlichen Prüfung
-(Querschnitt 6.7) ist Atlas ein reines Einzelplatz-Register — das ist ohnehin
-verkaufbar, und das Briefing sieht genau diesen Start vor. Der Schalter ist die
-einzige Stelle, die dafür umgelegt werden muss.
+Ob der Pool überhaupt angeboten wird, entscheidet der Betreiber über
+`ATLAS_POOL_FREIGEGEBEN`; die Voreinstellung ist **an**, weil das Register der
+Stundenverrechnungssätze das gemeinsame Feature der Plattform ist. Ist der
+Schalter aus, ist Atlas ein reines Einzelplatz-Register — auch das ist
+verkaufbar, und das Briefing sieht diesen Start ausdrücklich als Möglichkeit vor.
+
+Die wettbewerbsrechtliche Prüfung aus Querschnitt 6.7 bleibt davon unberührt und
+ist **nicht erledigt**. Sie steht als offener Punkt in `docs/BETRIEB.md` und im
+Modulkopf. Die Konstruktion ist danach tragfähig, weil Preise Dritter erhoben
+werden und nicht die Honorare der Teilnehmer — geprüft ist sie nicht.
 
 ## Entscheidung PLZ-Mittelpunkte
 

@@ -72,6 +72,14 @@ class Einstellungen(BaseSettings):
         default=True, validation_alias="OEFFENTLICHE_PRUEFUNG_AKTIV"
     )
 
+    # Der Atlas-Pool ist das einzige mandantenuebergreifende Feature der
+    # Plattform. Er bleibt je Erhebung eine Einzelentscheidung des Buueros
+    # (Voreinstellung aus); dieser Schalter bestimmt, ob er ueberhaupt
+    # angeboten wird. Siehe ADR 0007 und den Rechtshinweis in atlas/pool.py.
+    atlas_pool_freigegeben: bool = Field(
+        default=True, validation_alias="ATLAS_POOL_FREIGEGEBEN"
+    )
+
     @field_validator("datenbank_url")
     @classmethod
     def _asyncpg_treiber(cls, wert: str) -> str:

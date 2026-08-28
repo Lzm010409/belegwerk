@@ -21,12 +21,17 @@ Weil der Pool über Mandantengrenzen liest, arbeitet er unter der
 Eigentümerrolle und steht deshalb auf der Ausnahmeliste in
 ``tests/test_architektur.py``.
 
-**Vor dem Livegang:** Das Poolmodell ist wettbewerbsrechtlich zu prüfen
-(Briefing Abschnitt 5, Querschnitt 6.7). Erhoben werden Preise Dritter
-(Werkstätten), nicht die Honorare der teilnehmenden Sachverständigen — das ist
-der entscheidende Unterschied zu einem Preisaustausch unter Wettbewerbern. Bis
-zur anwaltlichen Freigabe bleibt ``POOL_FREIGEGEBEN`` auf ``False``; dann ist
-Atlas ein reines Einzelplatz-Register, und das ist ohnehin verkaufbar.
+**Rechtlicher Hinweis, der nicht wegdiskutiert werden darf:** Das Poolmodell ist
+wettbewerbsrechtlich zu prüfen (Briefing Abschnitt 5, Querschnitt 6.7). Erhoben
+werden Preise Dritter (Werkstätten), nicht die Honorare der teilnehmenden
+Sachverständigen — das ist der entscheidende Unterschied zu einem
+kartellrechtlich problematischen Preisaustausch unter Wettbewerbern. Die
+Konstruktion ist danach tragfähig, geprüft ist sie nicht.
+
+Der Betreiber schaltet den Pool über ``ATLAS_POOL_FREIGEGEBEN``. Ist er aus, ist
+Atlas ein reines Einzelplatz-Register — auch das ist verkaufbar. Ist er an,
+bleibt die Teilnahme je Erhebung eine Einzelentscheidung des Büros mit der
+Voreinstellung „nicht im Pool".
 """
 
 from __future__ import annotations
@@ -41,9 +46,11 @@ from sqlalchemy import func, select
 
 from belegwerk.atlas.modelle import Betrieb, Betriebsart, Erhebung, Erhebungsart
 from belegwerk.datenbank import sitzungsfabrik
+from belegwerk.konfiguration import einstellungen
 
-# Schalter für Querschnitt 6.7: bis zur anwaltlichen Prüfung ist der Pool aus.
-POOL_FREIGEGEBEN = False
+def pool_freigegeben() -> bool:
+    """Ob der Pool überhaupt angeboten wird (Betreiberentscheidung)."""
+    return einstellungen().atlas_pool_freigegeben
 
 
 @dataclass(frozen=True, slots=True)
@@ -113,7 +120,7 @@ async def beitragszaehler(mandant_id: uuid.UUID) -> int:
 
 async def ist_teilnehmer(mandant_id: uuid.UUID) -> bool:
     """Wer nichts gibt, sieht nur eigene Daten."""
-    if not POOL_FREIGEGEBEN:
+    if not pool_freigegeben():
         return False
     return await beitragszaehler(mandant_id) > 0
 

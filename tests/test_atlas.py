@@ -361,19 +361,28 @@ async def test_ohne_pool_sieht_niemand_fremde_erhebungen(sitzung: AsyncSession) 
     assert bericht.zeilen == []
 
 
-async def test_pool_ist_bis_zur_pruefung_abgeschaltet(sitzung: AsyncSession) -> None:
-    """Querschnitt 6.7: bis zur anwaltlichen Freigabe bleibt der Pool aus."""
-    assert pool.POOL_FREIGEGEBEN is False
+async def test_abgeschalteter_pool_liefert_nichts(
+    sitzung: AsyncSession, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    """Der Betreiber kann den Pool abschalten; dann ist Atlas Einzelplatz."""
+    monkeypatch.setattr(pool, "pool_freigegeben", lambda: False)
     nord = await _mandant(sitzung, "Büro Nord")
+    async with mandanten_sitzung(nord) as db:
+        await dienst.erhebung_anlegen(db, nord, _benutzer(nord), _erfassung(im_pool=True), None)
     assert await pool.ist_teilnehmer(nord) is False
     assert await pool.pooldaten(nord, {"26123"}) == []
+
+
+async def test_pool_ist_voreingestellt_freigegeben() -> None:
+    """Das SVS-Register ist das einzige geteilte Feature der Plattform."""
+    assert pool.pool_freigegeben() is True
 
 
 async def test_pooldatensatz_kennt_die_mandanten_id_nicht(
     sitzung: AsyncSession, monkeypatch: pytest.MonkeyPatch
 ) -> None:
     """Todo 5.3: kein API-Pfad liefert die Erfasser-Mandanten-ID an einen anderen."""
-    monkeypatch.setattr(pool, "POOL_FREIGEGEBEN", True)
+    monkeypatch.setattr(pool, "pool_freigegeben", lambda: True)
     nord = await _mandant(sitzung, "Büro Nord")
     sued = await _mandant(sitzung, "Büro Süd")
 
@@ -397,7 +406,7 @@ async def test_pooldatensatz_kennt_die_mandanten_id_nicht(
 async def test_wer_nichts_gibt_sieht_nur_eigene_daten(
     sitzung: AsyncSession, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    monkeypatch.setattr(pool, "POOL_FREIGEGEBEN", True)
+    monkeypatch.setattr(pool, "pool_freigegeben", lambda: True)
     nord = await _mandant(sitzung, "Büro Nord")
     sued = await _mandant(sitzung, "Büro Süd")
     async with mandanten_sitzung(nord) as db:
@@ -415,7 +424,7 @@ async def test_wer_nichts_gibt_sieht_nur_eigene_daten(
 async def test_nachweise_bleiben_immer_beim_erfasser(
     sitzung: AsyncSession, monkeypatch: pytest.MonkeyPatch
 ) -> None:
-    monkeypatch.setattr(pool, "POOL_FREIGEGEBEN", True)
+    monkeypatch.setattr(pool, "pool_freigegeben", lambda: True)
     nord = await _mandant(sitzung, "Büro Nord")
     sued = await _mandant(sitzung, "Büro Süd")
     async with mandanten_sitzung(nord) as db:
@@ -443,7 +452,7 @@ async def test_nachweise_bleiben_immer_beim_erfasser(
 
 
 async def test_beitragszaehler_zaehlt_nur_eigene(sitzung: AsyncSession, monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(pool, "POOL_FREIGEGEBEN", True)
+    monkeypatch.setattr(pool, "pool_freigegeben", lambda: True)
     nord = await _mandant(sitzung, "Büro Nord")
     sued = await _mandant(sitzung, "Büro Süd")
     async with mandanten_sitzung(nord) as db:
@@ -516,7 +525,7 @@ def test_erfassungsformular_nennt_die_belastbarkeit(angemeldet_atlas: Any) -> No
     assert antwort.status_code == 200
     assert "Belastbarkeit hoch" in antwort.text
     assert "Standortdaten werden beim Hochladen aus dem Bild entfernt" in antwort.text
-    assert "Der Pool ist noch nicht freigegeben" in antwort.text
+    assert "In den Pool geben" in antwort.text
 
 
 def test_erfassung_und_liste(angemeldet_atlas: Any) -> None:
@@ -572,10 +581,15 @@ def test_unbekannte_plz_meldet_klartext(angemeldet_atlas: Any) -> None:
     assert "benachbarte Postleitzahl" in antwort.text
 
 
-def test_pool_schalter_bleibt_bis_zur_freigabe_wirkungslos(angemeldet_atlas: Any) -> None:
-    _erfassen(angemeldet_atlas, im_pool="1")
+def test_poolschalter_steht_in_der_erhebungsliste(angemeldet_atlas: Any) -> None:
+    """Teilnahme bleibt eine Einzelentscheidung je Erhebung."""
+    formular = angemeldet_atlas.get("/app/atlas")
+    assert "In den Pool geben" in formular.text
+    assert "Voreinstellung aus" in formular.text
+
+    _erfassen(angemeldet_atlas)
     liste = angemeldet_atlas.get("/app/atlas/erhebungen")
-    assert "in den Pool geben" not in liste.text
+    assert "in den Pool geben" in liste.text
 
 
 def test_erhebungen_bleiben_beim_eigenen_buero(klient: Any, migrierte_datenbank: str) -> None:
