@@ -1,0 +1,10 @@
+{% if betriebe %}
+<div class="meldung meldung-hinweis">
+  <p><strong>Möglicherweise schon erfasst:</strong></p>
+  <ul class="klein" style="margin:0;padding-left:1.1rem">
+    {% for betrieb in betriebe %}
+      <li>{{ betrieb.name }}, {{ betrieb.plz }} {{ betrieb.ort }} ({{ betrieb.erhebungen|length }} Erhebungen)</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

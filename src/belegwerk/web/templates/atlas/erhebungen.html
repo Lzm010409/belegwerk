@@ -1,0 +1,46 @@
+{% extends "basis.html" %}
+{% block titel %}Meine Erhebungen — Atlas{% endblock %}
+{% block inhalt %}
+<h1>Meine Erhebungen</h1>
+<p class="klein gedaempft">
+  {{ erhebungen|length }} Erhebungen{% if pool_freigegeben %} · {{ beitraege }} davon im Pool{% endif %}.
+  Erhebungen über {{ alterung_monate }} Monate zählen nicht mehr in den Median.
+</p>
+
+{% if erhebungen %}
+<div class="tabellenrahmen">
+  <table class="protokoll">
+    <thead><tr><th>Betrieb</th><th>PLZ</th><th>Datum</th><th>Nachweisart</th><th class="zahl">Mechanik</th><th class="zahl">Karosserie</th><th class="zahl">Lack</th><th>Beleg</th><th>Zustand</th></tr></thead>
+    <tbody>
+    {% for erhebung in erhebungen %}
+      <tr class="{{ 'unveraendert' if erhebung.veraltet() }}">
+        <td>{{ erhebung.betrieb.name }}</td>
+        <td class="mono">{{ erhebung.betrieb.plz }}</td>
+        <td class="mono klein">{{ erhebung.erhebungsdatum|datum }}</td>
+        <td class="klein">{{ erhebung.art.beschriftung }}<br><span class="gedaempft">Belastbarkeit {{ erhebung.art.belastbarkeit }}</span></td>
+        <td class="zahl">{{ erhebung.satz_mechanik|geld }}</td>
+        <td class="zahl">{{ erhebung.satz_karosserie|geld }}</td>
+        <td class="zahl">{{ erhebung.satz_lack_lohn|geld }}</td>
+        <td class="klein">{{ erhebung.nachweise|length }}</td>
+        <td>
+          {% if erhebung.veraltet() %}<span class="marker marker-warnung">Nachprüfung fällig</span>
+          {% else %}<span class="marker marker-hold">aktuell</span>{% endif %}
+          {% if pool_freigegeben %}
+          <form method="post" action="/app/atlas/erhebung/{{ erhebung.id }}/pool" style="margin-top:.3rem">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <button class="knopf knopf-zweit" style="font-size:.75rem;padding:.2rem .45rem">{{ 'aus dem Pool nehmen' if erhebung.im_pool else 'in den Pool geben' }}</button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% else %}
+<div class="leer">
+  <p>Noch keine Erhebung. Die erste entsteht am schnellsten am Werkstatttresen: Preisaushang fotografieren, Sätze eintragen, speichern.</p>
+  <p><a class="knopf knopf-zweit" href="/app/atlas">Erhebung erfassen</a></p>
+</div>
+{% endif %}
+{% endblock %}

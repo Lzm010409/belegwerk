@@ -1,0 +1,102 @@
+{% extends "basis.html" %}
+{% block titel %}Erfassen — Atlas{% endblock %}
+{% block inhalt %}
+<h1>Erhebung erfassen</h1>
+<p class="klein gedaempft">Am Werkstatttresen in unter 60 Sekunden: Preisaushang fotografieren, Werte eintragen, fertig.</p>
+
+{% if nur_lesbar %}
+<div class="meldung meldung-hinweis"><p>Die Testphase für Atlas ist abgelaufen. Ihre Erhebungen bleiben lesbar und exportierbar; neue erfassen Sie nach Abschluss eines Abonnements wieder.</p></div>
+{% else %}
+<form method="post" action="/app/atlas" enctype="multipart/form-data" class="karte">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+  <input type="hidden" name="betrieb_id" value="">
+
+  <fieldset>
+    <legend>Betrieb</legend>
+    <div class="feld">
+      <label for="name">Name</label>
+      <input id="name" name="name" required autocomplete="organization"
+             hx-get="/app/atlas/betriebe" hx-trigger="keyup changed delay:400ms"
+             hx-target="#dubletten" hx-params="*" hx-vals='js:{suche: document.getElementById("name").value}'>
+    </div>
+    <div id="dubletten"></div>
+    <div class="gitter gitter-2">
+      <div class="feld">
+        <label for="strasse">Straße</label>
+        <input id="strasse" name="strasse" autocomplete="street-address">
+      </div>
+      <div class="feld">
+        <label for="plz">PLZ</label>
+        <input id="plz" name="plz" class="mono" required inputmode="numeric" pattern="\d{5}" autocomplete="postal-code">
+      </div>
+      <div class="feld">
+        <label for="ort">Ort</label>
+        <input id="ort" name="ort" autocomplete="address-level2">
+      </div>
+      <div class="feld">
+        <label for="betriebsart">Betriebsart</label>
+        <select id="betriebsart" name="betriebsart">
+          {% for art in betriebsarten %}<option value="{{ art.value }}">{{ art.beschriftung }}</option>{% endfor %}
+        </select>
+      </div>
+    </div>
+    <div class="feld">
+      <label for="marken">Marken (Komma getrennt)</label>
+      <input id="marken" name="marken" placeholder="VW, Audi">
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Sätze in Euro beziehungsweise Prozent</legend>
+    <div class="gitter gitter-2">
+      <div class="feld"><label for="satz_mechanik">Mechanik</label><input id="satz_mechanik" name="satz_mechanik" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="satz_karosserie">Karosserie</label><input id="satz_karosserie" name="satz_karosserie" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="satz_elektrik">Elektrik</label><input id="satz_elektrik" name="satz_elektrik" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="satz_lack_lohn">Lacklohn</label><input id="satz_lack_lohn" name="satz_lack_lohn" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="lack_material_prozent">Lackmaterial %</label><input id="lack_material_prozent" name="lack_material_prozent" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="upe_aufschlag_prozent">UPE-Aufschlag %</label><input id="upe_aufschlag_prozent" name="upe_aufschlag_prozent" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="verbringung_pauschale">Verbringung</label><input id="verbringung_pauschale" name="verbringung_pauschale" inputmode="decimal" class="mono"></div>
+      <div class="feld"><label for="entsorgung">Entsorgung</label><input id="entsorgung" name="entsorgung" inputmode="decimal" class="mono"></div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Nachweis</legend>
+    <div class="gitter gitter-2">
+      <div class="feld">
+        <label for="erhebungsdatum">Erhebungsdatum</label>
+        <input id="erhebungsdatum" name="erhebungsdatum" type="date" required value="{{ heute }}">
+      </div>
+      <div class="feld">
+        <label for="erhebungsart">Nachweisart</label>
+        <select id="erhebungsart" name="erhebungsart" required>
+          {% for art in erhebungsarten %}
+            <option value="{{ art.value }}">{{ art.beschriftung }} — Belastbarkeit {{ art.belastbarkeit }}</option>
+          {% endfor %}
+        </select>
+        <p class="feld-hilfe">Bei Preisaushang, Rechnung und schriftlicher Auskunft gehört das Dokument dazu. Ohne Beleg ist die Erhebung als Anlage nicht verwertbar.</p>
+      </div>
+    </div>
+    <div class="feld">
+      <label for="nachweis">Beleg (Foto oder PDF)</label>
+      <input id="nachweis" name="nachweis" type="file" accept="image/*,application/pdf" capture="environment">
+      <p class="feld-hilfe">Standortdaten werden beim Hochladen aus dem Bild entfernt.</p>
+    </div>
+    <div class="feld">
+      <label for="bemerkung">Bemerkung</label>
+      <textarea id="bemerkung" name="bemerkung" placeholder="Bei telefonischer Auskunft: Name, Datum, Uhrzeit"></textarea>
+    </div>
+    {% if pool_freigegeben %}
+    <div class="feld">
+      <label><input type="checkbox" name="im_pool" value="1"> In den Pool geben</label>
+      <p class="feld-hilfe">Voreinstellung aus. Im Pool sichtbar sind Betrieb, Anschrift, Sätze, Datum und Nachweisart — nicht, wer erfasst hat, und nie der Beleg.</p>
+    </div>
+    {% else %}
+    <p class="klein gedaempft">Der Pool ist noch nicht freigegeben. Bis zur wettbewerbsrechtlichen Prüfung bleiben alle Erhebungen ausschließlich in Ihrem Büro.</p>
+    {% endif %}
+  </fieldset>
+
+  <button class="knopf" type="submit">Erhebung speichern</button>
+</form>
+{% endif %}
+{% endblock %}

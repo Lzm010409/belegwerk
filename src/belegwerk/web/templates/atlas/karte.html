@@ -1,0 +1,38 @@
+{% extends "basis.html" %}
+{% block titel %}Karte — Atlas{% endblock %}
+{% block inhalt %}
+<h1>Karte</h1>
+<form method="get" action="/app/atlas/karte" class="knopfreihe" style="margin-bottom:1rem">
+  <label class="visuell-versteckt" for="plz">PLZ</label>
+  <input id="plz" name="plz" class="mono" value="{{ plz }}" placeholder="PLZ" pattern="\d{5}" required style="max-width:8rem">
+  <label class="visuell-versteckt" for="radius">Radius</label>
+  <input id="radius" name="radius" type="number" class="mono" value="{{ radius }}" min="1" max="200" style="max-width:6rem">
+  <button class="knopf knopf-zweit" type="submit">Anzeigen</button>
+</form>
+
+{% if fehler %}<div class="meldung meldung-fehler"><p>{{ fehler }}</p></div>{% endif %}
+
+{% if bericht %}
+<div class="karte">
+  <div class="karte-kopf"><h2>{{ bericht.zentrum.plz }} {{ bericht.zentrum.ort }} · {{ bericht.zeilen|length }} Erhebungen</h2></div>
+  <p class="klein gedaempft">
+    Die Darstellung nutzt die PLZ-Mittelpunkte, nicht die Hausanschriften — mehrere Betriebe derselben Postleitzahl liegen deshalb aufeinander.
+    Eine Kartendarstellung mit Kacheln erfordert einen Anbieter mit AV-Vertrag; bis dahin steht hier das Streubild.
+  </p>
+  {% set punkte = bericht.zeilen %}
+  <svg viewBox="0 0 600 400" role="img" aria-label="Streubild der Betriebe im Umkreis" style="width:100%;height:auto;background:var(--paper-warm);border:1px solid var(--rule)">
+    <circle cx="300" cy="200" r="6" fill="#C8102E"/>
+    <text x="300" y="188" text-anchor="middle" font-size="11" font-family="JetBrains Mono, monospace" fill="#C8102E">{{ bericht.zentrum.plz }}</text>
+    {% for zeile in punkte %}
+      {% set winkel = loop.index0 * 137.5 %}
+      {% set abstand = (zeile.entfernung_km / bericht.filter.radius_km * 170) if bericht.filter.radius_km else 0 %}
+      <circle cx="{{ 300 + abstand * (winkel % 360 - 180) / 180 }}"
+              cy="{{ 200 + abstand * ((winkel * 1.3) % 360 - 180) / 180 }}"
+              r="4" fill="{{ '#14181D' if not zeile.veraltet else '#C3C8CE' }}">
+        <title>{{ zeile.name }}, {{ zeile.plz }} {{ zeile.ort }} — {{ zeile.entfernung_km }} km</title>
+      </circle>
+    {% endfor %}
+  </svg>
+</div>
+{% endif %}
+{% endblock %}

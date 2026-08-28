@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><title>Stundenverrechnungssätze {{ bericht.filter.plz }}</title></head>
+<body>
+<div class="briefkopf">
+  <div class="absender">{{ mandant.briefkopf_zeilen or mandant.name }}</div>
+  {% if logo %}<img src="{{ logo }}" alt="">{% endif %}
+</div>
+
+<h1>Anlage: Erhebung regionaler Stundenverrechnungssätze</h1>
+<dl class="kopfdaten">
+  <dt>Erhebungsraum</dt><dd class="mono">{{ bericht.zentrum.plz }} {{ bericht.zentrum.ort }}, Umkreis {{ bericht.filter.radius_km }} km</dd>
+  <dt>Stichtag</dt><dd class="mono">{{ bericht.ergebnis.stichtag|datum }}</dd>
+  <dt>Betriebe</dt><dd class="mono">{{ bericht.ergebnis.anzahl_betriebe }}</dd>
+  <dt>Erhebungen</dt><dd class="mono">{{ bericht.ergebnis.anzahl_erhebungen }}{% if bericht.ergebnis.anzahl_veraltet %}, davon {{ bericht.ergebnis.anzahl_veraltet }} älter als 24 Monate{% endif %}</dd>
+  {% if bericht.filter.betriebsart %}<dt>Filter Betriebsart</dt><dd>{{ bericht.filter.betriebsart.beschriftung }}</dd>{% endif %}
+  {% if bericht.filter.marke %}<dt>Filter Marke</dt><dd>{{ bericht.filter.marke }}</dd>{% endif %}
+  {% if bericht.filter.mindestbelastbarkeit %}<dt>Mindestbelastbarkeit</dt><dd>{{ bericht.filter.mindestbelastbarkeit }}</dd>{% endif %}
+</dl>
+
+{% for hinweis in bericht.ergebnis.hinweise %}<p><strong>Hinweis.</strong> {{ hinweis }}</p>{% endfor %}
+
+<h2>Kennzahlen</h2>
+<table>
+  <thead><tr><th>Satzart</th><th class="zahl">Anzahl</th><th class="zahl">Median</th><th class="zahl">25 %</th><th class="zahl">75 %</th><th class="zahl">Min</th><th class="zahl">Max</th></tr></thead>
+  <tbody>
+  {% for kennzahl in bericht.ergebnis.kennzahlen %}
+    {% if kennzahl.anzahl or kennzahl.anzahl_veraltet %}
+    <tr>
+      <td>{{ kennzahl.beschriftung }}</td>
+      <td class="zahl">{{ kennzahl.anzahl }}</td>
+      {% if kennzahl.belastbar %}
+        <td class="zahl">{{ kennzahl.median|zahl }}</td><td class="zahl">{{ kennzahl.p25|zahl }}</td>
+        <td class="zahl">{{ kennzahl.p75|zahl }}</td><td class="zahl">{{ kennzahl.minimum|zahl }}</td>
+        <td class="zahl">{{ kennzahl.maximum|zahl }}</td>
+      {% else %}
+        <td colspan="5">Datenbasis zu dünn — kein Median ausgewiesen</td>
+      {% endif %}
+    </tr>
+    {% endif %}
+  {% endfor %}
+  </tbody>
+</table>
+
+{% for kennzahl in bericht.ergebnis.kennzahlen %}
+  {% if kennzahl.belastbar %}
+  <h2>Verteilung {{ kennzahl.beschriftung }}</h2>
+  <div>{{ diagramme.get(kennzahl.feld, '')|safe }}</div>
+  {% endif %}
+{% endfor %}
+
+<h2>Erhobene Betriebe</h2>
+<table>
+  <thead><tr><th>Betrieb</th><th>Ort</th><th class="zahl">km</th><th>Erhebung</th><th>Nachweisart</th><th class="zahl">Mech.</th><th class="zahl">Kar.</th><th class="zahl">Lack</th></tr></thead>
+  <tbody>
+  {% for zeile in bericht.zeilen %}
+    <tr>
+      <td>{{ zeile.name }}{% if zeile.strasse %}<br><span class="klein">{{ zeile.strasse }}</span>{% endif %}</td>
+      <td>{{ zeile.plz }} {{ zeile.ort }}</td>
+      <td class="zahl">{{ zeile.entfernung_km }}</td>
+      <td class="mono">{{ zeile.erhebungsdatum|datum }}{% if zeile.veraltet %} *{% endif %}</td>
+      <td>{{ zeile.erhebungsart.beschriftung }} ({{ zeile.erhebungsart.belastbarkeit }})</td>
+      <td class="zahl">{{ zeile.saetze.satz_mechanik|zahl }}</td>
+      <td class="zahl">{{ zeile.saetze.satz_karosserie|zahl }}</td>
+      <td class="zahl">{{ zeile.saetze.satz_lack_lohn|zahl }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<p class="klein">* Erhebung älter als 24 Monate; ausgewiesen, aber nicht in Median und Perzentile eingerechnet.</p>
+
+<div class="methodik">
+  <p><strong>Zur Methodik.</strong> Erhoben wurden Stundenverrechnungssätze, Materialindizes und
+  Nebenkostenpauschalen von Reparaturbetrieben im genannten Umkreis. Grundlage jeder einzelnen
+  Angabe ist ein dokumentierter Nachweis; die Nachweisart ist je Betrieb ausgewiesen und reicht von
+  fotografiertem Preisaushang (hohe Belastbarkeit) bis zur Angabe aus fremder Kalkulation (niedrige
+  Belastbarkeit). Die Entfernung ist die Großkreisentfernung zwischen den Mittelpunkten der
+  Postleitzahlen. Median und Perzentile werden aus den Erhebungen der letzten 24 Monate gebildet;
+  ältere Erhebungen sind ausgewiesen, zählen aber nicht ein. Liegen für eine Satzart weniger als
+  {{ mindestanzahl }} Erhebungen vor, wird bewusst kein Median ausgewiesen — eine Kennzahl aus
+  wenigen Werten trägt keine Aussage. Die Erhebung erhebt keinen Anspruch auf Vollständigkeit
+  oder Repräsentativität; sie ist eine dokumentierte Erhebung und nicht mehr.</p>
+</div>
+<span class="fuss">Stundensatzerhebung {{ bericht.zentrum.plz }} · {{ bericht.filter.radius_km }} km · {{ bericht.ergebnis.stichtag|datum }}</span>
+</body></html>

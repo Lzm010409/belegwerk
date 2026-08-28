@@ -65,6 +65,7 @@ def anwendung_erzeugen() -> FastAPI:
     app.add_middleware(SicherheitsKopfzeilen, hsts=konfiguration.ist_produktion)
     app.mount("/static", StaticFiles(directory=str(STATIK_VERZEICHNIS)), name="static")
 
+    from belegwerk.atlas.router import router as atlas_router
     from belegwerk.check.router import router as check_router
     from belegwerk.delta.router import router as delta_router
     from belegwerk.kern.router import router as kern_router
@@ -73,6 +74,7 @@ def anwendung_erzeugen() -> FastAPI:
     app.include_router(kern_router)
     app.include_router(check_router)
     app.include_router(delta_router)
+    app.include_router(atlas_router)
     fehlerseiten_registrieren(app)
     return app
 
