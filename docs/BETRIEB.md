@@ -34,6 +34,7 @@ keine `.env`.
 | `TESTPHASE_TAGE` | Standard 30. |
 | `KONTO_KARENZ_TAGE` | Standard 14. |
 | `OEFFENTLICHE_PRUEFUNG_AKTIV` | Schaltet die offene Dropzone auf `/check`. |
+| `ATLAS_POOL_FREIGEGEBEN` | Ob der gemeinsame Erhebungspool angeboten wird. Vorgabe an. Aus bedeutet: Atlas ist ein reines Einzelplatz-Register. Die Teilnahme bleibt in jedem Fall eine Einzelentscheidung je Erhebung. |
 | `SMTP_*` | Ohne diese Angaben werden Mails nur protokolliert; die Anwendung läuft weiter und nennt Einladungslinks direkt in der Oberfläche. |
 | `MISTRAL_API_SCHLUESSEL` | Ohne Schlüssel bleibt der Sprachmodellpfad global aus. |
 
@@ -82,6 +83,22 @@ Eine Replica. Der Auftragsarbeiter verträgt mehrere; die Wartung nicht (siehe
 oben), und das Rate-Limit liegt im Prozessspeicher. Vor der zweiten Replica sind
 beide Punkte zu lösen.
 
+## Domain
+
+Die Anwendung hört auf zwei Namen:
+
+- `https://belegwerk.gollenstede.app` — **DNS fehlt noch.** Für die anderen
+  Projekte zeigt `gollenstede.app` auf Cloudflare; hier ist ein Eintrag für
+  `belegwerk` anzulegen, der auf denselben Server zeigt wie die übrigen
+  Anwendungen. Bis dahin läuft die Adresse ins Leere.
+- `http://belegwerk.116.202.21.243.sslip.io` — von Coolify aufgelöste
+  Ersatzadresse ohne eigenen DNS-Eintrag. Sie dient der Abnahme und sollte nach
+  Einrichten der echten Domain entfernt werden, weil sie ohne TLS ausgeliefert
+  wird.
+
+Nach dem DNS-Eintrag genügt ein erneutes Deployment; Coolify stellt das
+Zertifikat dann selbst aus.
+
 ## Was vor dem ersten externen Nutzer fehlt
 
 1. Sicherung und erprobte Wiederherstellung (siehe oben).
@@ -91,6 +108,9 @@ beide Punkte zu lösen.
    gehostet), Querschnitt 4.2.
 4. Uptime-Prüfung von außen gegen `/gesundheit`, Querschnitt 4.5.
 5. Anwaltliche Prüfung der Rechtstexte, des Atlas-Poolmodells und der offenen
-   Dropzone auf `/check` (Querschnitt 6.7).
+   Dropzone auf `/check` (Querschnitt 6.7). Der Pool ist eingeschaltet, weil das
+   Stundensatzregister das gemeinsame Feature der Plattform ist — geprüft ist er
+   damit nicht. Wer ihn bis zur Prüfung aussetzen will, setzt
+   `ATLAS_POOL_FREIGEGEBEN=false`.
 6. Die Punkte aus `docs/PHASE-0.md`: echter Dokumentenkorpus und die
    Abbruchentscheidung, amtliche PLZ-Mittelpunkte, Markenrecherche.
