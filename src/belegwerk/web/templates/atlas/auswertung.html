@@ -1,0 +1,116 @@
+{% extends "basis.html" %}
+{% block titel %}Auswertung — Atlas{% endblock %}
+{% block inhalt %}
+<h1>Auswertung</h1>
+
+<form method="get" action="/app/atlas/auswertung" class="karte">
+  <div class="gitter gitter-3">
+    <div class="feld">
+      <label for="plz">PLZ des Zentrums</label>
+      <input id="plz" name="plz" class="mono" required inputmode="numeric" pattern="\d{5}" value="{{ plz }}">
+    </div>
+    <div class="feld">
+      <label for="radius">Radius in km</label>
+      <input id="radius" name="radius" type="number" min="1" max="200" value="{{ radius }}" class="mono">
+    </div>
+    <div class="feld">
+      <label for="betriebsart">Betriebsart</label>
+      <select id="betriebsart" name="betriebsart">
+        <option value="">alle</option>
+        {% for art in betriebsarten %}<option value="{{ art.value }}" {{ 'selected' if betriebsart == art.value }}>{{ art.beschriftung }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="feld">
+      <label for="marke">Marke</label>
+      <input id="marke" name="marke" value="{{ marke }}">
+    </div>
+    <div class="feld">
+      <label for="belastbarkeit">Mindestbelastbarkeit</label>
+      <select id="belastbarkeit" name="belastbarkeit">
+        <option value="">beliebig</option>
+        <option value="hoch" {{ 'selected' if belastbarkeit == 'hoch' }}>nur hoch</option>
+        <option value="mittel" {{ 'selected' if belastbarkeit == 'mittel' }}>hoch und mittel</option>
+      </select>
+    </div>
+    <div class="feld">
+      <label for="hoechstalter">Höchstalter in Monaten</label>
+      <input id="hoechstalter" name="hoechstalter" type="number" min="1" max="120" value="{{ hoechstalter }}" class="mono">
+    </div>
+  </div>
+  <button class="knopf" type="submit">Auswerten</button>
+</form>
+
+{% if fehler %}<div class="meldung meldung-fehler" role="alert"><p>{{ fehler }}</p></div>{% endif %}
+
+{% if bericht %}
+<div class="karte">
+  <div class="karte-kopf">
+    <h2>{{ bericht.zentrum.plz }} {{ bericht.zentrum.ort }}, {{ bericht.filter.radius_km }} km</h2>
+    <span class="knopfreihe" style="margin-left:auto">
+      <a class="knopf knopf-zweit" href="/app/atlas/auswertung.pdf?plz={{ plz }}&amp;radius={{ radius }}&amp;betriebsart={{ betriebsart }}&amp;marke={{ marke }}&amp;belastbarkeit={{ belastbarkeit }}&amp;hoechstalter={{ hoechstalter }}">Auswertung als PDF-Anlage</a>
+      <a class="knopf knopf-zweit" href="/app/atlas/auswertung.csv?plz={{ plz }}&amp;radius={{ radius }}&amp;betriebsart={{ betriebsart }}&amp;marke={{ marke }}&amp;belastbarkeit={{ belastbarkeit }}&amp;hoechstalter={{ hoechstalter }}">CSV</a>
+      <a class="knopf knopf-zweit" href="/app/atlas/karte?plz={{ plz }}&amp;radius={{ radius }}">Karte</a>
+    </span>
+  </div>
+
+  {% for hinweis in bericht.ergebnis.hinweise %}<div class="meldung meldung-hinweis"><p>{{ hinweis }}</p></div>{% endfor %}
+
+  <div class="kennzahlen">
+    <div class="kennzahl"><span class="kennzahl-wert">{{ bericht.ergebnis.anzahl_betriebe }}</span><span class="kennzahl-label">Betriebe</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ bericht.ergebnis.anzahl_erhebungen }}</span><span class="kennzahl-label">Erhebungen</span></div>
+    <div class="kennzahl"><span class="kennzahl-wert">{{ bericht.ergebnis.anzahl_veraltet }}</span><span class="kennzahl-label">davon veraltet</span></div>
+  </div>
+</div>
+
+{% for kennzahl in bericht.ergebnis.kennzahlen %}
+  {% if kennzahl.anzahl or kennzahl.anzahl_veraltet %}
+  <div class="karte">
+    <div class="karte-kopf"><h2>{{ kennzahl.beschriftung }}</h2><span class="klein gedaempft">{{ kennzahl.anzahl }} Erhebungen{% if kennzahl.anzahl_veraltet %}, {{ kennzahl.anzahl_veraltet }} veraltet und nicht gezählt{% endif %}</span></div>
+    {% if kennzahl.belastbar %}
+      <div class="kennzahlen">
+        <div class="kennzahl"><span class="kennzahl-wert">{{ kennzahl.median|zahl }}</span><span class="kennzahl-label">Median</span></div>
+        <div class="kennzahl"><span class="kennzahl-wert">{{ kennzahl.p25|zahl }}</span><span class="kennzahl-label">25. Perzentil</span></div>
+        <div class="kennzahl"><span class="kennzahl-wert">{{ kennzahl.p75|zahl }}</span><span class="kennzahl-label">75. Perzentil</span></div>
+        <div class="kennzahl"><span class="kennzahl-wert">{{ kennzahl.minimum|zahl }}</span><span class="kennzahl-label">Minimum</span></div>
+        <div class="kennzahl"><span class="kennzahl-wert">{{ kennzahl.maximum|zahl }}</span><span class="kennzahl-label">Maximum</span></div>
+      </div>
+      <div style="margin-top:.8rem">{{ diagramme.get(kennzahl.feld, '')|safe }}</div>
+    {% else %}
+      <div class="meldung meldung-hinweis"><p>{{ kennzahl.hinweis }}</p></div>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endfor %}
+
+<div class="karte">
+  <div class="karte-kopf"><h2>Betriebe im Umkreis</h2></div>
+  {% if bericht.zeilen %}
+  <div class="tabellenrahmen">
+    <table class="protokoll">
+      <thead><tr><th>Betrieb</th><th>Ort</th><th class="zahl">km</th><th>Art</th><th>Erhebung</th><th>Nachweis</th><th class="zahl">Mechanik</th><th class="zahl">Karosserie</th><th class="zahl">Lack</th></tr></thead>
+      <tbody>
+      {% for zeile in bericht.zeilen %}
+        <tr class="{{ 'unveraendert' if zeile.veraltet }}">
+          <td>{{ zeile.name }}{% if not zeile.eigen %} <span class="marker marker-hinweis">Pool</span>{% endif %}</td>
+          <td class="klein">{{ zeile.plz }} {{ zeile.ort }}</td>
+          <td class="zahl">{{ zeile.entfernung_km }}</td>
+          <td class="klein">{{ zeile.betriebsart.beschriftung }}</td>
+          <td class="mono klein">{{ zeile.erhebungsdatum|datum }}{% if zeile.veraltet %} <span class="marker marker-warnung">veraltet</span>{% endif %}</td>
+          <td class="klein">{{ zeile.erhebungsart.beschriftung }}</td>
+          <td class="zahl">{{ zeile.saetze.satz_mechanik|geld }}</td>
+          <td class="zahl">{{ zeile.saetze.satz_karosserie|geld }}</td>
+          <td class="zahl">{{ zeile.saetze.satz_lack_lohn|geld }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <div class="leer">
+    <p>Im Umkreis von {{ bericht.filter.radius_km }} km um {{ bericht.filter.plz }} liegt keine Erhebung vor.</p>
+    <p>So sieht es heute aus. Ihr Umkreis fehlt noch — <a href="/app/atlas">die erste Erhebung dauert unter einer Minute</a>.</p>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+{% endblock %}

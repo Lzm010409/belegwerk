@@ -49,8 +49,11 @@ def _beispielwert(spalte: Column[Any], zaehler: int) -> Any:
         return dt.date(2026, 1, 1)
     if "jsonb" in name or "json" in name:
         return {}
+    if "array" in name:
+        return []
     laenge = getattr(typ, "length", None) or 40
-    return f"p{zaehler}-{uuid.uuid4().hex}"[: max(8, min(laenge, 60))]
+    # Kurze Spalten (etwa PLZ mit fuenf Zeichen) muessen exakt eingehalten werden.
+    return f"{zaehler}{uuid.uuid4().hex}"[: min(laenge, 60)]
 
 
 async def _zeile_anlegen(
