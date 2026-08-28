@@ -1,0 +1,57 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0307/6240TG
+Vorgangsnummer      0307/6240TG
+
+Fahrzeug
+Hersteller / Typ    SKODA Octavia Combi 1.5 TSI
+Fahrgestellnummer   WVWZZZZCX80RAU8JX
+Amtl. Kennzeichen   OL-ZW 3779
+Erstzulassung       11.02.2020
+Laufleistung        96.150 km
+
+Verrechnungssaetze
+Lohn Mechanik                     172,00 EUR/Std
+Lohn Karosserie                   123,00 EUR/Std
+Lohn Elektrik                     135,00 EUR/Std
+Lohn Lackierung                   146,00 EUR/Std
+Lackmaterial                        32,5 %
+UPE-Aufschlag                        2,0 %
+Verbringungskosten                150,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821021I           Kotfluegel vorn links              904,60      2,0 %        922,69
+  2 5H0941699I           Nebelscheinwerfer links            805,85      2,0 %        821,97
+  3 5H0941006I           Scheinwerfer rechts                736,40      2,0 %        751,13
+  4 5H0821022I           Kotfluegel vorn rechts             233,80      2,0 %        238,48
+  5 5H0853651I           Kuehlergrill                       843,25      2,0 %        860,12
+Summe Ersatzteile                                                   3.594,39
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      4,8  Motorhaube ersetzen                            123,00         59,04
+ 12     12,8  Achsvermessung durchfuehren                    172,00        220,16
+ 13     13,8  Scheinwerfer links ersetzen                    135,00        186,30
+Summe Arbeitslohn                                                     465,50
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      4,9  Stossfaenger vorn lackieren                146,00         94,79
+ 22     3     11,5  Kotfluegel vorn links lackieren            146,00        222,47
+ 23     1      5,2  Beilackierung Seitenwand links             146,00        100,59
+ 24     3     10,1  Motorhaube lackieren                       146,00        195,38
+Summe Lackierung                                                      613,23
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  150,00
+ 32  Entsorgung Altteile                                                  35,00
+ 33  Probefahrt                                                           84,00
+Summe Nebenkosten                                                     269,00
+
+Kalkulationsergebnis
+Summe netto                                                         4.942,12
+Mehrwertsteuer 19,0 %                                                 939,00
+Gesamtbetrag brutto                                                 5.881,12
+

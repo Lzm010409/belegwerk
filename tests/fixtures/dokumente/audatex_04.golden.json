@@ -1,0 +1,190 @@
+{
+  "quelle": "AUDATEX",
+  "quellformat": "pdf",
+  "adapter": "audatex_pdf",
+  "aktenzeichen": "0450/1996TG",
+  "fahrzeug": {
+    "hersteller": "SEAT",
+    "modell": "Leon ST 1.5 TSI",
+    "vin": "WVWZZZW4EYNWHW8F0",
+    "kennzeichen": "OL-QB 7534",
+    "erstzulassung": "2024-02-05",
+    "laufleistung_km": 92230
+  },
+  "saetze": {
+    "mechanik": "110",
+    "karosserie": "146",
+    "elektrik": "162",
+    "lack_lohn": "126",
+    "lack_material_prozent": "34.5",
+    "upe_aufschlag_prozent": "14",
+    "verbringung": "85"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1131.65",
+      "aufschlag_prozent": "14",
+      "betrag": "1290.08"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Motorhaube",
+      "teilenummer": "5H0823031E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "645",
+      "aufschlag_prozent": "14",
+      "betrag": "735.30"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Tuer vorn links",
+      "teilenummer": "5H0831055E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "751.7",
+      "aufschlag_prozent": "14",
+      "betrag": "856.94"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Nebelscheinwerfer links",
+      "teilenummer": "5H0941699E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "321.1",
+      "aufschlag_prozent": "14",
+      "betrag": "366.05"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "9.3",
+      "stundensatz": "146",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "135.78"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "10.1",
+      "stundensatz": "110",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "111.10"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "3.3",
+      "stundensatz": "110",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "36.30"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "2.4",
+      "stundensatz": "162",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "38.88"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "5.9",
+      "stundensatz": "146",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "86.14"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "14.8",
+      "stundensatz": "126",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "250.82"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "3.5",
+      "stundensatz": "126",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "59.31"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "85"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Entsorgung Altteile",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "118"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "3248.37",
+    "arbeit": "408.20",
+    "lack": "310.13",
+    "nebenkosten": "203.00",
+    "netto": "4169.70",
+    "mehrwertsteuer": "792.24",
+    "brutto": "4961.94"
+  }
+}

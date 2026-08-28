@@ -1,0 +1,55 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0864/8792TG
+Vorgangsnummer      0864/8792TG
+
+Fahrzeug
+Hersteller / Typ    AUDI A4 Avant 40 TDI
+Fahrgestellnummer   WVWZZZ3LWP4STYRWC
+Amtl. Kennzeichen   OL-IT 6322
+Erstzulassung       14.02.2019
+Laufleistung        37.090 km
+
+Verrechnungssaetze
+Lohn Mechanik                     133,00 EUR/Std
+Lohn Karosserie                   137,00 EUR/Std
+Lohn Elektrik                     123,00 EUR/Std
+Lohn Lackierung                   137,00 EUR/Std
+Lackmaterial                        42,0 %
+UPE-Aufschlag                       25,0 %
+Verbringungskosten                140,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821021L           Kotfluegel vorn links              404,80     25,0 %        506,00
+  2 5H0823031L           Motorhaube                         373,35     25,0 %        466,69
+  3 5H0941005L           Scheinwerfer links                 225,75     25,0 %        282,19
+  4 5H0805594L           Querträger vorn                    918,95     25,0 %      1.148,69
+  5 5H0857507L           Aussenspiegel links                961,05     25,0 %      1.201,31
+Summe Ersatzteile                                                   3.604,88
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     12,6  Frontklappe einstellen                         137,00        172,62
+ 12     12,0  Achsvermessung durchfuehren                    133,00        159,60
+ 13      1,0  Tuer vorn links instand setzen                 137,00         13,70
+ 14      4,7  Scheinwerfer links ersetzen                    123,00         57,81
+ 15      6,7  Airbagsteuergeraet auslesen                    123,00         82,41
+Summe Arbeitslohn                                                     486,14
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1      8,4  Beilackierung Seitenwand links             137,00        163,41
+ 22     3      6,4  Kotfluegel vorn links lackieren            137,00        124,51
+Summe Lackierung                                                      287,92
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  140,00
+Summe Nebenkosten                                                     140,00
+
+Kalkulationsergebnis
+Summe netto                                                         4.518,94
+Mehrwertsteuer 19,0 %                                                 858,60
+Gesamtbetrag brutto                                                 5.377,54
+

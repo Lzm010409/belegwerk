@@ -1,0 +1,51 @@
+Eucon Digital GmbH - Pruefbericht Kalkulation                 Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0864/8792TG
+Fahrgestellnummer   WVWZZZ3LWP4STYRWC
+Amtl. Kennzeichen   OL-IT 6322
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     133,00 EUR/Std
+Lohn Karosserie                   116,45 EUR/Std
+Lohn Elektrik                     123,00 EUR/Std
+Lohn Lackierung                   137,00 EUR/Std
+Lackmaterial                        34,0 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821021L           Kotfluegel vorn links              404,80      0,0 %        404,80
+  3 5H0941005L           Scheinwerfer links                 225,75      0,0 %        225,75
+  4 5H0805594L           Querträger vorn                    918,95      0,0 %        918,95
+  5 5H0857507L           Aussenspiegel links                961,05      0,0 %        961,05
+Summe Ersatzteile                                                   2.510,55
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      7,6  Frontklappe einstellen                         116,45         88,50
+ 12     12,0  Achsvermessung durchfuehren                    133,00        159,60
+ 13      1,0  Tuer vorn links instand setzen                 116,45         11,65
+ 14      4,7  Scheinwerfer links ersetzen                    123,00         57,81
+ 15      6,7  Airbagsteuergeraet auslesen                    123,00         82,41
+Summe Arbeitslohn                                                     399,97
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1      8,4  Beilackierung Seitenwand links             137,00        154,21
+ 22     2      5,1  Kotfluegel vorn links lackieren            137,00         93,63
+Summe Lackierung                                                      247,84
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+Summe Nebenkosten                                                       0,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   4.518,94
+Summe netto                                                         3.158,36
+Mehrwertsteuer 19,0 %                                                 600,09
+Gesamtbetrag brutto                                                 3.758,45
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0816/9933TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>TOYOTA</Hersteller>
+    <Typ>Corolla Touring Sports</Typ>
+    <FIN>WVWZZZF4KUJ7MD6G0</FIN>
+    <Kennzeichen>OL-AD 1671</Kennzeichen>
+    <Erstzulassung>2020-05-28</Erstzulassung>
+    <Laufleistung einheit="km">74370</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>160</LohnMechanik>
+    <LohnKarosserie>152</LohnKarosserie>
+    <LohnElektrik>140</LohnElektrik>
+    <LohnLack>149</LohnLack>
+    <LackmaterialProzent>41</LackmaterialProzent>
+    <UPEAufschlagProzent>17</UPEAufschlagProzent>
+    <Verbringung>120</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Motorhaube</Bezeichnung>
+      <Teilenummer>5H0823031I</Teilenummer>
+      <Einzelpreis>401.4</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>469.64</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Nebelscheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941699I</Teilenummer>
+      <Einzelpreis>983.85</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>1151.10</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Kotfluegel vorn links</Bezeichnung>
+      <Teilenummer>5H0821021I</Teilenummer>
+      <Einzelpreis>167.25</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>195.68</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Querträger vorn</Bezeichnung>
+      <Teilenummer>5H0805594I</Teilenummer>
+      <Einzelpreis>171.2</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>200.30</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Achsvermessung durchfuehren</Bezeichnung>
+      <Arbeitswerte>9.5</Arbeitswerte>
+      <Stundensatz>160</Stundensatz>
+      <Betrag>152.00</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Motorhaube ersetzen</Bezeichnung>
+      <Arbeitswerte>11.4</Arbeitswerte>
+      <Stundensatz>152</Stundensatz>
+      <Betrag>173.28</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Kotfluegel vorn links ersetzen</Bezeichnung>
+      <Arbeitswerte>6.3</Arbeitswerte>
+      <Stundensatz>152</Stundensatz>
+      <Betrag>95.76</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Kotfluegel vorn links lackieren</Bezeichnung>
+      <Arbeitswerte>11.8</Arbeitswerte>
+      <Stundensatz>149</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>247.91</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>14.8</Arbeitswerte>
+      <Stundensatz>149</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>310.93</Betrag>
+    </Position>
+    <Position art="LACK" nr="23">
+      <Bezeichnung>Motorhaube lackieren</Bezeichnung>
+      <Arbeitswerte>15.4</Arbeitswerte>
+      <Stundensatz>149</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>323.54</Betrag>
+    </Position>
+    <Position art="LACK" nr="24">
+      <Bezeichnung>Beilackierung Seitenwand links</Bezeichnung>
+      <Arbeitswerte>5</Arbeitswerte>
+      <Stundensatz>149</Stundensatz>
+      <Lackstufe>1</Lackstufe>
+      <Betrag>105.05</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>120</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Probefahrt</Bezeichnung>
+      <Betrag>29</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="33">
+      <Bezeichnung>Fahrzeugreinigung</Bezeichnung>
+      <Betrag>59</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>2016.72</Ersatzteile>
+    <Arbeit>421.04</Arbeit>
+    <Lack>987.43</Lack>
+    <Nebenkosten>208.00</Nebenkosten>
+    <Netto>3633.19</Netto>
+    <Mehrwertsteuer satz="19.0">690.31</Mehrwertsteuer>
+    <Brutto>4323.50</Brutto>
+  </Summen>
+</DAT_Kalkulation>

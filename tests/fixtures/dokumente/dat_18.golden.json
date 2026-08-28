@@ -1,0 +1,178 @@
+{
+  "quelle": "DAT",
+  "quellformat": "pdf",
+  "adapter": "dat_pdf",
+  "aktenzeichen": "0115/6920TG",
+  "fahrzeug": {
+    "hersteller": "OPEL",
+    "modell": "Astra K 1.4 Turbo",
+    "vin": "WVWZZZKCYHKM4NAEP",
+    "kennzeichen": "OL-FM 2650",
+    "erstzulassung": "2024-08-11",
+    "laufleistung_km": 50340
+  },
+  "saetze": {
+    "mechanik": "160",
+    "karosserie": "132",
+    "elektrik": "143",
+    "lack_lohn": "170",
+    "lack_material_prozent": "40",
+    "upe_aufschlag_prozent": "7",
+    "verbringung": "175"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651S",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "680.8",
+      "aufschlag_prozent": "7",
+      "betrag": "728.46"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Tuer vorn links",
+      "teilenummer": "5H0831055S",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "927.85",
+      "aufschlag_prozent": "7",
+      "betrag": "992.80"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Stossfaenger vorn",
+      "teilenummer": "5H0807221S",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1146",
+      "aufschlag_prozent": "7",
+      "betrag": "1226.22"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021S",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "334.55",
+      "aufschlag_prozent": "7",
+      "betrag": "357.97"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Airbagsteuergeraet auslesen",
+      "teilenummer": null,
+      "arbeitswerte": "4.4",
+      "stundensatz": "143",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "62.92"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "10.4",
+      "stundensatz": "132",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "137.28"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "9.8",
+      "stundensatz": "132",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "129.36"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "3.2",
+      "stundensatz": "143",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "45.76"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "17.9",
+      "stundensatz": "170",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "426.02"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "10.3",
+      "stundensatz": "170",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "245.14"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "175"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Fahrzeugreinigung",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "57"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "3305.45",
+    "arbeit": "375.32",
+    "lack": "671.16",
+    "nebenkosten": "232.00",
+    "netto": "4583.93",
+    "mehrwertsteuer": "870.95",
+    "brutto": "5454.88"
+  }
+}

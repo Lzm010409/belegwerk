@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0832/8946TG
+Vorgangsnummer      0832/8946TG
+
+Fahrzeug
+Hersteller / Typ    TOYOTA Corolla Touring Sports
+Fahrgestellnummer   WVWZZZA5YC09WG9A4
+Amtl. Kennzeichen   OL-XS 1173
+Erstzulassung       08.04.2020
+Laufleistung        210.440 km
+
+Verrechnungssaetze
+Lohn Mechanik                     153,00 EUR/Std
+Lohn Karosserie                   134,00 EUR/Std
+Lohn Elektrik                     166,00 EUR/Std
+Lohn Lackierung                   168,00 EUR/Std
+Lackmaterial                        39,0 %
+UPE-Aufschlag                       14,0 %
+Verbringungskosten                170,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941005J           Scheinwerfer links                  83,40     14,0 %         95,08
+  2 5H0821022J           Kotfluegel vorn rechts           1.164,35     14,0 %      1.327,36
+  3 5H0941699J           Nebelscheinwerfer links             57,90     14,0 %         66,01
+Summe Ersatzteile                                                   1.488,45
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     12,9  Scheinwerfer links ersetzen                    166,00        214,14
+ 12      4,4  Kotfluegel vorn links ersetzen                 134,00         58,96
+ 13     11,0  Tuer vorn links instand setzen                 134,00        147,40
+ 14      1,7  Motorhaube ersetzen                            134,00         22,78
+ 15     10,8  Airbagsteuergeraet auslesen                    166,00        179,28
+ 16      9,8  Stossfaenger vorn aus- und einbauen            153,00        149,94
+Summe Arbeitslohn                                                     772,50
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3     17,5  Tuer vorn links lackieren                  168,00        408,66
+ 22     3     10,0  Motorhaube lackieren                       168,00        233,52
+ 23     1     14,0  Beilackierung Seitenwand links             168,00        326,93
+ 24     2     13,0  Stossfaenger vorn lackieren                168,00        303,58
+Summe Lackierung                                                    1.272,69
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  170,00
+ 32  Probefahrt                                                           26,00
+ 33  Fahrzeugreinigung                                                    72,00
+Summe Nebenkosten                                                     268,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.801,64
+Mehrwertsteuer 19,0 %                                                 722,31
+Gesamtbetrag brutto                                                 4.523,95
+

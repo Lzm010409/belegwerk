@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0533/5374TG
+Vorgangsnummer      0533/5374TG
+
+Fahrzeug
+Hersteller / Typ    VOLKSWAGEN Golf VIII 2.0 TDI
+Fahrgestellnummer   WVWZZZC1U3MNB86M7
+Amtl. Kennzeichen   OL-GD 3884
+Erstzulassung       14.02.2024
+Laufleistung        127.170 km
+
+Verrechnungssaetze
+Lohn Mechanik                     132,00 EUR/Std
+Lohn Karosserie                   159,00 EUR/Std
+Lohn Elektrik                     137,00 EUR/Std
+Lohn Lackierung                   134,00 EUR/Std
+Lackmaterial                        31,5 %
+UPE-Aufschlag                       20,0 %
+Verbringungskosten                 90,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0823031H           Motorhaube                         353,85     20,0 %        424,62
+  2 5H0857507H           Aussenspiegel links                440,35     20,0 %        528,42
+  3 5H0805594H           Querträger vorn                    161,10     20,0 %        193,32
+  4 5H0941005H           Scheinwerfer links                 243,35     20,0 %        292,02
+  5 5H0941699H           Nebelscheinwerfer links          1.140,60     20,0 %      1.368,72
+  6 5H0809957H           Radhausschale vorn links         1.083,05     20,0 %      1.299,66
+  7 5H0807221H           Stossfaenger vorn                  140,05     20,0 %        168,06
+Summe Ersatzteile                                                   4.274,82
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      9,0  Airbagsteuergeraet auslesen                    137,00        123,30
+ 12      8,7  Stossfaenger vorn aus- und einbauen            132,00        114,84
+ 13      2,8  Tuer vorn links instand setzen                 159,00         44,52
+ 14      6,7  Kotfluegel vorn links ersetzen                 159,00        106,53
+ 15      0,7  Motorhaube ersetzen                            159,00         11,13
+Summe Arbeitslohn                                                     400,32
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1      5,1  Beilackierung Seitenwand links             134,00         89,87
+ 22     3     13,6  Tuer vorn links lackieren                  134,00        239,65
+Summe Lackierung                                                      329,52
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                   90,00
+ 32  Fahrzeugreinigung                                                   122,00
+Summe Nebenkosten                                                     212,00
+
+Kalkulationsergebnis
+Summe netto                                                         5.216,66
+Mehrwertsteuer 19,0 %                                                 991,17
+Gesamtbetrag brutto                                                 6.207,83
+

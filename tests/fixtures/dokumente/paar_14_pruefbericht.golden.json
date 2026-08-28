@@ -1,0 +1,202 @@
+{
+  "quelle": "PRUEFBERICHT",
+  "quellformat": "txt",
+  "adapter": "pruefbericht_generisch",
+  "aktenzeichen": "0863/4747TG",
+  "fahrzeug": {
+    "hersteller": "BMW",
+    "modell": "320d Touring",
+    "vin": "WVWZZZ05HS2EEDJH1",
+    "kennzeichen": "OL-PZ 3112",
+    "erstzulassung": "2017-09-19",
+    "laufleistung_km": 152140
+  },
+  "saetze": {
+    "mechanik": "139",
+    "karosserie": "114.75",
+    "elektrik": "158",
+    "lack_lohn": "162",
+    "lack_material_prozent": "34.50",
+    "upe_aufschlag_prozent": "0.0",
+    "verbringung": "0.00"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Tuer vorn links",
+      "teilenummer": "5H0831055O",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "499.95",
+      "aufschlag_prozent": "0.0",
+      "betrag": "499.95"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn rechts",
+      "teilenummer": "5H0821022O",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "443.85",
+      "aufschlag_prozent": "0.0",
+      "betrag": "443.85"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer links",
+      "teilenummer": "5H0941005O",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "719.6",
+      "aufschlag_prozent": "0.0",
+      "betrag": "719.60"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Radhausschale vorn links",
+      "teilenummer": "5H0809957O",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "803.45",
+      "aufschlag_prozent": "0.0",
+      "betrag": "803.45"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "2.1",
+      "stundensatz": "158",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "33.18"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "11.6",
+      "stundensatz": "114.75",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "133.11"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "6.5",
+      "stundensatz": "114.75",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "74.59"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Airbagsteuergeraet auslesen",
+      "teilenummer": null,
+      "arbeitswerte": "10.5",
+      "stundensatz": "158",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "165.90"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Kotfluegel vorn links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "3.0",
+      "stundensatz": "114.75",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "34.43"
+    },
+    {
+      "laufnummer": 16,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "1.1",
+      "stundensatz": "139",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "15.29"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "12.9",
+      "stundensatz": "162",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "281.08"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "13.4",
+      "stundensatz": "162",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "291.97"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Entsorgung Altteile",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "51"
+    },
+    {
+      "laufnummer": 33,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Fahrzeugreinigung",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "115"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "2466.85",
+    "arbeit": "456.50",
+    "lack": "573.05",
+    "nebenkosten": "166.00",
+    "netto": "3662.40",
+    "mehrwertsteuer": "695.86",
+    "brutto": "4358.26"
+  }
+}

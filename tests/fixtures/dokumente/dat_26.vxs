@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0296/7348TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>VOLKSWAGEN</Hersteller>
+    <Typ>Golf VIII 2.0 TDI</Typ>
+    <FIN>WVWZZZM8MF7ZWU2F0</FIN>
+    <Kennzeichen>OL-SR 6980</Kennzeichen>
+    <Erstzulassung>2024-06-04</Erstzulassung>
+    <Laufleistung einheit="km">15840</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>170</LohnMechanik>
+    <LohnKarosserie>154</LohnKarosserie>
+    <LohnElektrik>164</LohnElektrik>
+    <LohnLack>164</LohnLack>
+    <LackmaterialProzent>38</LackmaterialProzent>
+    <UPEAufschlagProzent>7</UPEAufschlagProzent>
+    <Verbringung>150</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Aussenspiegel links</Bezeichnung>
+      <Teilenummer>5H0857507G</Teilenummer>
+      <Einzelpreis>783.55</Einzelpreis>
+      <AufschlagProzent>7</AufschlagProzent>
+      <Betrag>838.40</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Kuehlergrill</Bezeichnung>
+      <Teilenummer>5H0853651G</Teilenummer>
+      <Einzelpreis>1072.25</Einzelpreis>
+      <AufschlagProzent>7</AufschlagProzent>
+      <Betrag>1147.31</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006G</Teilenummer>
+      <Einzelpreis>621.45</Einzelpreis>
+      <AufschlagProzent>7</AufschlagProzent>
+      <Betrag>664.95</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Radhausschale vorn links</Bezeichnung>
+      <Teilenummer>5H0809957G</Teilenummer>
+      <Einzelpreis>527.5</Einzelpreis>
+      <AufschlagProzent>7</AufschlagProzent>
+      <Betrag>564.43</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="5">
+      <Bezeichnung>Kotfluegel vorn links</Bezeichnung>
+      <Teilenummer>5H0821021G</Teilenummer>
+      <Einzelpreis>1050.05</Einzelpreis>
+      <AufschlagProzent>7</AufschlagProzent>
+      <Betrag>1123.55</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="6">
+      <Bezeichnung>Motorhaube</Bezeichnung>
+      <Teilenummer>5H0823031G</Teilenummer>
+      <Einzelpreis>441.5</Einzelpreis>
+      <AufschlagProzent>7</AufschlagProzent>
+      <Betrag>472.41</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>9.2</Arbeitswerte>
+      <Stundensatz>154</Stundensatz>
+      <Betrag>141.68</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Motorhaube ersetzen</Bezeichnung>
+      <Arbeitswerte>4.9</Arbeitswerte>
+      <Stundensatz>154</Stundensatz>
+      <Betrag>75.46</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Airbagsteuergeraet auslesen</Bezeichnung>
+      <Arbeitswerte>12.3</Arbeitswerte>
+      <Stundensatz>164</Stundensatz>
+      <Betrag>201.72</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="14">
+      <Bezeichnung>Tuer vorn links instand setzen</Bezeichnung>
+      <Arbeitswerte>4.3</Arbeitswerte>
+      <Stundensatz>154</Stundensatz>
+      <Betrag>66.22</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="15">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>4.6</Arbeitswerte>
+      <Stundensatz>164</Stundensatz>
+      <Betrag>75.44</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Tuer vorn links lackieren</Bezeichnung>
+      <Arbeitswerte>6.9</Arbeitswerte>
+      <Stundensatz>164</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>156.16</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>12</Arbeitswerte>
+      <Stundensatz>164</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>271.58</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>150</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Fahrzeugreinigung</Bezeichnung>
+      <Betrag>67</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="33">
+      <Bezeichnung>Entsorgung Altteile</Bezeichnung>
+      <Betrag>60</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>4811.05</Ersatzteile>
+    <Arbeit>560.52</Arbeit>
+    <Lack>427.74</Lack>
+    <Nebenkosten>277.00</Nebenkosten>
+    <Netto>6076.31</Netto>
+    <Mehrwertsteuer satz="19.0">1154.50</Mehrwertsteuer>
+    <Brutto>7230.81</Brutto>
+  </Summen>
+</DAT_Kalkulation>

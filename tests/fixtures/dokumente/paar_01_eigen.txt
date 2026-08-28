@@ -1,0 +1,56 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0719/2644TG
+Vorgangsnummer      0719/2644TG
+
+Fahrzeug
+Hersteller / Typ    SKODA Octavia Combi 1.5 TSI
+Fahrgestellnummer   WVWZZZFV30J2UKWM0
+Amtl. Kennzeichen   OL-BT 9086
+Erstzulassung       29.08.2017
+Laufleistung        61.720 km
+
+Verrechnungssaetze
+Lohn Mechanik                     166,00 EUR/Std
+Lohn Karosserie                   138,00 EUR/Std
+Lohn Elektrik                     160,00 EUR/Std
+Lohn Lackierung                   171,00 EUR/Std
+Lackmaterial                        37,5 %
+UPE-Aufschlag                        9,0 %
+Verbringungskosten                115,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0857507B           Aussenspiegel links                190,60      9,0 %        207,75
+  2 5H0941005B           Scheinwerfer links               1.025,50      9,0 %      1.117,80
+  3 5H0831055B           Tuer vorn links                  1.109,55      9,0 %      1.209,41
+  4 5H0941006B           Scheinwerfer rechts                 92,35      9,0 %        100,66
+  5 5H0807221B           Stossfaenger vorn                1.169,05      9,0 %      1.274,26
+Summe Ersatzteile                                                   3.909,88
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      7,1  Tuer vorn links instand setzen                 138,00         97,98
+ 12     11,0  Scheinwerfer links ersetzen                    160,00        176,00
+ 13     12,0  Kotfluegel vorn links ersetzen                 138,00        165,60
+Summe Arbeitslohn                                                     439,58
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      7,0  Motorhaube lackieren                       171,00        164,59
+ 22     2     10,5  Stossfaenger vorn lackieren                171,00        246,88
+ 23     3      8,6  Kotfluegel vorn links lackieren            171,00        202,21
+Summe Lackierung                                                      613,68
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  115,00
+ 32  Fahrzeugreinigung                                                    72,00
+ 33  Probefahrt                                                           79,00
+Summe Nebenkosten                                                     266,00
+
+Kalkulationsergebnis
+Summe netto                                                         5.229,14
+Mehrwertsteuer 19,0 %                                                 993,54
+Gesamtbetrag brutto                                                 6.222,68
+

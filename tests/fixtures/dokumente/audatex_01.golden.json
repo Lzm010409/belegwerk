@@ -1,0 +1,178 @@
+{
+  "quelle": "AUDATEX",
+  "quellformat": "pdf",
+  "adapter": "audatex_pdf",
+  "aktenzeichen": "0786/8778TG",
+  "fahrzeug": {
+    "hersteller": "RENAULT",
+    "modell": "Megane Grandtour",
+    "vin": "WVWZZZJSL3PJV5XAB",
+    "kennzeichen": "OL-NK 2690",
+    "erstzulassung": "2017-03-31",
+    "laufleistung_km": 213030
+  },
+  "saetze": {
+    "mechanik": "112",
+    "karosserie": "166",
+    "elektrik": "121",
+    "lack_lohn": "125",
+    "lack_material_prozent": "31",
+    "upe_aufschlag_prozent": "18",
+    "verbringung": "175"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Querträger vorn",
+      "teilenummer": "5H0805594B",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "293.55",
+      "aufschlag_prozent": "18",
+      "betrag": "346.39"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Motorhaube",
+      "teilenummer": "5H0823031B",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "149.45",
+      "aufschlag_prozent": "18",
+      "betrag": "176.35"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer links",
+      "teilenummer": "5H0941005B",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1096.4",
+      "aufschlag_prozent": "18",
+      "betrag": "1293.75"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507B",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "753.7",
+      "aufschlag_prozent": "18",
+      "betrag": "889.37"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "12.8",
+      "stundensatz": "112",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "143.36"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Kotfluegel vorn links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "9.5",
+      "stundensatz": "166",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "157.70"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "8.2",
+      "stundensatz": "121",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "99.22"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "11.7",
+      "stundensatz": "125",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "191.59"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "8.5",
+      "stundensatz": "125",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "139.19"
+    },
+    {
+      "laufnummer": 23,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "3",
+      "stundensatz": "125",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "49.13"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "175"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Fahrzeugreinigung",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "56"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "2705.86",
+    "arbeit": "400.28",
+    "lack": "379.91",
+    "nebenkosten": "231.00",
+    "netto": "3717.05",
+    "mehrwertsteuer": "706.24",
+    "brutto": "4423.29"
+  }
+}

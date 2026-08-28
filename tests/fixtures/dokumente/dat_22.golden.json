@@ -1,0 +1,202 @@
+{
+  "quelle": "DAT",
+  "quellformat": "vxs",
+  "adapter": "dat_vxs",
+  "aktenzeichen": "0645/8392TG",
+  "fahrzeug": {
+    "hersteller": "MERCEDES-BENZ",
+    "modell": "C 220 d T-Modell",
+    "vin": "WVWZZZHFGS9JP4HFZ",
+    "kennzeichen": "OL-SU 7113",
+    "erstzulassung": "2017-06-27",
+    "laufleistung_km": 216050
+  },
+  "saetze": {
+    "mechanik": "162",
+    "karosserie": "166",
+    "elektrik": "126",
+    "lack_lohn": "172",
+    "lack_material_prozent": "42.5",
+    "upe_aufschlag_prozent": "17",
+    "verbringung": "165"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Nebelscheinwerfer links",
+      "teilenummer": "5H0941699C",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "753.6",
+      "aufschlag_prozent": "17",
+      "betrag": "881.71"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006C",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "134.75",
+      "aufschlag_prozent": "17",
+      "betrag": "157.66"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Stossfaenger vorn",
+      "teilenummer": "5H0807221C",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "494.15",
+      "aufschlag_prozent": "17",
+      "betrag": "578.16"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "4.3",
+      "stundensatz": "166",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "71.38"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Airbagsteuergeraet auslesen",
+      "teilenummer": null,
+      "arbeitswerte": "10.6",
+      "stundensatz": "126",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "133.56"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "12.1",
+      "stundensatz": "162",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "196.02"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "2",
+      "stundensatz": "126",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "25.20"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "4.4",
+      "stundensatz": "162",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "71.28"
+    },
+    {
+      "laufnummer": 16,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "4.7",
+      "stundensatz": "166",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "78.02"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "16.9",
+      "stundensatz": "172",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "414.22"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "5.2",
+      "stundensatz": "172",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "127.45"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "165"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Fahrzeugreinigung",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "69"
+    },
+    {
+      "laufnummer": 33,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Entsorgung Altteile",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "86"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "1617.53",
+    "arbeit": "575.46",
+    "lack": "541.67",
+    "nebenkosten": "320.00",
+    "netto": "3054.66",
+    "mehrwertsteuer": "580.39",
+    "brutto": "3635.05"
+  }
+}

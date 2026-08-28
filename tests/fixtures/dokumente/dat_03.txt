@@ -1,0 +1,54 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0346/7334TG
+Vorgangsnummer      0346/7334TG
+
+Fahrzeug
+Hersteller / Typ    TOYOTA Corolla Touring Sports
+Fahrgestellnummer   WVWZZZDU2JT14NNT6
+Amtl. Kennzeichen   OL-YG 2179
+Erstzulassung       20.05.2023
+Laufleistung        198.820 km
+
+Verrechnungssaetze
+Lohn Mechanik                     156,00 EUR/Std
+Lohn Karosserie                   148,00 EUR/Std
+Lohn Elektrik                     174,00 EUR/Std
+Lohn Lackierung                   148,00 EUR/Std
+Lackmaterial                        44,5 %
+UPE-Aufschlag                       12,0 %
+Verbringungskosten                 60,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821021D           Kotfluegel vorn links              528,45     12,0 %        591,86
+  2 5H0857507D           Aussenspiegel links                599,80     12,0 %        671,78
+  3 5H0853651D           Kuehlergrill                       997,50     12,0 %      1.117,20
+  4 5H0809957D           Radhausschale vorn links           873,85     12,0 %        978,71
+  5 5H0941699D           Nebelscheinwerfer links          1.143,30     12,0 %      1.280,50
+Summe Ersatzteile                                                   4.640,05
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     14,4  Scheinwerfer links ersetzen                    174,00        250,56
+ 12      2,0  Achsvermessung durchfuehren                    156,00         31,20
+ 13      8,6  Frontklappe einstellen                         148,00        127,28
+Summe Arbeitslohn                                                     409,04
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1      5,5  Beilackierung Seitenwand links             148,00        117,62
+ 22     3     12,0  Motorhaube lackieren                       148,00        256,63
+Summe Lackierung                                                      374,25
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                   60,00
+ 32  Probefahrt                                                           94,00
+Summe Nebenkosten                                                     154,00
+
+Kalkulationsergebnis
+Summe netto                                                         5.577,34
+Mehrwertsteuer 19,0 %                                               1.059,69
+Gesamtbetrag brutto                                                 6.637,03
+

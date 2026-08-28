@@ -1,0 +1,55 @@
+Eucon Digital GmbH - Pruefbericht Kalkulation                 Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0832/8946TG
+Fahrgestellnummer   WVWZZZA5YC09WG9A4
+Amtl. Kennzeichen   OL-XS 1173
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     153,00 EUR/Std
+Lohn Karosserie                   113,90 EUR/Std
+Lohn Elektrik                     166,00 EUR/Std
+Lohn Lackierung                   168,00 EUR/Std
+Lackmaterial                        31,0 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941005J           Scheinwerfer links                  83,40      0,0 %         83,40
+  2 5H0821022J           Kotfluegel vorn rechts           1.164,35      0,0 %      1.164,35
+  3 5H0941699J           Nebelscheinwerfer links             57,90      0,0 %         57,90
+Summe Ersatzteile                                                   1.305,65
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     12,9  Scheinwerfer links ersetzen                    166,00        214,14
+ 12      4,4  Kotfluegel vorn links ersetzen                 113,90         50,12
+ 13     11,0  Tuer vorn links instand setzen                 113,90        125,29
+ 14      1,7  Motorhaube ersetzen                            113,90         19,36
+ 15     10,8  Airbagsteuergeraet auslesen                    166,00        179,28
+ 16      5,9  Stossfaenger vorn aus- und einbauen            153,00         90,27
+Summe Arbeitslohn                                                     678,46
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3     17,5  Tuer vorn links lackieren                  168,00        385,14
+ 22     3     10,0  Motorhaube lackieren                       168,00        220,08
+ 23     1     14,0  Beilackierung Seitenwand links             168,00        308,11
+ 24     1     10,4  Stossfaenger vorn lackieren                168,00        228,88
+Summe Lackierung                                                    1.142,21
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 32  Probefahrt                                                           26,00
+ 33  Fahrzeugreinigung                                                    72,00
+Summe Nebenkosten                                                      98,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   3.801,64
+Summe netto                                                         3.224,32
+Mehrwertsteuer 19,0 %                                                 612,62
+Gesamtbetrag brutto                                                 3.836,94
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

@@ -1,0 +1,56 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0593/9749TG
+Vorgangsnummer      0593/9749TG
+
+Fahrzeug
+Hersteller / Typ    VOLKSWAGEN Golf VIII 2.0 TDI
+Fahrgestellnummer   WVWZZZ79GWWUF7GRM
+Amtl. Kennzeichen   OL-FL 4998
+Erstzulassung       28.10.2019
+Laufleistung        19.270 km
+
+Verrechnungssaetze
+Lohn Mechanik                     160,00 EUR/Std
+Lohn Karosserie                   162,00 EUR/Std
+Lohn Elektrik                     178,00 EUR/Std
+Lohn Lackierung                   133,00 EUR/Std
+Lackmaterial                        32,0 %
+UPE-Aufschlag                        6,0 %
+Verbringungskosten                175,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941699F           Nebelscheinwerfer links            738,20      6,0 %        782,49
+  2 5H0853651F           Kuehlergrill                       128,30      6,0 %        136,00
+  3 5H0941006F           Scheinwerfer rechts              1.197,15      6,0 %      1.268,98
+Summe Ersatzteile                                                   2.187,47
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     11,1  Scheinwerfer links ersetzen                    178,00        197,58
+ 12     11,8  Airbagsteuergeraet auslesen                    178,00        210,04
+ 13     12,1  Frontklappe einstellen                         162,00        196,02
+ 14      5,4  Achsvermessung durchfuehren                    160,00         86,40
+ 15     10,8  Motorhaube ersetzen                            162,00        174,96
+ 16      4,8  Stossfaenger vorn aus- und einbauen            160,00         76,80
+Summe Arbeitslohn                                                     941,80
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      5,2  Stossfaenger vorn lackieren                133,00         91,29
+ 22     1      4,0  Beilackierung Seitenwand links             133,00         70,22
+ 23     3      9,2  Tuer vorn links lackieren                  133,00        161,52
+Summe Lackierung                                                      323,03
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  175,00
+ 32  Entsorgung Altteile                                                  81,00
+Summe Nebenkosten                                                     256,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.708,30
+Mehrwertsteuer 19,0 %                                                 704,58
+Gesamtbetrag brutto                                                 4.412,88
+

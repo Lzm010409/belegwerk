@@ -1,0 +1,166 @@
+{
+  "quelle": "PRUEFBERICHT",
+  "quellformat": "txt",
+  "adapter": "pruefbericht_generisch",
+  "aktenzeichen": "0864/8792TG",
+  "fahrzeug": {
+    "hersteller": "AUDI",
+    "modell": "A4 Avant 40 TDI",
+    "vin": "WVWZZZ3LWP4STYRWC",
+    "kennzeichen": "OL-IT 6322",
+    "erstzulassung": "2019-02-14",
+    "laufleistung_km": 37090
+  },
+  "saetze": {
+    "mechanik": "133",
+    "karosserie": "116.45",
+    "elektrik": "123",
+    "lack_lohn": "137",
+    "lack_material_prozent": "34.00",
+    "upe_aufschlag_prozent": "0.0",
+    "verbringung": "0.00"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "404.8",
+      "aufschlag_prozent": "0.0",
+      "betrag": "404.80"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer links",
+      "teilenummer": "5H0941005L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "225.75",
+      "aufschlag_prozent": "0.0",
+      "betrag": "225.75"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Querträger vorn",
+      "teilenummer": "5H0805594L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "918.95",
+      "aufschlag_prozent": "0.0",
+      "betrag": "918.95"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "961.05",
+      "aufschlag_prozent": "0.0",
+      "betrag": "961.05"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "7.6",
+      "stundensatz": "116.45",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "88.50"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "12",
+      "stundensatz": "133",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "159.60"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "1",
+      "stundensatz": "116.45",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "11.65"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "4.7",
+      "stundensatz": "123",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "57.81"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Airbagsteuergeraet auslesen",
+      "teilenummer": null,
+      "arbeitswerte": "6.7",
+      "stundensatz": "123",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "82.41"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "8.4",
+      "stundensatz": "137",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "154.21"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "5.1",
+      "stundensatz": "137",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "93.63"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "2510.55",
+    "arbeit": "399.97",
+    "lack": "247.84",
+    "nebenkosten": "0.00",
+    "netto": "3158.36",
+    "mehrwertsteuer": "600.09",
+    "brutto": "3758.45"
+  }
+}

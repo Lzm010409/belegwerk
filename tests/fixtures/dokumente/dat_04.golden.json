@@ -1,0 +1,178 @@
+{
+  "quelle": "DAT",
+  "quellformat": "txt",
+  "adapter": "dat_txt",
+  "aktenzeichen": "0353/1261TG",
+  "fahrzeug": {
+    "hersteller": "OPEL",
+    "modell": "Astra K 1.4 Turbo",
+    "vin": "WVWZZZ1V5DM84825L",
+    "kennzeichen": "OL-HO 2160",
+    "erstzulassung": "2022-12-23",
+    "laufleistung_km": 162780
+  },
+  "saetze": {
+    "mechanik": "123",
+    "karosserie": "144",
+    "elektrik": "141",
+    "lack_lohn": "141",
+    "lack_material_prozent": "31.5",
+    "upe_aufschlag_prozent": "22",
+    "verbringung": "170"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Querträger vorn",
+      "teilenummer": "5H0805594E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "431.55",
+      "aufschlag_prozent": "22",
+      "betrag": "526.49"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "55.2",
+      "aufschlag_prozent": "22",
+      "betrag": "67.34"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "279.6",
+      "aufschlag_prozent": "22",
+      "betrag": "341.11"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651E",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "88.7",
+      "aufschlag_prozent": "22",
+      "betrag": "108.21"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "11.5",
+      "stundensatz": "123",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "141.45"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "8.2",
+      "stundensatz": "144",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "118.08"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "1.2",
+      "stundensatz": "144",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "17.28"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "3.5",
+      "stundensatz": "144",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "50.40"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "3.2",
+      "stundensatz": "141",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "59.33"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "9.5",
+      "stundensatz": "141",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "176.14"
+    },
+    {
+      "laufnummer": 23,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "16.1",
+      "stundensatz": "141",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "298.52"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "170"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "1043.15",
+    "arbeit": "327.21",
+    "lack": "533.99",
+    "nebenkosten": "170.00",
+    "netto": "2074.35",
+    "mehrwertsteuer": "394.13",
+    "brutto": "2468.48"
+  }
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0118/3541TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>SEAT</Hersteller>
+    <Typ>Leon ST 1.5 TSI</Typ>
+    <FIN>WVWZZZ5GD9VUXPL88</FIN>
+    <Kennzeichen>OL-AO 7091</Kennzeichen>
+    <Erstzulassung>2018-11-26</Erstzulassung>
+    <Laufleistung einheit="km">38060</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>132</LohnMechanik>
+    <LohnKarosserie>151</LohnKarosserie>
+    <LohnElektrik>147</LohnElektrik>
+    <LohnLack>154</LohnLack>
+    <LackmaterialProzent>43</LackmaterialProzent>
+    <UPEAufschlagProzent>19</UPEAufschlagProzent>
+    <Verbringung>125</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006B</Teilenummer>
+      <Einzelpreis>739.05</Einzelpreis>
+      <AufschlagProzent>19</AufschlagProzent>
+      <Betrag>879.47</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Kotfluegel vorn links</Bezeichnung>
+      <Teilenummer>5H0821021B</Teilenummer>
+      <Einzelpreis>1133.95</Einzelpreis>
+      <AufschlagProzent>19</AufschlagProzent>
+      <Betrag>1349.40</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Radhausschale vorn links</Bezeichnung>
+      <Teilenummer>5H0809957B</Teilenummer>
+      <Einzelpreis>1005.65</Einzelpreis>
+      <AufschlagProzent>19</AufschlagProzent>
+      <Betrag>1196.72</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Aussenspiegel links</Bezeichnung>
+      <Teilenummer>5H0857507B</Teilenummer>
+      <Einzelpreis>78.95</Einzelpreis>
+      <AufschlagProzent>19</AufschlagProzent>
+      <Betrag>93.95</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="5">
+      <Bezeichnung>Scheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941005B</Teilenummer>
+      <Einzelpreis>571.35</Einzelpreis>
+      <AufschlagProzent>19</AufschlagProzent>
+      <Betrag>679.91</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="6">
+      <Bezeichnung>Querträger vorn</Bezeichnung>
+      <Teilenummer>5H0805594B</Teilenummer>
+      <Einzelpreis>1104.3</Einzelpreis>
+      <AufschlagProzent>19</AufschlagProzent>
+      <Betrag>1314.12</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>9.3</Arbeitswerte>
+      <Stundensatz>147</Stundensatz>
+      <Betrag>136.71</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>13</Arbeitswerte>
+      <Stundensatz>151</Stundensatz>
+      <Betrag>196.30</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Tuer vorn links instand setzen</Bezeichnung>
+      <Arbeitswerte>2.9</Arbeitswerte>
+      <Stundensatz>151</Stundensatz>
+      <Betrag>43.79</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>11.9</Arbeitswerte>
+      <Stundensatz>154</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>262.06</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Beilackierung Seitenwand links</Bezeichnung>
+      <Arbeitswerte>13.6</Arbeitswerte>
+      <Stundensatz>154</Stundensatz>
+      <Lackstufe>1</Lackstufe>
+      <Betrag>299.50</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>125</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Fahrzeugreinigung</Bezeichnung>
+      <Betrag>28</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>5513.57</Ersatzteile>
+    <Arbeit>376.80</Arbeit>
+    <Lack>561.56</Lack>
+    <Nebenkosten>153.00</Nebenkosten>
+    <Netto>6604.93</Netto>
+    <Mehrwertsteuer satz="19.0">1254.94</Mehrwertsteuer>
+    <Brutto>7859.87</Brutto>
+  </Summen>
+</DAT_Kalkulation>

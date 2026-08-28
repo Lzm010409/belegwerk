@@ -1,0 +1,53 @@
+ControlExpert GmbH - Rechnungspruefung                        Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0320/8201TG
+Fahrgestellnummer   WVWZZZSBXWJDHHD55
+Amtl. Kennzeichen   OL-KD 2356
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     169,00 EUR/Std
+Lohn Karosserie                   128,35 EUR/Std
+Lohn Elektrik                     149,00 EUR/Std
+Lohn Lackierung                   156,00 EUR/Std
+Lackmaterial                        23,5 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941006D           Scheinwerfer rechts                131,45      0,0 %        131,45
+  2 5H0941699D           Nebelscheinwerfer links            450,15      0,0 %        450,15
+  3 5H0823031D           Motorhaube                       1.165,90      0,0 %      1.165,90
+Summe Ersatzteile                                                   1.747,50
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      2,0  Motorhaube ersetzen                            128,35         25,67
+ 12      1,6  Tuer vorn links instand setzen                 128,35         20,54
+ 13      0,5  Achsvermessung durchfuehren                    169,00          8,45
+ 14      5,8  Kotfluegel vorn links ersetzen                 128,35         74,44
+Summe Arbeitslohn                                                     129,10
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      3,1  Tuer vorn links lackieren                  156,00         59,72
+ 22     3      5,1  Motorhaube lackieren                       156,00         98,26
+ 23     1      5,9  Stossfaenger vorn lackieren                156,00        113,67
+ 24     3     14,3  Kotfluegel vorn links lackieren            156,00        275,50
+Summe Lackierung                                                      547,15
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 32  Entsorgung Altteile                                                  42,00
+ 33  Fahrzeugreinigung                                                    41,00
+Summe Nebenkosten                                                      83,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   3.246,04
+Summe netto                                                         2.506,75
+Mehrwertsteuer 19,0 %                                                 476,28
+Gesamtbetrag brutto                                                 2.983,03
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

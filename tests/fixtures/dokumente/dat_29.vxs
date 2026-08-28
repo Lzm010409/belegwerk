@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0366/6867TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>RENAULT</Hersteller>
+    <Typ>Megane Grandtour</Typ>
+    <FIN>WVWZZZECHN0EADBDJ</FIN>
+    <Kennzeichen>OL-UJ 3564</Kennzeichen>
+    <Erstzulassung>2019-02-28</Erstzulassung>
+    <Laufleistung einheit="km">210710</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>149</LohnMechanik>
+    <LohnKarosserie>140</LohnKarosserie>
+    <LohnElektrik>179</LohnElektrik>
+    <LohnLack>170</LohnLack>
+    <LackmaterialProzent>43.5</LackmaterialProzent>
+    <UPEAufschlagProzent>8</UPEAufschlagProzent>
+    <Verbringung>120</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Kotfluegel vorn links</Bezeichnung>
+      <Teilenummer>5H0821021J</Teilenummer>
+      <Einzelpreis>1136.3</Einzelpreis>
+      <AufschlagProzent>8</AufschlagProzent>
+      <Betrag>1227.20</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Scheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941005J</Teilenummer>
+      <Einzelpreis>927.15</Einzelpreis>
+      <AufschlagProzent>8</AufschlagProzent>
+      <Betrag>1001.32</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006J</Teilenummer>
+      <Einzelpreis>833.45</Einzelpreis>
+      <AufschlagProzent>8</AufschlagProzent>
+      <Betrag>900.13</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Radhausschale vorn links</Bezeichnung>
+      <Teilenummer>5H0809957J</Teilenummer>
+      <Einzelpreis>576.45</Einzelpreis>
+      <AufschlagProzent>8</AufschlagProzent>
+      <Betrag>622.57</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="5">
+      <Bezeichnung>Tuer vorn links</Bezeichnung>
+      <Teilenummer>5H0831055J</Teilenummer>
+      <Einzelpreis>874.75</Einzelpreis>
+      <AufschlagProzent>8</AufschlagProzent>
+      <Betrag>944.73</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Kotfluegel vorn links ersetzen</Bezeichnung>
+      <Arbeitswerte>0.6</Arbeitswerte>
+      <Stundensatz>140</Stundensatz>
+      <Betrag>8.40</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>9.1</Arbeitswerte>
+      <Stundensatz>179</Stundensatz>
+      <Betrag>162.89</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Tuer vorn links instand setzen</Bezeichnung>
+      <Arbeitswerte>4</Arbeitswerte>
+      <Stundensatz>140</Stundensatz>
+      <Betrag>56.00</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="14">
+      <Bezeichnung>Motorhaube ersetzen</Bezeichnung>
+      <Arbeitswerte>1.2</Arbeitswerte>
+      <Stundensatz>140</Stundensatz>
+      <Betrag>16.80</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="15">
+      <Bezeichnung>Stossfaenger vorn aus- und einbauen</Bezeichnung>
+      <Arbeitswerte>4.3</Arbeitswerte>
+      <Stundensatz>149</Stundensatz>
+      <Betrag>64.07</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="16">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>14.1</Arbeitswerte>
+      <Stundensatz>140</Stundensatz>
+      <Betrag>197.40</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Beilackierung Seitenwand links</Bezeichnung>
+      <Arbeitswerte>7.3</Arbeitswerte>
+      <Stundensatz>170</Stundensatz>
+      <Lackstufe>1</Lackstufe>
+      <Betrag>178.08</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>5.4</Arbeitswerte>
+      <Stundensatz>170</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>131.73</Betrag>
+    </Position>
+    <Position art="LACK" nr="23">
+      <Bezeichnung>Motorhaube lackieren</Bezeichnung>
+      <Arbeitswerte>16.4</Arbeitswerte>
+      <Stundensatz>170</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>400.08</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>120</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Probefahrt</Bezeichnung>
+      <Betrag>149</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>4695.95</Ersatzteile>
+    <Arbeit>505.56</Arbeit>
+    <Lack>709.89</Lack>
+    <Nebenkosten>269.00</Nebenkosten>
+    <Netto>6180.40</Netto>
+    <Mehrwertsteuer satz="19.0">1174.28</Mehrwertsteuer>
+    <Brutto>7354.68</Brutto>
+  </Summen>
+</DAT_Kalkulation>

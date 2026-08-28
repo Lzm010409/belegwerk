@@ -1,0 +1,54 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0353/1261TG
+Vorgangsnummer      0353/1261TG
+
+Fahrzeug
+Hersteller / Typ    OPEL Astra K 1.4 Turbo
+Fahrgestellnummer   WVWZZZ1V5DM84825L
+Amtl. Kennzeichen   OL-HO 2160
+Erstzulassung       23.12.2022
+Laufleistung        162.780 km
+
+Verrechnungssaetze
+Lohn Mechanik                     123,00 EUR/Std
+Lohn Karosserie                   144,00 EUR/Std
+Lohn Elektrik                     141,00 EUR/Std
+Lohn Lackierung                   141,00 EUR/Std
+Lackmaterial                        31,5 %
+UPE-Aufschlag                       22,0 %
+Verbringungskosten                170,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0805594E           Querträger vorn                    431,55     22,0 %        526,49
+  2 5H0941006E           Scheinwerfer rechts                 55,20     22,0 %         67,34
+  3 5H0821021E           Kotfluegel vorn links              279,60     22,0 %        341,11
+  4 5H0853651E           Kuehlergrill                        88,70     22,0 %        108,21
+Summe Ersatzteile                                                   1.043,15
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     11,5  Stossfaenger vorn aus- und einbauen            123,00        141,45
+ 12      8,2  Motorhaube ersetzen                            144,00        118,08
+ 13      1,2  Frontklappe einstellen                         144,00         17,28
+ 14      3,5  Tuer vorn links instand setzen                 144,00         50,40
+Summe Arbeitslohn                                                     327,21
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      3,2  Motorhaube lackieren                       141,00         59,33
+ 22     3      9,5  Tuer vorn links lackieren                  141,00        176,14
+ 23     2     16,1  Stossfaenger vorn lackieren                141,00        298,52
+Summe Lackierung                                                      533,99
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  170,00
+Summe Nebenkosten                                                     170,00
+
+Kalkulationsergebnis
+Summe netto                                                         2.074,35
+Mehrwertsteuer 19,0 %                                                 394,13
+Gesamtbetrag brutto                                                 2.468,48
+

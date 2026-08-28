@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0712/7828TG
+Vorgangsnummer      0712/7828TG
+
+Fahrzeug
+Hersteller / Typ    SEAT Leon ST 1.5 TSI
+Fahrgestellnummer   WVWZZZE8FMCGF4E7D
+Amtl. Kennzeichen   OL-PI 424
+Erstzulassung       20.03.2024
+Laufleistung        75.880 km
+
+Verrechnungssaetze
+Lohn Mechanik                     163,00 EUR/Std
+Lohn Karosserie                   148,00 EUR/Std
+Lohn Elektrik                     133,00 EUR/Std
+Lohn Lackierung                   128,00 EUR/Std
+Lackmaterial                        38,5 %
+UPE-Aufschlag                       15,0 %
+Verbringungskosten                 80,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0805594C           Querträger vorn                    111,10     15,0 %        127,77
+  2 5H0821021C           Kotfluegel vorn links              734,90     15,0 %        845,14
+  3 5H0831055C           Tuer vorn links                     90,65     15,0 %        104,25
+  4 5H0853651C           Kuehlergrill                       971,00     15,0 %      1.116,65
+  5 5H0823031C           Motorhaube                         956,40     15,0 %      1.099,86
+  6 5H0809957C           Radhausschale vorn links         1.153,20     15,0 %      1.326,18
+  7 5H0941699C           Nebelscheinwerfer links            257,35     15,0 %        295,95
+Summe Ersatzteile                                                   4.915,80
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      2,5  Frontklappe einstellen                         148,00         37,00
+ 12     13,9  Scheinwerfer links ersetzen                    133,00        184,87
+ 13     11,7  Achsvermessung durchfuehren                    163,00        190,71
+ 14      7,9  Stossfaenger vorn aus- und einbauen            163,00        128,77
+Summe Arbeitslohn                                                     541,35
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      3,7  Motorhaube lackieren                       128,00         65,59
+ 22     1     12,0  Beilackierung Seitenwand links             128,00        212,74
+ 23     3     10,0  Kotfluegel vorn links lackieren            128,00        177,28
+ 24     3     17,5  Tuer vorn links lackieren                  128,00        310,24
+Summe Lackierung                                                      765,85
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                   80,00
+Summe Nebenkosten                                                      80,00
+
+Kalkulationsergebnis
+Summe netto                                                         6.303,00
+Mehrwertsteuer 19,0 %                                               1.197,57
+Gesamtbetrag brutto                                                 7.500,57
+

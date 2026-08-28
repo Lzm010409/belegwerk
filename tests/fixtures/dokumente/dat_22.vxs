@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0645/8392TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>MERCEDES-BENZ</Hersteller>
+    <Typ>C 220 d T-Modell</Typ>
+    <FIN>WVWZZZHFGS9JP4HFZ</FIN>
+    <Kennzeichen>OL-SU 7113</Kennzeichen>
+    <Erstzulassung>2017-06-27</Erstzulassung>
+    <Laufleistung einheit="km">216050</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>162</LohnMechanik>
+    <LohnKarosserie>166</LohnKarosserie>
+    <LohnElektrik>126</LohnElektrik>
+    <LohnLack>172</LohnLack>
+    <LackmaterialProzent>42.5</LackmaterialProzent>
+    <UPEAufschlagProzent>17</UPEAufschlagProzent>
+    <Verbringung>165</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Nebelscheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941699C</Teilenummer>
+      <Einzelpreis>753.6</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>881.71</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006C</Teilenummer>
+      <Einzelpreis>134.75</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>157.66</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Stossfaenger vorn</Bezeichnung>
+      <Teilenummer>5H0807221C</Teilenummer>
+      <Einzelpreis>494.15</Einzelpreis>
+      <AufschlagProzent>17</AufschlagProzent>
+      <Betrag>578.16</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>4.3</Arbeitswerte>
+      <Stundensatz>166</Stundensatz>
+      <Betrag>71.38</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Airbagsteuergeraet auslesen</Bezeichnung>
+      <Arbeitswerte>10.6</Arbeitswerte>
+      <Stundensatz>126</Stundensatz>
+      <Betrag>133.56</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Achsvermessung durchfuehren</Bezeichnung>
+      <Arbeitswerte>12.1</Arbeitswerte>
+      <Stundensatz>162</Stundensatz>
+      <Betrag>196.02</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="14">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>2</Arbeitswerte>
+      <Stundensatz>126</Stundensatz>
+      <Betrag>25.20</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="15">
+      <Bezeichnung>Stossfaenger vorn aus- und einbauen</Bezeichnung>
+      <Arbeitswerte>4.4</Arbeitswerte>
+      <Stundensatz>162</Stundensatz>
+      <Betrag>71.28</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="16">
+      <Bezeichnung>Motorhaube ersetzen</Bezeichnung>
+      <Arbeitswerte>4.7</Arbeitswerte>
+      <Stundensatz>166</Stundensatz>
+      <Betrag>78.02</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>16.9</Arbeitswerte>
+      <Stundensatz>172</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>414.22</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Beilackierung Seitenwand links</Bezeichnung>
+      <Arbeitswerte>5.2</Arbeitswerte>
+      <Stundensatz>172</Stundensatz>
+      <Lackstufe>1</Lackstufe>
+      <Betrag>127.45</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>165</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Fahrzeugreinigung</Bezeichnung>
+      <Betrag>69</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="33">
+      <Bezeichnung>Entsorgung Altteile</Bezeichnung>
+      <Betrag>86</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>1617.53</Ersatzteile>
+    <Arbeit>575.46</Arbeit>
+    <Lack>541.67</Lack>
+    <Nebenkosten>320.00</Nebenkosten>
+    <Netto>3054.66</Netto>
+    <Mehrwertsteuer satz="19.0">580.39</Mehrwertsteuer>
+    <Brutto>3635.05</Brutto>
+  </Summen>
+</DAT_Kalkulation>

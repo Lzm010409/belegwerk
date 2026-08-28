@@ -1,0 +1,202 @@
+{
+  "quelle": "DAT",
+  "quellformat": "pdf",
+  "adapter": "dat_pdf",
+  "aktenzeichen": "0654/1840TG",
+  "fahrzeug": {
+    "hersteller": "RENAULT",
+    "modell": "Megane Grandtour",
+    "vin": "WVWZZZDVNRERVWSPY",
+    "kennzeichen": "OL-EK 1459",
+    "erstzulassung": "2017-04-15",
+    "laufleistung_km": 165480
+  },
+  "saetze": {
+    "mechanik": "141",
+    "karosserie": "130",
+    "elektrik": "167",
+    "lack_lohn": "147",
+    "lack_material_prozent": "43",
+    "upe_aufschlag_prozent": "5",
+    "verbringung": "80"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Nebelscheinwerfer links",
+      "teilenummer": "5H0941699K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "987.95",
+      "aufschlag_prozent": "5",
+      "betrag": "1037.35"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Stossfaenger vorn",
+      "teilenummer": "5H0807221K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1182.7",
+      "aufschlag_prozent": "5",
+      "betrag": "1241.84"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "284.4",
+      "aufschlag_prozent": "5",
+      "betrag": "298.62"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "687.15",
+      "aufschlag_prozent": "5",
+      "betrag": "721.51"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "827.4",
+      "aufschlag_prozent": "5",
+      "betrag": "868.77"
+    },
+    {
+      "laufnummer": 6,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn rechts",
+      "teilenummer": "5H0821022K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1030.75",
+      "aufschlag_prozent": "5",
+      "betrag": "1082.29"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Kotfluegel vorn links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "4.2",
+      "stundensatz": "130",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "54.60"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "4.1",
+      "stundensatz": "130",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "53.30"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "13.4",
+      "stundensatz": "130",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "174.20"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "4.9",
+      "stundensatz": "141",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "69.09"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "1.1",
+      "stundensatz": "141",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "15.51"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "2.4",
+      "stundensatz": "147",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "50.45"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "2.7",
+      "stundensatz": "147",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "56.76"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "80"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "5250.38",
+    "arbeit": "366.70",
+    "lack": "107.21",
+    "nebenkosten": "80.00",
+    "netto": "5804.29",
+    "mehrwertsteuer": "1102.82",
+    "brutto": "6907.11"
+  }
+}

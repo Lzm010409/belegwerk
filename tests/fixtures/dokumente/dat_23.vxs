@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0983/5881TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>TOYOTA</Hersteller>
+    <Typ>Corolla Touring Sports</Typ>
+    <FIN>WVWZZZ8Z63NYRDRB1</FIN>
+    <Kennzeichen>OL-TR 7736</Kennzeichen>
+    <Erstzulassung>2022-05-31</Erstzulassung>
+    <Laufleistung einheit="km">57060</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>167</LohnMechanik>
+    <LohnKarosserie>181</LohnKarosserie>
+    <LohnElektrik>131</LohnElektrik>
+    <LohnLack>147</LohnLack>
+    <LackmaterialProzent>39.5</LackmaterialProzent>
+    <UPEAufschlagProzent>0</UPEAufschlagProzent>
+    <Verbringung>160</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006D</Teilenummer>
+      <Einzelpreis>153.6</Einzelpreis>
+      <AufschlagProzent>0</AufschlagProzent>
+      <Betrag>153.60</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Nebelscheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941699D</Teilenummer>
+      <Einzelpreis>939.95</Einzelpreis>
+      <AufschlagProzent>0</AufschlagProzent>
+      <Betrag>939.95</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Radhausschale vorn links</Bezeichnung>
+      <Teilenummer>5H0809957D</Teilenummer>
+      <Einzelpreis>481.6</Einzelpreis>
+      <AufschlagProzent>0</AufschlagProzent>
+      <Betrag>481.60</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Tuer vorn links</Bezeichnung>
+      <Teilenummer>5H0831055D</Teilenummer>
+      <Einzelpreis>804.85</Einzelpreis>
+      <AufschlagProzent>0</AufschlagProzent>
+      <Betrag>804.85</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="5">
+      <Bezeichnung>Kuehlergrill</Bezeichnung>
+      <Teilenummer>5H0853651D</Teilenummer>
+      <Einzelpreis>216.15</Einzelpreis>
+      <AufschlagProzent>0</AufschlagProzent>
+      <Betrag>216.15</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="6">
+      <Bezeichnung>Kotfluegel vorn rechts</Bezeichnung>
+      <Teilenummer>5H0821022D</Teilenummer>
+      <Einzelpreis>1071.4</Einzelpreis>
+      <AufschlagProzent>0</AufschlagProzent>
+      <Betrag>1071.40</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>3.1</Arbeitswerte>
+      <Stundensatz>131</Stundensatz>
+      <Betrag>40.61</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>9.2</Arbeitswerte>
+      <Stundensatz>181</Stundensatz>
+      <Betrag>166.52</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Achsvermessung durchfuehren</Bezeichnung>
+      <Arbeitswerte>7.2</Arbeitswerte>
+      <Stundensatz>167</Stundensatz>
+      <Betrag>120.24</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="14">
+      <Bezeichnung>Kotfluegel vorn links ersetzen</Bezeichnung>
+      <Arbeitswerte>8.6</Arbeitswerte>
+      <Stundensatz>181</Stundensatz>
+      <Betrag>155.66</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Tuer vorn links lackieren</Bezeichnung>
+      <Arbeitswerte>17.7</Arbeitswerte>
+      <Stundensatz>147</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>362.97</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>15.2</Arbeitswerte>
+      <Stundensatz>147</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>311.70</Betrag>
+    </Position>
+    <Position art="LACK" nr="23">
+      <Bezeichnung>Kotfluegel vorn links lackieren</Bezeichnung>
+      <Arbeitswerte>7.3</Arbeitswerte>
+      <Stundensatz>147</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>149.70</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>160</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Probefahrt</Bezeichnung>
+      <Betrag>84</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>3667.55</Ersatzteile>
+    <Arbeit>483.03</Arbeit>
+    <Lack>824.37</Lack>
+    <Nebenkosten>244.00</Nebenkosten>
+    <Netto>5218.95</Netto>
+    <Mehrwertsteuer satz="19.0">991.60</Mehrwertsteuer>
+    <Brutto>6210.55</Brutto>
+  </Summen>
+</DAT_Kalkulation>

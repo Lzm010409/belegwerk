@@ -1,0 +1,60 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0186/4931TG
+Vorgangsnummer      0186/4931TG
+
+Fahrzeug
+Hersteller / Typ    TOYOTA Corolla Touring Sports
+Fahrgestellnummer   WVWZZZCS8C2RUYLX1
+Amtl. Kennzeichen   OL-AW 8806
+Erstzulassung       14.05.2024
+Laufleistung        50.670 km
+
+Verrechnungssaetze
+Lohn Mechanik                     115,00 EUR/Std
+Lohn Karosserie                   126,00 EUR/Std
+Lohn Elektrik                     131,00 EUR/Std
+Lohn Lackierung                   128,00 EUR/Std
+Lackmaterial                        34,5 %
+UPE-Aufschlag                        4,0 %
+Verbringungskosten                155,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821022N           Kotfluegel vorn rechts             598,65      4,0 %        622,60
+  2 5H0853651N           Kuehlergrill                       578,50      4,0 %        601,64
+  3 5H0831055N           Tuer vorn links                    700,95      4,0 %        728,99
+  4 5H0857507N           Aussenspiegel links                 90,70      4,0 %         94,33
+  5 5H0821021N           Kotfluegel vorn links               47,50      4,0 %         49,40
+  6 5H0941005N           Scheinwerfer links                 579,30      4,0 %        602,47
+  7 5H0809957N           Radhausschale vorn links           397,90      4,0 %        413,82
+Summe Ersatzteile                                                   3.113,25
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      8,1  Achsvermessung durchfuehren                    115,00         93,15
+ 12      2,9  Stossfaenger vorn aus- und einbauen            115,00         33,35
+ 13     11,8  Kotfluegel vorn links ersetzen                 126,00        148,68
+ 14     13,7  Scheinwerfer links ersetzen                    131,00        179,47
+ 15      2,3  Airbagsteuergeraet auslesen                    131,00         30,13
+ 16      4,4  Frontklappe einstellen                         126,00         55,44
+Summe Arbeitslohn                                                     540,22
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      7,2  Stossfaenger vorn lackieren                128,00        123,96
+ 22     3     15,3  Motorhaube lackieren                       128,00        263,40
+ 23     3      6,4  Kotfluegel vorn links lackieren            128,00        110,18
+Summe Lackierung                                                      497,54
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  155,00
+ 32  Probefahrt                                                          117,00
+Summe Nebenkosten                                                     272,00
+
+Kalkulationsergebnis
+Summe netto                                                         4.423,01
+Mehrwertsteuer 19,0 %                                                 840,37
+Gesamtbetrag brutto                                                 5.263,38
+

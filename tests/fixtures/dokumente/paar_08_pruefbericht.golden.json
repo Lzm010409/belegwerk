@@ -1,0 +1,190 @@
+{
+  "quelle": "PRUEFBERICHT",
+  "quellformat": "txt",
+  "adapter": "pruefbericht_generisch",
+  "aktenzeichen": "0307/6240TG",
+  "fahrzeug": {
+    "hersteller": "SKODA",
+    "modell": "Octavia Combi 1.5 TSI",
+    "vin": "WVWZZZZCX80RAU8JX",
+    "kennzeichen": "OL-ZW 3779",
+    "erstzulassung": "2020-02-11",
+    "laufleistung_km": 96150
+  },
+  "saetze": {
+    "mechanik": "172",
+    "karosserie": "104.55",
+    "elektrik": "135",
+    "lack_lohn": "146",
+    "lack_material_prozent": "24.50",
+    "upe_aufschlag_prozent": "0.0",
+    "verbringung": "0.00"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021I",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "904.6",
+      "aufschlag_prozent": "0.0",
+      "betrag": "904.60"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006I",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "736.4",
+      "aufschlag_prozent": "0.0",
+      "betrag": "736.40"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn rechts",
+      "teilenummer": "5H0821022I",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "233.8",
+      "aufschlag_prozent": "0.0",
+      "betrag": "233.80"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651I",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "843.25",
+      "aufschlag_prozent": "0.0",
+      "betrag": "843.25"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "2.9",
+      "stundensatz": "104.55",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "30.32"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "12.8",
+      "stundensatz": "172",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "220.16"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "13.8",
+      "stundensatz": "135",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "186.30"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "4.9",
+      "stundensatz": "146",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "89.07"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "9.2",
+      "stundensatz": "146",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "167.23"
+    },
+    {
+      "laufnummer": 23,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "5.2",
+      "stundensatz": "146",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "94.52"
+    },
+    {
+      "laufnummer": 24,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "10.1",
+      "stundensatz": "146",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "183.59"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Entsorgung Altteile",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "35"
+    },
+    {
+      "laufnummer": 33,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Probefahrt",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "84"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "2718.05",
+    "arbeit": "436.78",
+    "lack": "534.41",
+    "nebenkosten": "119.00",
+    "netto": "3808.24",
+    "mehrwertsteuer": "723.57",
+    "brutto": "4531.81"
+  }
+}

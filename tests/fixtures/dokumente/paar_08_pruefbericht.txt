@@ -1,0 +1,53 @@
+Eucon Digital GmbH - Pruefbericht Kalkulation                 Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0307/6240TG
+Fahrgestellnummer   WVWZZZZCX80RAU8JX
+Amtl. Kennzeichen   OL-ZW 3779
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     172,00 EUR/Std
+Lohn Karosserie                   104,55 EUR/Std
+Lohn Elektrik                     135,00 EUR/Std
+Lohn Lackierung                   146,00 EUR/Std
+Lackmaterial                        24,5 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821021I           Kotfluegel vorn links              904,60      0,0 %        904,60
+  3 5H0941006I           Scheinwerfer rechts                736,40      0,0 %        736,40
+  4 5H0821022I           Kotfluegel vorn rechts             233,80      0,0 %        233,80
+  5 5H0853651I           Kuehlergrill                       843,25      0,0 %        843,25
+Summe Ersatzteile                                                   2.718,05
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      2,9  Motorhaube ersetzen                            104,55         30,32
+ 12     12,8  Achsvermessung durchfuehren                    172,00        220,16
+ 13     13,8  Scheinwerfer links ersetzen                    135,00        186,30
+Summe Arbeitslohn                                                     436,78
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      4,9  Stossfaenger vorn lackieren                146,00         89,07
+ 22     2      9,2  Kotfluegel vorn links lackieren            146,00        167,23
+ 23     1      5,2  Beilackierung Seitenwand links             146,00         94,52
+ 24     3     10,1  Motorhaube lackieren                       146,00        183,59
+Summe Lackierung                                                      534,41
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 32  Entsorgung Altteile                                                  35,00
+ 33  Probefahrt                                                           84,00
+Summe Nebenkosten                                                     119,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   4.942,12
+Summe netto                                                         3.808,24
+Mehrwertsteuer 19,0 %                                                 723,57
+Gesamtbetrag brutto                                                 4.531,81
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

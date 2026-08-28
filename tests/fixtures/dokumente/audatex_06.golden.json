@@ -1,0 +1,178 @@
+{
+  "quelle": "AUDATEX",
+  "quellformat": "pdf",
+  "adapter": "audatex_pdf",
+  "aktenzeichen": "0873/8113TG",
+  "fahrzeug": {
+    "hersteller": "SEAT",
+    "modell": "Leon ST 1.5 TSI",
+    "vin": "WVWZZZNGG7M2D67DN",
+    "kennzeichen": "OL-QC 7568",
+    "erstzulassung": "2021-05-31",
+    "laufleistung_km": 147760
+  },
+  "saetze": {
+    "mechanik": "160",
+    "karosserie": "129",
+    "elektrik": "121",
+    "lack_lohn": "140",
+    "lack_material_prozent": "32",
+    "upe_aufschlag_prozent": "20",
+    "verbringung": "95"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507G",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "964.55",
+      "aufschlag_prozent": "20",
+      "betrag": "1157.46"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer links",
+      "teilenummer": "5H0941005G",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "763.95",
+      "aufschlag_prozent": "20",
+      "betrag": "916.74"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Stossfaenger vorn",
+      "teilenummer": "5H0807221G",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "373.55",
+      "aufschlag_prozent": "20",
+      "betrag": "448.26"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Querträger vorn",
+      "teilenummer": "5H0805594G",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1163.15",
+      "aufschlag_prozent": "20",
+      "betrag": "1395.78"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "14.1",
+      "stundensatz": "121",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "170.61"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "9.8",
+      "stundensatz": "129",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "126.42"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "7.7",
+      "stundensatz": "160",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "123.20"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "12.3",
+      "stundensatz": "140",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "227.30"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "5.3",
+      "stundensatz": "140",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "97.94"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "95"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Probefahrt",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "108"
+    },
+    {
+      "laufnummer": 33,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Fahrzeugreinigung",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "134"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "3918.24",
+    "arbeit": "420.23",
+    "lack": "325.24",
+    "nebenkosten": "337.00",
+    "netto": "5000.71",
+    "mehrwertsteuer": "950.13",
+    "brutto": "5950.84"
+  }
+}
