@@ -54,9 +54,27 @@ tr { page-break-inside: avoid; }
 
 
 def _schriften_css() -> str:
-    """Bindet die lokalen Schriften mit absoluten Dateipfaden ein."""
+    """Bindet die lokalen Schriften mit absoluten Dateipfaden ein.
+
+    WeasyPrint kennt keine variablen Achsen und verwirft Bereichsangaben wie
+    ``font-weight: 100 900`` samt zugehöriger Schrift. Für den PDF-Pfad wird
+    deshalb je Datei ein Schnitt in 400 und einer in 700 deklariert; den fetten
+    Schnitt setzt WeasyPrint synthetisch. Im Browser bleibt die variable
+    Deklaration unverändert.
+    """
+    import re
+
     quelle = (STATIK_VERZEICHNIS / "schriften.css").read_text(encoding="utf-8")
-    return quelle.replace("/static/fonts/", f"{(STATIK_VERZEICHNIS / 'fonts').as_uri()}/")
+    quelle = quelle.replace("/static/fonts/", f"{(STATIK_VERZEICHNIS / 'fonts').as_uri()}/")
+    quelle = re.sub(r"\s*font-stretch:[^;]+;\n", "\n", quelle)
+    quelle = quelle.replace("format('woff2-variations')", "format('woff2')")
+
+    bloecke = re.findall(r"@font-face\s*\{[^}]*\}", quelle)
+    gebaut: list[str] = []
+    for block in bloecke:
+        for gewicht in ("400", "700"):
+            gebaut.append(re.sub(r"font-weight:\s*[\d ]+;", f"font-weight: {gewicht};", block))
+    return "\n".join(gebaut)
 
 
 def aus_vorlage(name: str, kontext: dict[str, Any]) -> bytes:

@@ -72,6 +72,7 @@ def anwendung_erzeugen() -> FastAPI:
     from belegwerk.check.router import router as check_router
     from belegwerk.delta.router import router as delta_router
     from belegwerk.kern.einstellungen_router import router as einstellungen_router
+    from belegwerk.kern.oeffentlich import router as oeffentlich_router
     from belegwerk.kern.router import router as kern_router
 
     app.include_router(gesundheit_router)
@@ -80,6 +81,8 @@ def anwendung_erzeugen() -> FastAPI:
     app.include_router(check_router)
     app.include_router(delta_router)
     app.include_router(atlas_router)
+    # Zuletzt: die oeffentlichen Seiten liegen auf der Wurzel.
+    app.include_router(oeffentlich_router)
     fehlerseiten_registrieren(app)
     return app
 

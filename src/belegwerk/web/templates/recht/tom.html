@@ -1,0 +1,73 @@
+{% extends "recht/basis_recht.html" %}
+{% block text %}
+<p>
+  Anlage zum Vertrag über die Auftragsverarbeitung. Technische und organisatorische Maßnahmen
+  nach Art. 32 DSGVO.
+</p>
+
+<h2>1. Vertraulichkeit</h2>
+<h3>Zutrittskontrolle</h3>
+<p>
+  Die Server stehen in einem Rechenzentrum in Deutschland ([Hoster, Standort]) mit
+  Zutrittskontrolle, Videoüberwachung und Besucherprotokoll. Eigene Hardware wird nicht betrieben.
+</p>
+<h3>Zugangskontrolle</h3>
+<p>
+  Anmeldung ausschließlich mit E-Mail und Passwort; Passwörter werden mit Argon2id
+  (Speicherkosten 64 MiB, drei Durchläufe) gespeichert, niemals im Klartext. Mindestlänge zwölf
+  Zeichen. Sitzungscookies enthalten nur einen Zufallswert; in der Datenbank steht dessen
+  SHA-256-Hash. Anmeldeversuche sind mengenmäßig begrenzt. Ein Konto entsteht nur über eine
+  Einladung.
+</p>
+<h3>Zugriffskontrolle</h3>
+<p>
+  Die Trennung der Mandanten wird <strong>in der Datenbank</strong> erzwungen: auf jeder
+  mandantenbezogenen Tabelle liegt eine Row-Level-Security-Policy, und die Anwendung arbeitet in
+  Anfragen unter einer eigenen Datenbankrolle ohne Superuser-Rechte. Ohne gesetzten
+  Mandantenkontext liefert jede Abfrage null Zeilen. Dateien liegen je Mandant getrennt und
+  werden ausschließlich über einen Endpunkt mit Zugehörigkeitsprüfung ausgeliefert, nie über
+  einen statischen Pfad. Zwei Rollen (Inhaber, Mitarbeiter) steuern die Rechte innerhalb eines
+  Büros.
+</p>
+<h3>Trennungskontrolle</h3>
+<p>
+  Automatisierte Tests prüfen für <em>jede</em> mandantenbezogene Tabelle den lesenden,
+  schreibenden und löschenden Zugriff über Mandantengrenzen hinweg. Die Tabellenliste entsteht
+  aus der Modellstruktur, nicht aus einer gepflegten Aufzählung.
+</p>
+
+<h2>2. Integrität</h2>
+<p>
+  Übertragung ausschließlich über TLS. Schutz vor Formularfälschung durch doppelte Absendung
+  eines Zufallswerts. Content-Security-Policy ohne fremde Quellen; sämtliche Schriften, Skripte
+  und Stile liegen im eigenen Image. Uploads werden nach ihrem tatsächlichen Inhalt geprüft, nicht
+  nach der Dateiendung, und in Größe und Seitenzahl begrenzt. Aus Bildern werden Metadaten
+  einschließlich Standortangaben entfernt. Geldbeträge werden ausnahmslos in Festkommaarithmetik
+  gerechnet.
+</p>
+
+<h2>3. Verfügbarkeit und Belastbarkeit</h2>
+<p>
+  Tägliche Sicherung der Datenbank mit 30 Tagen Aufbewahrung an einem Ziel außerhalb des
+  Anwendungsservers; die Dateivolumes sind einbezogen. Die Wiederherstellung wird dokumentiert
+  erprobt. Gesundheitsprüfung des Dienstes einschließlich Datenbankverbindung, nicht nur des
+  laufenden Prozesses.
+</p>
+
+<h2>4. Verfahren zur Überprüfung und Bewertung</h2>
+<p>
+  Strukturierte Protokollierung ohne Dokumentinhalte, Namen, Kennzeichen oder
+  Fahrzeug-Identifizierungsnummern; erlaubt sind Vorgangskennung, Mandantenkennung und
+  Dokumentprüfsumme. Änderungen erfolgen versioniert über eine Codeverwaltung; Tests laufen vor
+  jeder Auslieferung. Auftragsverarbeiter werden vertraglich verpflichtet und in einer
+  öffentlichen <a href="/unterauftragsverarbeiter">Liste</a> geführt.
+</p>
+
+<h2>5. Löschung</h2>
+<p>
+  Uploads werden nach 90 Tagen, erzeugte Dateien nach zwölf Monaten automatisch gelöscht. Auf
+  Löschauftrag wird ein Konto nach 14 Tagen Karenz vollständig entfernt — Datensätze und Dateien.
+  Ein automatisierter Test weist nach, dass danach in keiner mandantenbezogenen Tabelle eine
+  Zeile und im Dateibereich keine Datei verbleibt.
+</p>
+{% endblock %}
