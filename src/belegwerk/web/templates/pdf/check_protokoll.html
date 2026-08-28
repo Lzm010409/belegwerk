@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de"><head><meta charset="utf-8"><title>Prüfprotokoll {{ pruefung.aktenzeichen or '' }}</title></head>
+<body>
+<div class="briefkopf">
+  <div class="absender">{{ mandant.briefkopf_zeilen or mandant.name }}</div>
+  {% if logo %}<img src="{{ logo }}" alt="">{% endif %}
+</div>
+
+<h1>Prüfprotokoll</h1>
+<dl class="kopfdaten">
+  <dt>Aktenzeichen</dt><dd class="mono">{{ pruefung.aktenzeichen or '—' }}</dd>
+  <dt>Geprüfte Datei</dt><dd>{{ pruefung.dateiname }} ({{ pruefung.seiten }} Seiten)</dd>
+  <dt>Dokumentkennung</dt><dd class="mono">{{ pruefung.dokument_hash[:32] }}</dd>
+  <dt>Geprüft am</dt><dd class="mono">{{ pruefung.angelegt_am|datum_zeit }}</dd>
+  <dt>Umfang der Prüfung</dt><dd>{{ pruefung.geprueft_regeln }} Regeln</dd>
+  <dt>Ergebnis</dt><dd>{% if pruefung.befunde %}{{ pruefung.befunde|length }} Befund{{ 'e' if pruefung.befunde|length != 1 }}{% else %}keine Befunde{% endif %}</dd>
+</dl>
+
+{% if pruefung.fehlende_pflichtfelder %}
+<h2>Nicht gefundene Pflichtfelder</h2>
+<p>{{ pruefung.fehlende_pflichtfelder | map('replace','_',' ') | join(', ') }}.</p>
+{% endif %}
+
+{% for schwere, befunde in gruppen.items() %}
+  {% if befunde %}
+  <h2>{{ schwere.beschriftung }} ({{ befunde|length }})</h2>
+  <table>
+    <thead><tr><th style="width:8mm">Nr</th><th>Befund</th><th style="width:34mm">Fundort</th></tr></thead>
+    <tbody>
+    {% for befund in befunde %}
+      <tr class="{{ 'quittiert' if befund.quittiert_am }}">
+        <td class="mono">{{ '%02d'|format(befund.nummer) }}</td>
+        <td>
+          <strong>{{ befund.titel }}</strong><br>{{ befund.meldung }}
+          {% if befund.feldwerte %}<br><span class="mono">{% for name, wert in befund.feldwerte.items() %}{{ katalog.get(name, name) }}: {{ wert }}{% if not loop.last %} · {% endif %}{% endfor %}</span>{% endif %}
+          {% if befund.quittiert_am %}<br><em>Quittiert am {{ befund.quittiert_am|datum }}: {{ befund.quittierungsgrund }}</em>{% endif %}
+        </td>
+        <td class="klein">{% if befund.seite %}Seite {{ befund.seite }}<br>„{{ befund.ausschnitt[:90] }}“{% else %}—{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+{% endfor %}
+
+{% if pruefung.nicht_entscheidbar %}
+<h2>Nicht entscheidbare Regeln</h2>
+<p>Diesen Regeln fehlte mindestens ein Wert; sie haben deshalb nichts gemeldet:
+<span class="mono">{{ pruefung.nicht_entscheidbar|join(', ') }}</span>.</p>
+{% endif %}
+
+<div class="methodik">
+  <p><strong>Zur Methodik.</strong> Geprüft wurde das vorliegende PDF gegen
+  {{ pruefung.geprueft_regeln }} formale Regeln. Die Werte wurden über einen Feldkatalog
+  aus dem Dokument gelesen; der Fundort ist je Befund angegeben. Ein Ergebnis ohne Befund
+  bedeutet Widerspruchsfreiheit nach diesen {{ pruefung.geprueft_regeln }} Regeln — es ist
+  keine Aussage über die inhaltliche Richtigkeit des Gutachtens. Die fachliche Verantwortung
+  trägt der unterzeichnende Sachverständige.</p>
+</div>
+<span class="fuss">Prüfprotokoll {{ pruefung.aktenzeichen or pruefung.dateiname }} · erstellt {{ pruefung.angelegt_am|datum }}</span>
+</body></html>

@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0725/3720TG
+Gutachtenart                      Haftpflichtschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-JP 4560
+Fahrzeug-Identifizierungsnummer   WVWZZZFG1467R8RG5
+Erstzulassung                     23.04.2022
+Laufleistung                      153.010 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        26.02.2026
+Besichtigungstag                  11.03.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-JP 4560 wurde am 11.03.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     141,00 EUR
+Lohn Karosserie                   166,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             7.371,00 EUR
+Reparaturkosten brutto            8.771,49 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     11.340,00 EUR
+Wiederbeschaffungswert netto      9.529,41 EUR
+Restwert                          2.381,40 EUR
+Merkantile Wertminderung          800,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

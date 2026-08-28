@@ -7,6 +7,7 @@ Module werden hier eingetragen — vergisst man das, schlaegt
 
 from __future__ import annotations
 
+import belegwerk.check.modelle as check_modelle
 import belegwerk.kern.modelle as kern_modelle
 
-__all__ = ["kern_modelle"]
+__all__ = ["kern_modelle", "check_modelle"]

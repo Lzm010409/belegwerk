@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0953/9826TG
+Gutachtenart                      Kaskoschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-SO 6614
+Fahrzeug-Identifizierungsnummer   WVWZZZJ7GHST92DW1
+Erstzulassung                     17.03.2021
+Laufleistung                      154.490 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        17.02.2026
+Besichtigungstag                  19.02.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-SO 6614 wurde am 19.02.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     142,00 EUR
+Lohn Karosserie                   136,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             2.589,30 EUR
+Reparaturkosten brutto            3.081,27 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     12.330,00 EUR
+Wiederbeschaffungswert netto      10.361,34 EUR
+Restwert                          4.932,00 EUR
+Merkantile Wertminderung          750,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

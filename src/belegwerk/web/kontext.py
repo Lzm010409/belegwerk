@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Any
+from urllib.parse import quote, unquote
 
 from fastapi import Request
 from fastapi.responses import RedirectResponse, Response
@@ -52,14 +53,16 @@ def meldungen_lesen(request: Request) -> list[tuple[str, str]]:
     art, _, text = roh.partition("|")
     if art not in {"erfolg", "fehler", "hinweis"} or not text:
         return []
-    return [(art, text)]
+    # Cookie-Werte muessen latin-1-faehig sein; deutsche Anfuehrungszeichen sind
+    # es nicht. Deshalb prozentkodiert ablegen und hier zurueckwandeln.
+    return [(art, unquote(text))]
 
 
 def antwort_mit_meldung(ziel: str, art: str, text: str, status_code: int = 303) -> RedirectResponse:
     antwort = RedirectResponse(ziel, status_code=status_code)
     antwort.set_cookie(
         MELDUNG_COOKIE,
-        f"{art}|{text}",
+        f"{art}|{quote(text)}",
         max_age=30,
         path="/",
         httponly=True,

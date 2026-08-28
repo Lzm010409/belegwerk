@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0594/9016TG
+Gutachtenart                      Haftpflichtschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-KX 7137
+Fahrzeug-Identifizierungsnummer   WVWZZZ6EVFL839TDZ
+Erstzulassung                     16.04.2021
+Laufleistung                      50.610 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        04.02.2026
+Besichtigungstag                  13.02.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-KX 7137 wurde am 13.02.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     156,00 EUR
+Lohn Karosserie                   183,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             8.027,40 EUR
+Reparaturkosten brutto            9.552,61 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     23.610,00 EUR
+Wiederbeschaffungswert netto      19.840,34 EUR
+Restwert                          9.207,90 EUR
+Merkantile Wertminderung          700,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

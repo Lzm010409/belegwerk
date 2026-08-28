@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0637/4257TG
+Gutachtenart                      Kaskoschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-RD 4036
+Fahrzeug-Identifizierungsnummer   WVWZZZ6NKZP0YATNM
+Erstzulassung                     26.02.2022
+Laufleistung                      172.740 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        08.07.2026
+Besichtigungstag                  12.07.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-RD 4036 wurde am 12.07.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     132,00 EUR
+Lohn Karosserie                   162,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             4.047,00 EUR
+Reparaturkosten brutto            4.815,93 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     7.100,00 EUR
+Wiederbeschaffungswert netto      5.966,39 EUR
+Restwert                          2.982,00 EUR
+Merkantile Wertminderung          500,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

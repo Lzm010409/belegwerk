@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0568/1261TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-JI 4051
+FIN                               WVWZZZZGMJJEKE0GB
+EZ                                07.06.2020
+Kilometerstand                    158.590 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      17.02.2026
+Besichtigt am                     23.02.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-JI 4051 wurde am 23.02.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     144,00 EUR
+Lohn Karosserie                   172,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         7.472,00 EUR
+Reparaturkosten inkl. MwSt        8.891,68 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        23.350,00 EUR
+WBW netto                         19.621,85 EUR
+Restwert brutto                   8.639,50 EUR
+Minderwert                        850,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

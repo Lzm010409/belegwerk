@@ -107,8 +107,15 @@ async def testphase_starten(sitzung: AsyncSession, mandant_id: uuid.UUID) -> lis
     heute = date.today()
     ende = heute + timedelta(days=einstellungen().testphase_tage)
     angelegt: list[Abonnement] = []
+    # Der mandant_id-Filter ist hier nicht ueberfluessig: Wartungspfade und
+    # Tests arbeiten mit der Eigentuemerrolle, fuer die RLS nicht greift.
     vorhanden = {
-        eintrag.modul for eintrag in (await sitzung.execute(select(Abonnement))).scalars().all()
+        eintrag.modul
+        for eintrag in (
+            await sitzung.execute(select(Abonnement).where(Abonnement.mandant_id == mandant_id))
+        )
+        .scalars()
+        .all()
     }
     for modul in Modul:
         if modul in vorhanden:

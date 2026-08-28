@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0984/4829TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-OB 4503
+FIN                               WVWZZZYAXLYZ22XWL
+EZ                                14.09.2022
+Kilometerstand                    173.880 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      10.03.2026
+Besichtigt am                     19.03.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-OB 4503 wurde am 19.03.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     166,00 EUR
+Lohn Karosserie                   130,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         9.391,80 EUR
+Reparaturkosten inkl. MwSt        11.176,24 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        14.230,00 EUR
+WBW netto                         11.957,98 EUR
+Restwert brutto                   5.976,60 EUR
+Minderwert                        750,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

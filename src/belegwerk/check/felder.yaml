@@ -1,0 +1,241 @@
+# Feldkatalog v1 (Check-Briefing Abschnitt 2).
+#
+# Der Regelkatalog ist wertlos ohne verlaessliche Werte. Extrahiert wird ueber
+# diesen Katalog, nicht ueber verstreute Regexe im Code — so kann jeder Mandant
+# Muster fuer seine eigene Gutachtensoftware ergaenzen, ohne dass Code angefasst
+# wird. Mandantenmuster haben Vorrang vor diesen globalen (Todo 1.4).
+#
+# typ: geld | zahl | datum | text | auswahl | ja_nein
+# pflicht_bei: Gutachtenarten, in denen das Feld vorhanden sein muss.
+#              Ein nicht gefundenes Pflichtfeld ist selbst ein Pruefergebnis,
+#              kein Fehler des Werkzeugs.
+
+felder:
+  - feld: aktenzeichen
+    typ: text
+    label: Aktenzeichen
+    label_muster:
+      - 'Aktenzeichen'
+      - 'Gutachten-?Nr\.?'
+      - 'Vorgangsnummer'
+    pflicht_bei: [haftpflicht, kasko, wertgutachten]
+
+  - feld: kennzeichen
+    typ: text
+    label: Amtliches Kennzeichen
+    label_muster:
+      - 'Amtl\.?\s*Kennzeichen'
+      - 'Kennzeichen'
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: vin
+    typ: text
+    label: Fahrzeug-Identifizierungsnummer
+    label_muster:
+      - 'Fahrzeug-?Identifizierungsnummer'
+      - 'Fahrgestellnummer'
+      - '\bFIN\b'
+      - '\bVIN\b'
+    pflicht_bei: [haftpflicht, kasko, wertgutachten]
+
+  - feld: erstzulassung
+    typ: datum
+    label: Erstzulassung
+    label_muster: ['Erstzulassung', '\bEZ\b']
+    pflicht_bei: [haftpflicht, kasko, wertgutachten]
+
+  - feld: laufleistung
+    typ: zahl
+    label: Laufleistung
+    label_muster: ['Laufleistung', 'Kilometerstand', 'Gesamtfahrleistung']
+    pflicht_bei: [haftpflicht, kasko, wertgutachten]
+
+  - feld: laufleistung_bewertung
+    typ: zahl
+    label: Laufleistung laut Bewertung
+    label_muster: ['Laufleistung\s*\(Bewertung\)', 'Bewertungsgrundlage\s*Laufleistung']
+
+  - feld: kennzeichen_text
+    typ: text
+    label: Kennzeichen im Fliesstext
+    label_muster: ['Das Fahrzeug mit dem amtlichen Kennzeichen']
+
+  - feld: schadendatum
+    typ: datum
+    label: Schadentag
+    label_muster: ['Schaden(?:s)?(?:tag|datum)', 'Unfalltag', 'Unfalldatum']
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: besichtigungsdatum
+    typ: datum
+    label: Besichtigungstag
+    label_muster: ['Besichtigung(?:stag|sdatum)?', 'Besichtigt am']
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: reparaturkosten_netto
+    typ: geld
+    label: Reparaturkosten netto
+    label_muster:
+      - 'Reparaturkosten\s*(?:\(?netto\)?)'
+      - 'Reparaturkosten\s*ohne\s*(?:MwSt|Mehrwertsteuer)'
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: reparaturkosten_brutto
+    typ: geld
+    label: Reparaturkosten brutto
+    label_muster:
+      - 'Reparaturkosten\s*(?:\(?brutto\)?)'
+      - 'Reparaturkosten\s*inkl\.?\s*(?:MwSt|Mehrwertsteuer)'
+
+  - feld: wiederbeschaffungswert_brutto
+    typ: geld
+    label: Wiederbeschaffungswert brutto
+    label_muster:
+      - 'Wiederbeschaffungswert\s*(?:\(?brutto\)?)'
+      - 'WBW\s*brutto'
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: wiederbeschaffungswert_netto
+    typ: geld
+    label: Wiederbeschaffungswert netto
+    label_muster:
+      - 'Wiederbeschaffungswert\s*(?:\(?netto\)?)'
+      - 'WBW\s*netto'
+
+  - feld: restwert
+    typ: geld
+    label: Restwert
+    label_muster: ['Restwert\s*(?:\(?brutto\)?)?']
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: wertminderung
+    typ: geld
+    label: Merkantile Wertminderung
+    label_muster: ['(?:Merkantile\s*)?Wertminderung', 'Minderwert']
+
+  - feld: wertminderung_methode
+    typ: text
+    label: Methode der Wertminderung
+    label_muster:
+      - 'Wertminderung\s*(?:nach|gemaess|gemäß)\s*'
+      - 'Berechnungsmethode\s*Wertminderung'
+      - 'Methode\s*der\s*Wertminderung'
+
+  - feld: wiederbeschaffungsdauer
+    typ: zahl
+    label: Wiederbeschaffungsdauer
+    label_muster: ['Wiederbeschaffungsdauer', 'Wiederbeschaffungszeit']
+
+  - feld: reparaturdauer
+    typ: zahl
+    label: Reparaturdauer
+    label_muster: ['Reparaturdauer', 'Reparaturzeit', 'Voraussichtliche Reparaturdauer']
+
+  - feld: umsatzsteuer_regime
+    typ: auswahl
+    label: Umsatzsteuerregime
+    werte: [regelbesteuert, differenzbesteuert, nicht_vorsteuerabzugsberechtigt]
+    werte_muster:
+      regelbesteuert: ['regelbesteuert', 'vorsteuerabzugsberechtigt(?!e[rn]?\s*nicht)', 'Regelbesteuerung']
+      differenzbesteuert: ['differenzbesteuert', 'Differenzbesteuerung', '§\s*25a']
+      nicht_vorsteuerabzugsberechtigt: ['nicht\s+vorsteuerabzugsberechtigt', 'ohne\s+Vorsteuerabzug']
+    label_muster: ['Umsatzsteuer', 'Vorsteuerabzug', 'Besteuerung']
+    pflicht_bei: [haftpflicht, kasko]
+
+  - feld: mehrwertsteuersatz
+    typ: zahl
+    label: Mehrwertsteuersatz
+    label_muster: ['Mehrwertsteuer\s*(?:satz)?', 'MwSt\.?\s*(?:satz)?', 'Umsatzsteuersatz']
+
+  - feld: stundensatz_mechanik
+    typ: geld
+    label: Stundensatz Mechanik
+    label_muster: ['(?:Lohn|Stundensatz|Stundenverrechnungssatz)\s*Mechanik', 'Lohn Mechanik']
+
+  - feld: stundensatz_karosserie
+    typ: geld
+    label: Stundensatz Karosserie
+    label_muster: ['(?:Lohn|Stundensatz|Stundenverrechnungssatz)\s*Karosserie']
+
+  - feld: stundensatz_text
+    typ: geld
+    label: Stundensatz im Fliesstext
+    label_muster: ['Stundenverrechnungssatz\s*(?:von|in Hoehe von|in Höhe von)']
+
+  - feld: upe_aufschlag
+    typ: zahl
+    label: UPE-Aufschlag
+    label_muster: ['UPE-?\s*Aufschlag', 'Teileaufschlag', 'Ersatzteilaufschlag']
+
+  - feld: vorschaden
+    typ: ja_nein
+    label: Vorschaden
+    label_muster: ['Vorschaeden|Vorschäden|Vorschaden']
+
+  - feld: vorschaden_bewertet
+    typ: vorhandensein
+    label: Vorschaden bewertet
+    label_muster: ['Vorschaden\s*(?:wert)?bewertet', 'Bewertung\s*des\s*Vorschadens']
+
+  - feld: altschaden
+    typ: ja_nein
+    label: Altschaden
+    label_muster: ['Altschaeden|Altschäden|Altschaden']
+
+  - feld: altschaden_abgegrenzt
+    typ: vorhandensein
+    label: Altschaden abgegrenzt
+    label_muster: ['Abgrenzung\s*(?:zum|des)\s*Altschaden', 'Altschaden\s*abgegrenzt']
+
+  - feld: gutachtenart
+    typ: auswahl
+    label: Gutachtenart
+    werte: [haftpflicht, kasko, wertgutachten, kurzgutachten]
+    werte_muster:
+      haftpflicht: ['Haftpflichtschaden', 'Haftpflichtgutachten']
+      kasko: ['Kaskoschaden', 'Kaskogutachten']
+      wertgutachten: ['Wertgutachten', 'Fahrzeugbewertung']
+      kurzgutachten: ['Kurzgutachten', 'Kostenvoranschlag']
+    label_muster: ['Gutachtenart', 'Art des Gutachtens', 'Schadenart']
+
+  - feld: schadenfall
+    typ: auswahl
+    label: Abrechnungsart
+    werte: [reparaturfall, totalschaden]
+    werte_muster:
+      totalschaden: ['(?:wirtschaftlicher\s+)?Totalschaden', 'Totalschadenabrechnung']
+      reparaturfall: ['Reparaturfall', 'Reparaturwuerdig', 'Reparaturwürdig', 'reparaturwuerdig']
+    label_muster: ['Ergebnis', 'Abrechnungsart', 'Feststellung']
+
+  - feld: weiterbenutzung
+    typ: vorhandensein
+    label: Hinweis auf Weiterbenutzungspflicht
+    label_muster:
+      - 'Weiterbenutzung(?:spflicht)?'
+      - 'Weiterben(?:u|ü)tzung'
+      - 'Integritaetsinteresse|Integritätsinteresse'
+      - 'sechs\s*Monate\s*weiter'
+
+  - feld: wertminderung_begruendung
+    typ: vorhandensein
+    label: Begruendung der Wertminderung
+    label_muster:
+      - 'Begr(?:ue|ü)ndung\s*(?:der\s*)?Wertminderung'
+      - 'Wertminderung\s*wird\s*begr(?:ue|ü)ndet'
+
+  - feld: umsatzsteuer_regime_bewertung
+    typ: auswahl
+    label: Umsatzsteuerregime in der Bewertung
+    werte: [regelbesteuert, differenzbesteuert, nicht_vorsteuerabzugsberechtigt]
+    werte_muster:
+      regelbesteuert: ['regelbesteuert', 'Regelbesteuerung']
+      differenzbesteuert: ['differenzbesteuert', 'Differenzbesteuerung', '§\s*25a']
+      nicht_vorsteuerabzugsberechtigt: ['nicht\s+vorsteuerabzugsberechtigt']
+    label_muster: ['Bewertung\s*\(Umsatzsteuer\)', 'Besteuerung\s*der\s*Bewertung', 'Bewertungsgrundlage\s*Umsatzsteuer']
+
+  - feld: besichtigung_erlaeuterung
+    typ: vorhandensein
+    label: Erlaeuterung zum Besichtigungszeitpunkt
+    label_muster:
+      - 'Erl(?:ae|ä)uterung\s*(?:zur|zum)\s*Besichtigung'
+      - 'versp(?:ae|ä)tete\s*Besichtigung'

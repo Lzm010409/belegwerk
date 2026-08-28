@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Aktenzeichen                      0234/1466TG
+Gutachtenart                      Kaskoschaden
+
+1. Fahrzeug
+Amtl. Kennzeichen                 OL-TM 6218
+Fahrzeug-Identifizierungsnummer   WVWZZZXUM98B7LK7H
+Erstzulassung                     25.06.2024
+Laufleistung                      56.540 km
+
+2. Schadenhergang und Besichtigung
+Schadentag                        10.05.2026
+Besichtigungstag                  02.06.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-TM 6218 wurde am 02.06.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     128,00 EUR
+Lohn Karosserie                   143,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten netto             8.823,20 EUR
+Reparaturkosten brutto            10.499,61 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+Wiederbeschaffungswert brutto     21.520,00 EUR
+Wiederbeschaffungswert netto      18.084,03 EUR
+Restwert                          3.873,60 EUR
+Merkantile Wertminderung          250,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Ergebnis                          Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

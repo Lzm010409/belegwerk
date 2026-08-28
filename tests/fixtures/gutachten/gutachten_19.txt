@@ -1,0 +1,42 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0603/7421TG
+Art des Gutachtens                Haftpflichtschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-YB 7446
+FIN                               WVWZZZ09AGGAACUHT
+EZ                                20.10.2019
+Kilometerstand                    86.870 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      30.01.2026
+Besichtigt am                     14.02.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-YB 7446 wurde am 14.02.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     163,00 EUR
+Lohn Karosserie                   178,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         5.648,20 EUR
+Reparaturkosten inkl. MwSt        6.721,36 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        18.220,00 EUR
+WBW netto                         15.310,92 EUR
+Restwert brutto                   4.008,40 EUR
+Minderwert                        150,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+

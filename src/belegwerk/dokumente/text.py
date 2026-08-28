@@ -77,7 +77,9 @@ def _mit_pdfplumber(daten: bytes) -> Extraktion | None:
     except Exception as fehler:  # noqa: BLE001 — ein Pfad darf ausfallen
         _log.warning("pdfplumber fehlgeschlagen", extra={"fehlerart": type(fehler).__name__})
         return None
-    text = "\n".join(teile)
+    # Seitentrenner mitführen: der Feldkatalog von Check gibt den Fundort mit
+    # Seitenzahl an, und die kommt aus genau diesem Zeichen.
+    text = "\f".join(teile)
     return Extraktion("pdfplumber", text, seiten, guete_bewerten(text))
 
 
@@ -101,7 +103,7 @@ def _mit_pdftotext(daten: bytes) -> Extraktion | None:
     if ergebnis.returncode != 0:
         return None
     text = ergebnis.stdout.decode("utf-8", errors="replace")
-    seiten = text.count("\f") or 1
+    seiten = text.count("\f") + 1 if text else 1
     return Extraktion("pdftotext", text, seiten, guete_bewerten(text))
 
 

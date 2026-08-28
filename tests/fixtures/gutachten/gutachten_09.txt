@@ -1,0 +1,41 @@
+SACHVERSTAENDIGENBUERO MUSTER                       Schadengutachten
+Gutachten-Nr.                     0969/3434TG
+Art des Gutachtens                Kaskoschaden
+
+1. Fahrzeug
+Kennzeichen                       OL-OG 5050
+FIN                               WVWZZZTUP44W9ASU4
+EZ                                21.12.2020
+Kilometerstand                    54.680 km
+
+2. Schadenhergang und Besichtigung
+Schadendatum                      29.05.2026
+Besichtigt am                     20.06.2026
+Das Fahrzeug mit dem amtlichen Kennzeichen OL-OG 5050 wurde am 20.06.2026 in Augenschein genommen.
+Vorschaeden                       keine
+Altschaeden                       keine
+
+3. Kalkulation
+Lohn Mechanik                     170,00 EUR
+Lohn Karosserie                   177,00 EUR
+UPE-Aufschlag                     18,0 %
+Reparaturkosten ohne MwSt         1.293,60 EUR
+Reparaturkosten inkl. MwSt        1.539,38 EUR
+Mehrwertsteuersatz                19,0 %
+
+4. Bewertung
+Umsatzsteuer                      regelbesteuert
+Bewertungsgrundlage Umsatzsteuer   regelbesteuert
+WBW brutto                        6.160,00 EUR
+WBW netto                         5.176,47 EUR
+Restwert brutto                   1.540,00 EUR
+Wertminderung nach                Ruhkopf/Sahm
+
+5. Ergebnis
+Feststellung                      Reparaturfall
+Reparaturdauer                    5 Arbeitstage
+Wiederbeschaffungsdauer           12 Arbeitstage
+
+Die fachliche Verantwortung fuer dieses Gutachten liegt beim unterzeichnenden
+Sachverstaendigen.
+
