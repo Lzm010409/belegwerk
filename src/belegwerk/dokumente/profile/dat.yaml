@@ -1,0 +1,68 @@
+# Profil: DAT-Kalkulation (SilverDAT), Ausgabe als PDF oder TXT.
+# Ein neues Layout desselben Absenders ist eine Ergaenzung hier, kein Code.
+name: dat
+quelle: DAT
+formate: [pdf, txt]
+
+adapter:
+  pdf: dat_pdf
+  txt: dat_txt
+
+erkennung:
+  mindestpunkte: 3
+  signaturen:
+    - muster: 'DAT\s+Deutschland|SilverDAT'
+      gewicht: 3
+    - muster: 'Kalkulation zum Vorgang'
+      gewicht: 2
+    - muster: 'Kalkulationsergebnis'
+      gewicht: 2
+    - muster: 'Verrechnungssaetze|Verrechnungssätze'
+      gewicht: 1
+
+pflichtfelder: [aktenzeichen, vin]
+
+felder:
+  aktenzeichen: 'Vorgangsnummer\s{2,}(?P<aktenzeichen>\S+)'
+  fahrzeug: 'Hersteller\s*/\s*Typ\s{2,}(?P<hersteller>[A-ZÄÖÜ][A-ZÄÖÜ\-]+)\s+(?P<modell>.+?)\s*$'
+  vin: '(?:Fahrgestellnummer|FIN)\s{2,}(?P<vin>[A-HJ-NPR-Z0-9]{17})'
+  kennzeichen: 'Amtl\.?\s*Kennzeichen\s{2,}(?P<kennzeichen>[A-ZÄÖÜ]{1,3}-[A-Z]{1,2}\s?\d{1,4}[EH]?)'
+  erstzulassung: 'Erstzulassung\s{2,}(?P<erstzulassung>\d{2}\.\d{2}\.\d{4})'
+  laufleistung: 'Laufleistung\s{2,}(?P<laufleistung>[\d.]+)\s*km'
+
+saetze:
+  mechanik: 'Lohn\s+Mechanik\s{2,}(?P<wert>[\d.]+,\d{2})'
+  karosserie: 'Lohn\s+Karosserie\s{2,}(?P<wert>[\d.]+,\d{2})'
+  elektrik: 'Lohn\s+Elektrik\s{2,}(?P<wert>[\d.]+,\d{2})'
+  lack_lohn: 'Lohn\s+Lackierung\s{2,}(?P<wert>[\d.]+,\d{2})'
+  lack_material_prozent: 'Lackmaterial\s{2,}(?P<wert>[\d.]+,\d)\s*%'
+  upe_aufschlag_prozent: 'UPE-Aufschlag\s{2,}(?P<wert>[\d.]+,\d)\s*%'
+  verbringung: 'Verbringungskosten\s{2,}(?P<wert>[\d.]+,\d{2})\s*EUR'
+
+summen:
+  ersatzteile: 'Summe\s+Ersatzteile\s{2,}(?P<wert>[\d.]+,\d{2})'
+  arbeit: 'Summe\s+Arbeitslohn\s{2,}(?P<wert>[\d.]+,\d{2})'
+  lack: 'Summe\s+Lackierung\s{2,}(?P<wert>[\d.]+,\d{2})'
+  nebenkosten: 'Summe\s+Nebenkosten\s{2,}(?P<wert>[\d.]+,\d{2})'
+  netto: 'Summe\s+netto\s{2,}(?P<wert>[\d.]+,\d{2})'
+  mehrwertsteuer: 'Mehrwertsteuer\s+[\d.,]+\s*%\s{2,}(?P<wert>[\d.]+,\d{2})'
+  brutto: 'Gesamtbetrag\s+brutto\s{2,}(?P<wert>[\d.]+,\d{2})'
+
+abschnitte:
+  - art: ERSATZTEIL
+    beginn: '^\s*Ersatzteile\s*$'
+    ende: '^\s*Summe\s+Ersatzteile'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<teilenummer>[A-Z0-9][A-Z0-9./\-]{4,})\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<einzelpreis>[\d.]+,\d{2})\s{2,}(?P<aufschlag>[\d.]+,\d)\s*%\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+  - art: ARBEIT
+    beginn: '^\s*Arbeitslohn\s*$'
+    ende: '^\s*Summe\s+Arbeitslohn'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<aw>[\d.]+,\d)\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<satz>[\d.]+,\d{2})\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+  - art: LACK
+    beginn: '^\s*Lackierung\s*$'
+    ende: '^\s*Summe\s+Lackierung'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<stufe>\d)\s+(?P<aw>[\d.]+,\d)\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<satz>[\d.]+,\d{2})\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+  - art: NEBENKOSTEN
+    beginn: '^\s*Nebenkosten\s*$'
+    ende: '^\s*Summe\s+Nebenkosten'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+    optional: true

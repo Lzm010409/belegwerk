@@ -1,0 +1,728 @@
+[
+  {
+    "eigen": "paar_00_eigen.txt",
+    "pruefbericht": "paar_00_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "1748.25",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "4,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "130,00",
+        "wert_pruefbericht": "110,50"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "39,5",
+        "wert_pruefbericht": "31,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Kotfluegel vorn links ersetzen",
+        "wert_eigen": "8,7",
+        "wert_pruefbericht": "5,2"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Kotfluegel vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Stossfaenger vorn",
+        "wert_eigen": "1.195,20",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "155,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_01_eigen.txt",
+    "pruefbericht": "paar_01_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "805.08",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "9,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "138,00",
+        "wert_pruefbericht": "117,30"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "37,5",
+        "wert_pruefbericht": "29,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Scheinwerfer links ersetzen",
+        "wert_eigen": "11,0",
+        "wert_pruefbericht": "6,6"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Motorhaube lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Aussenspiegel links",
+        "wert_eigen": "190,60",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "115,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_02_eigen.txt",
+    "pruefbericht": "paar_02_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "2311.66",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "23,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "120,00",
+        "wert_pruefbericht": "102,00"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "42,0",
+        "wert_pruefbericht": "34,0"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Scheinwerfer links ersetzen",
+        "wert_eigen": "10,0",
+        "wert_pruefbericht": "6,0"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Kotfluegel vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Nebelscheinwerfer links",
+        "wert_eigen": "1.018,55",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "150,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_03_eigen.txt",
+    "pruefbericht": "paar_03_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "739.29",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "24,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "151,00",
+        "wert_pruefbericht": "128,35"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "31,5",
+        "wert_pruefbericht": "23,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Kotfluegel vorn links ersetzen",
+        "wert_eigen": "9,6",
+        "wert_pruefbericht": "5,8"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Stossfaenger vorn lackieren",
+        "wert_eigen": "2",
+        "wert_pruefbericht": "1"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "175,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_04_eigen.txt",
+    "pruefbericht": "paar_04_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "679.95",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "22,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "146,00",
+        "wert_pruefbericht": "124,10"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "30,5",
+        "wert_pruefbericht": "22,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Frontklappe einstellen",
+        "wert_eigen": "9,8",
+        "wert_pruefbericht": "5,9"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Tuer vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "70,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_05_eigen.txt",
+    "pruefbericht": "paar_05_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "425.72",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "6,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "162,00",
+        "wert_pruefbericht": "137,70"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "32,0",
+        "wert_pruefbericht": "24,0"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Achsvermessung durchfuehren",
+        "wert_eigen": "5,4",
+        "wert_pruefbericht": "3,2"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Stossfaenger vorn lackieren",
+        "wert_eigen": "2",
+        "wert_pruefbericht": "1"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "175,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_06_eigen.txt",
+    "pruefbericht": "paar_06_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "2298.63",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "24,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "157,00",
+        "wert_pruefbericht": "133,45"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "37,0",
+        "wert_pruefbericht": "29,0"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Kotfluegel vorn links ersetzen",
+        "wert_eigen": "13,7",
+        "wert_pruefbericht": "8,2"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Kotfluegel vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Radhausschale vorn links",
+        "wert_eigen": "694,65",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "170,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_07_eigen.txt",
+    "pruefbericht": "paar_07_pruefbericht.txt",
+    "absender": "controlexpert",
+    "differenz_netto": "1501.93",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "11,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "182,00",
+        "wert_pruefbericht": "154,70"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "32,5",
+        "wert_pruefbericht": "24,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Motorhaube ersetzen",
+        "wert_eigen": "12,1",
+        "wert_pruefbericht": "7,3"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Tuer vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Aussenspiegel links",
+        "wert_eigen": "806,60",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "130,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_08_eigen.txt",
+    "pruefbericht": "paar_08_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "1133.88",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "2,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "123,00",
+        "wert_pruefbericht": "104,55"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "32,5",
+        "wert_pruefbericht": "24,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Motorhaube ersetzen",
+        "wert_eigen": "4,8",
+        "wert_pruefbericht": "2,9"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Kotfluegel vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Nebelscheinwerfer links",
+        "wert_eigen": "805,85",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "150,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_09_eigen.txt",
+    "pruefbericht": "paar_09_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "577.32",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "14,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "134,00",
+        "wert_pruefbericht": "113,90"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "39,0",
+        "wert_pruefbericht": "31,0"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+        "wert_eigen": "9,8",
+        "wert_pruefbericht": "5,9"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Stossfaenger vorn lackieren",
+        "wert_eigen": "2",
+        "wert_pruefbericht": "1"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "170,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_10_eigen.txt",
+    "pruefbericht": "paar_10_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "1288.75",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "13,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "167,00",
+        "wert_pruefbericht": "141,95"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "43,5",
+        "wert_pruefbericht": "35,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Scheinwerfer links ersetzen",
+        "wert_eigen": "6,2",
+        "wert_pruefbericht": "3,7"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Tuer vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Kotfluegel vorn rechts",
+        "wert_eigen": "457,60",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "125,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_11_eigen.txt",
+    "pruefbericht": "paar_11_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "1360.58",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "25,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "137,00",
+        "wert_pruefbericht": "116,45"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "42,0",
+        "wert_pruefbericht": "34,0"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Frontklappe einstellen",
+        "wert_eigen": "12,6",
+        "wert_pruefbericht": "7,6"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Kotfluegel vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Motorhaube",
+        "wert_eigen": "373,35",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "140,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_12_eigen.txt",
+    "pruefbericht": "paar_12_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "1199.79",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "3,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "183,00",
+        "wert_pruefbericht": "155,55"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "38,5",
+        "wert_pruefbericht": "30,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Scheinwerfer links ersetzen",
+        "wert_eigen": "4,9",
+        "wert_pruefbericht": "2,9"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Motorhaube lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Kotfluegel vorn links",
+        "wert_eigen": "797,55",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "105,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_13_eigen.txt",
+    "pruefbericht": "paar_13_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "462.13",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "4,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "126,00",
+        "wert_pruefbericht": "107,10"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "34,5",
+        "wert_pruefbericht": "26,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+        "wert_eigen": "2,9",
+        "wert_pruefbericht": "1,7"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Stossfaenger vorn lackieren",
+        "wert_eigen": "2",
+        "wert_pruefbericht": "1"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Aussenspiegel links",
+        "wert_eigen": "90,70",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "155,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  },
+  {
+    "eigen": "paar_14_eigen.txt",
+    "pruefbericht": "paar_14_pruefbericht.txt",
+    "absender": "eucon",
+    "differenz_netto": "1390.18",
+    "kuerzungen": [
+      {
+        "klasse": "UPE_GEKUERZT",
+        "bezeichnung": "UPE-Aufschlag",
+        "wert_eigen": "15,0",
+        "wert_pruefbericht": "0,0"
+      },
+      {
+        "klasse": "SATZ_GESENKT",
+        "bezeichnung": "Lohn Karosserie",
+        "wert_eigen": "135,00",
+        "wert_pruefbericht": "114,75"
+      },
+      {
+        "klasse": "LACKMATERIAL_GEKUERZT",
+        "bezeichnung": "Lackmaterial",
+        "wert_eigen": "42,5",
+        "wert_pruefbericht": "34,5"
+      },
+      {
+        "klasse": "AW_REDUZIERT",
+        "bezeichnung": "Kotfluegel vorn links ersetzen",
+        "wert_eigen": "5,0",
+        "wert_pruefbericht": "3,0"
+      },
+      {
+        "klasse": "LACKSTUFE_GESENKT",
+        "bezeichnung": "Kotfluegel vorn links lackieren",
+        "wert_eigen": "3",
+        "wert_pruefbericht": "2"
+      },
+      {
+        "klasse": "POS_ENTFALLEN",
+        "bezeichnung": "Querträger vorn",
+        "wert_eigen": "678,40",
+        "wert_pruefbericht": "0,00"
+      },
+      {
+        "klasse": "VERBRINGUNG_ENTFALLEN",
+        "bezeichnung": "Verbringungskosten",
+        "wert_eigen": "60,00",
+        "wert_pruefbericht": "0,00"
+      }
+    ]
+  }
+]

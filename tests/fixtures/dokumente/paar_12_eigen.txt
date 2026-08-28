@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0899/5529TG
+Vorgangsnummer      0899/5529TG
+
+Fahrzeug
+Hersteller / Typ    SKODA Octavia Combi 1.5 TSI
+Fahrgestellnummer   WVWZZZFE4UHNSKGUU
+Amtl. Kennzeichen   OL-ZE 8344
+Erstzulassung       27.06.2019
+Laufleistung        75.290 km
+
+Verrechnungssaetze
+Lohn Mechanik                     135,00 EUR/Std
+Lohn Karosserie                   183,00 EUR/Std
+Lohn Elektrik                     140,00 EUR/Std
+Lohn Lackierung                   166,00 EUR/Std
+Lackmaterial                        38,5 %
+UPE-Aufschlag                        3,0 %
+Verbringungskosten                105,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941699M           Nebelscheinwerfer links            486,95      3,0 %        501,56
+  2 5H0807221M           Stossfaenger vorn                  536,65      3,0 %        552,75
+  3 5H0821021M           Kotfluegel vorn links              797,55      3,0 %        821,48
+  4 5H0853651M           Kuehlergrill                       704,15      3,0 %        725,27
+  5 5H0809957M           Radhausschale vorn links         1.042,10      3,0 %      1.073,36
+Summe Ersatzteile                                                   3.674,42
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     10,6  Tuer vorn links instand setzen                 183,00        193,98
+ 12      7,3  Stossfaenger vorn aus- und einbauen            135,00         98,55
+ 13      4,1  Airbagsteuergeraet auslesen                    140,00         57,40
+ 14      2,7  Frontklappe einstellen                         183,00         49,41
+ 15      4,9  Scheinwerfer links ersetzen                    140,00         68,60
+ 16      7,5  Kotfluegel vorn links ersetzen                 183,00        137,25
+Summe Arbeitslohn                                                     605,19
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2     16,3  Stossfaenger vorn lackieren                166,00        374,75
+ 22     3     13,0  Kotfluegel vorn links lackieren            166,00        298,88
+ 23     3      9,2  Motorhaube lackieren                       166,00        211,52
+ 24     3     11,3  Tuer vorn links lackieren                  166,00        259,80
+Summe Lackierung                                                    1.144,95
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  105,00
+Summe Nebenkosten                                                     105,00
+
+Kalkulationsergebnis
+Summe netto                                                         5.529,56
+Mehrwertsteuer 19,0 %                                               1.050,62
+Gesamtbetrag brutto                                                 6.580,18
+

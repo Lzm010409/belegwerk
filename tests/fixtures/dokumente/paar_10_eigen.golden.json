@@ -1,0 +1,202 @@
+{
+  "quelle": "DAT",
+  "quellformat": "txt",
+  "adapter": "dat_txt",
+  "aktenzeichen": "0220/8465TG",
+  "fahrzeug": {
+    "hersteller": "SEAT",
+    "modell": "Leon ST 1.5 TSI",
+    "vin": "WVWZZZYUE3575SR9M",
+    "kennzeichen": "OL-QV 7890",
+    "erstzulassung": "2017-11-25",
+    "laufleistung_km": 213610
+  },
+  "saetze": {
+    "mechanik": "156",
+    "karosserie": "167",
+    "elektrik": "121",
+    "lack_lohn": "129",
+    "lack_material_prozent": "43.5",
+    "upe_aufschlag_prozent": "13",
+    "verbringung": "125"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Radhausschale vorn links",
+      "teilenummer": "5H0809957K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "837.85",
+      "aufschlag_prozent": "13",
+      "betrag": "946.77"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Tuer vorn links",
+      "teilenummer": "5H0831055K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "694.8",
+      "aufschlag_prozent": "13",
+      "betrag": "785.12"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn rechts",
+      "teilenummer": "5H0821022K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "457.6",
+      "aufschlag_prozent": "13",
+      "betrag": "517.09"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Stossfaenger vorn",
+      "teilenummer": "5H0807221K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "840.7",
+      "aufschlag_prozent": "13",
+      "betrag": "949.99"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1040.8",
+      "aufschlag_prozent": "13",
+      "betrag": "1176.10"
+    },
+    {
+      "laufnummer": 6,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Motorhaube",
+      "teilenummer": "5H0823031K",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "943.25",
+      "aufschlag_prozent": "13",
+      "betrag": "1065.87"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "0.8",
+      "stundensatz": "156",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "12.48"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "6.2",
+      "stundensatz": "121",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "75.02"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "3.9",
+      "stundensatz": "167",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "65.13"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "10.4",
+      "stundensatz": "156",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "162.24"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "17.1",
+      "stundensatz": "129",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "316.55"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "4.9",
+      "stundensatz": "129",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "90.71"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "125"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Fahrzeugreinigung",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "50"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "5440.94",
+    "arbeit": "314.87",
+    "lack": "407.26",
+    "nebenkosten": "175.00",
+    "netto": "6338.07",
+    "mehrwertsteuer": "1204.23",
+    "brutto": "7542.30"
+  }
+}

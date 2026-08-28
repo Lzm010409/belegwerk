@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0481/1819TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>BMW</Hersteller>
+    <Typ>320d Touring</Typ>
+    <FIN>WVWZZZXNFYJ2MFN9U</FIN>
+    <Kennzeichen>OL-NR 95</Kennzeichen>
+    <Erstzulassung>2023-02-23</Erstzulassung>
+    <Laufleistung einheit="km">104900</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>113</LohnMechanik>
+    <LohnKarosserie>179</LohnKarosserie>
+    <LohnElektrik>166</LohnElektrik>
+    <LohnLack>157</LohnLack>
+    <LackmaterialProzent>35.5</LackmaterialProzent>
+    <UPEAufschlagProzent>9</UPEAufschlagProzent>
+    <Verbringung>85</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Scheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941005A</Teilenummer>
+      <Einzelpreis>124.95</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>136.20</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006A</Teilenummer>
+      <Einzelpreis>780.05</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>850.25</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Tuer vorn links</Bezeichnung>
+      <Teilenummer>5H0831055A</Teilenummer>
+      <Einzelpreis>253.45</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>276.26</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Kuehlergrill</Bezeichnung>
+      <Teilenummer>5H0853651A</Teilenummer>
+      <Einzelpreis>119.15</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>129.87</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="5">
+      <Bezeichnung>Nebelscheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941699A</Teilenummer>
+      <Einzelpreis>1036.6</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>1129.89</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="6">
+      <Bezeichnung>Kotfluegel vorn rechts</Bezeichnung>
+      <Teilenummer>5H0821022A</Teilenummer>
+      <Einzelpreis>857.65</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>934.84</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="7">
+      <Bezeichnung>Stossfaenger vorn</Bezeichnung>
+      <Teilenummer>5H0807221A</Teilenummer>
+      <Einzelpreis>346.7</Einzelpreis>
+      <AufschlagProzent>9</AufschlagProzent>
+      <Betrag>377.90</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Kotfluegel vorn links ersetzen</Bezeichnung>
+      <Arbeitswerte>2.8</Arbeitswerte>
+      <Stundensatz>179</Stundensatz>
+      <Betrag>50.12</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Motorhaube ersetzen</Bezeichnung>
+      <Arbeitswerte>12.9</Arbeitswerte>
+      <Stundensatz>179</Stundensatz>
+      <Betrag>230.91</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Tuer vorn links instand setzen</Bezeichnung>
+      <Arbeitswerte>0.5</Arbeitswerte>
+      <Stundensatz>179</Stundensatz>
+      <Betrag>8.95</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="14">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>10.4</Arbeitswerte>
+      <Stundensatz>166</Stundensatz>
+      <Betrag>172.64</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="15">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>10.6</Arbeitswerte>
+      <Stundensatz>179</Stundensatz>
+      <Betrag>189.74</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="16">
+      <Bezeichnung>Stossfaenger vorn aus- und einbauen</Bezeichnung>
+      <Arbeitswerte>6.2</Arbeitswerte>
+      <Stundensatz>113</Stundensatz>
+      <Betrag>70.06</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>5.2</Arbeitswerte>
+      <Stundensatz>157</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>110.62</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Motorhaube lackieren</Bezeichnung>
+      <Arbeitswerte>6.7</Arbeitswerte>
+      <Stundensatz>157</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>142.53</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>85</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="32">
+      <Bezeichnung>Probefahrt</Bezeichnung>
+      <Betrag>57</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>3835.21</Ersatzteile>
+    <Arbeit>722.42</Arbeit>
+    <Lack>253.15</Lack>
+    <Nebenkosten>142.00</Nebenkosten>
+    <Netto>4952.78</Netto>
+    <Mehrwertsteuer satz="19.0">941.03</Mehrwertsteuer>
+    <Brutto>5893.81</Brutto>
+  </Summen>
+</DAT_Kalkulation>

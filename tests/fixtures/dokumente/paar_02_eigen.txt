@@ -1,0 +1,57 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0704/2319TG
+Vorgangsnummer      0704/2319TG
+
+Fahrzeug
+Hersteller / Typ    AUDI A4 Avant 40 TDI
+Fahrgestellnummer   WVWZZZDDLFDG5D0M0
+Amtl. Kennzeichen   OL-ET 396
+Erstzulassung       08.02.2021
+Laufleistung        179.670 km
+
+Verrechnungssaetze
+Lohn Mechanik                     161,00 EUR/Std
+Lohn Karosserie                   120,00 EUR/Std
+Lohn Elektrik                     122,00 EUR/Std
+Lohn Lackierung                   167,00 EUR/Std
+Lackmaterial                        42,0 %
+UPE-Aufschlag                       23,0 %
+Verbringungskosten                150,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941699C           Nebelscheinwerfer links          1.018,55     23,0 %      1.252,82
+  2 5H0823031C           Motorhaube                         607,80     23,0 %        747,59
+  3 5H0809957C           Radhausschale vorn links           750,65     23,0 %        923,30
+  4 5H0821022C           Kotfluegel vorn rechts             246,60     23,0 %        303,32
+  5 5H0941006C           Scheinwerfer rechts                927,95     23,0 %      1.141,38
+  6 5H0805594C           Querträger vorn                    699,75     23,0 %        860,69
+Summe Ersatzteile                                                   5.229,10
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     10,0  Scheinwerfer links ersetzen                    122,00        122,00
+ 12      8,5  Motorhaube ersetzen                            120,00        102,00
+ 13     13,7  Airbagsteuergeraet auslesen                    122,00        167,14
+ 14      1,6  Tuer vorn links instand setzen                 120,00         19,20
+ 15      2,2  Frontklappe einstellen                         120,00         26,40
+ 16      8,9  Kotfluegel vorn links ersetzen                 120,00        106,80
+Summe Arbeitslohn                                                     543,54
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      2,0  Tuer vorn links lackieren                  167,00         47,43
+ 22     3     13,1  Kotfluegel vorn links lackieren            167,00        310,65
+Summe Lackierung                                                      358,08
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  150,00
+Summe Nebenkosten                                                     150,00
+
+Kalkulationsergebnis
+Summe netto                                                         6.280,72
+Mehrwertsteuer 19,0 %                                               1.193,34
+Gesamtbetrag brutto                                                 7.474,06
+

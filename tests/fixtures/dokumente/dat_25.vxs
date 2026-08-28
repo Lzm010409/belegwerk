@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0163/6577TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>AUDI</Hersteller>
+    <Typ>A4 Avant 40 TDI</Typ>
+    <FIN>WVWZZZMX3XSYCM2C2</FIN>
+    <Kennzeichen>OL-LA 23</Kennzeichen>
+    <Erstzulassung>2022-04-02</Erstzulassung>
+    <Laufleistung einheit="km">127170</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>117</LohnMechanik>
+    <LohnKarosserie>125</LohnKarosserie>
+    <LohnElektrik>141</LohnElektrik>
+    <LohnLack>142</LohnLack>
+    <LackmaterialProzent>37</LackmaterialProzent>
+    <UPEAufschlagProzent>20</UPEAufschlagProzent>
+    <Verbringung>165</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Tuer vorn links</Bezeichnung>
+      <Teilenummer>5H0831055F</Teilenummer>
+      <Einzelpreis>267.3</Einzelpreis>
+      <AufschlagProzent>20</AufschlagProzent>
+      <Betrag>320.76</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006F</Teilenummer>
+      <Einzelpreis>526.5</Einzelpreis>
+      <AufschlagProzent>20</AufschlagProzent>
+      <Betrag>631.80</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Aussenspiegel links</Bezeichnung>
+      <Teilenummer>5H0857507F</Teilenummer>
+      <Einzelpreis>158.9</Einzelpreis>
+      <AufschlagProzent>20</AufschlagProzent>
+      <Betrag>190.68</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Radhausschale vorn links</Bezeichnung>
+      <Teilenummer>5H0809957F</Teilenummer>
+      <Einzelpreis>1150.45</Einzelpreis>
+      <AufschlagProzent>20</AufschlagProzent>
+      <Betrag>1380.54</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Achsvermessung durchfuehren</Bezeichnung>
+      <Arbeitswerte>5.7</Arbeitswerte>
+      <Stundensatz>117</Stundensatz>
+      <Betrag>66.69</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>8.1</Arbeitswerte>
+      <Stundensatz>125</Stundensatz>
+      <Betrag>101.25</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Tuer vorn links instand setzen</Bezeichnung>
+      <Arbeitswerte>3.6</Arbeitswerte>
+      <Stundensatz>125</Stundensatz>
+      <Betrag>45.00</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Beilackierung Seitenwand links</Bezeichnung>
+      <Arbeitswerte>17.1</Arbeitswerte>
+      <Stundensatz>142</Stundensatz>
+      <Lackstufe>1</Lackstufe>
+      <Betrag>332.66</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Motorhaube lackieren</Bezeichnung>
+      <Arbeitswerte>8.9</Arbeitswerte>
+      <Stundensatz>142</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>173.14</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>165</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>2523.78</Ersatzteile>
+    <Arbeit>212.94</Arbeit>
+    <Lack>505.80</Lack>
+    <Nebenkosten>165.00</Nebenkosten>
+    <Netto>3407.52</Netto>
+    <Mehrwertsteuer satz="19.0">647.43</Mehrwertsteuer>
+    <Brutto>4054.95</Brutto>
+  </Summen>
+</DAT_Kalkulation>

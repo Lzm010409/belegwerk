@@ -1,0 +1,190 @@
+{
+  "quelle": "DAT",
+  "quellformat": "txt",
+  "adapter": "dat_txt",
+  "aktenzeichen": "0864/8792TG",
+  "fahrzeug": {
+    "hersteller": "AUDI",
+    "modell": "A4 Avant 40 TDI",
+    "vin": "WVWZZZ3LWP4STYRWC",
+    "kennzeichen": "OL-IT 6322",
+    "erstzulassung": "2019-02-14",
+    "laufleistung_km": 37090
+  },
+  "saetze": {
+    "mechanik": "133",
+    "karosserie": "137",
+    "elektrik": "123",
+    "lack_lohn": "137",
+    "lack_material_prozent": "42",
+    "upe_aufschlag_prozent": "25",
+    "verbringung": "140"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "404.8",
+      "aufschlag_prozent": "25",
+      "betrag": "506.00"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Motorhaube",
+      "teilenummer": "5H0823031L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "373.35",
+      "aufschlag_prozent": "25",
+      "betrag": "466.69"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer links",
+      "teilenummer": "5H0941005L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "225.75",
+      "aufschlag_prozent": "25",
+      "betrag": "282.19"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Querträger vorn",
+      "teilenummer": "5H0805594L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "918.95",
+      "aufschlag_prozent": "25",
+      "betrag": "1148.69"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507L",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "961.05",
+      "aufschlag_prozent": "25",
+      "betrag": "1201.31"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "12.6",
+      "stundensatz": "137",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "172.62"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "12",
+      "stundensatz": "133",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "159.60"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "1",
+      "stundensatz": "137",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "13.70"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "4.7",
+      "stundensatz": "123",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "57.81"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Airbagsteuergeraet auslesen",
+      "teilenummer": null,
+      "arbeitswerte": "6.7",
+      "stundensatz": "123",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "82.41"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "8.4",
+      "stundensatz": "137",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "163.41"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "6.4",
+      "stundensatz": "137",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "124.51"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "140"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "3604.88",
+    "arbeit": "486.14",
+    "lack": "287.92",
+    "nebenkosten": "140.00",
+    "netto": "4518.94",
+    "mehrwertsteuer": "858.60",
+    "brutto": "5377.54"
+  }
+}

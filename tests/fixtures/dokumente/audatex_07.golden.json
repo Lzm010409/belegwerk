@@ -1,0 +1,154 @@
+{
+  "quelle": "AUDATEX",
+  "quellformat": "pdf",
+  "adapter": "audatex_pdf",
+  "aktenzeichen": "0605/6788TG",
+  "fahrzeug": {
+    "hersteller": "AUDI",
+    "modell": "A4 Avant 40 TDI",
+    "vin": "WVWZZZDSAMJL2CSG6",
+    "kennzeichen": "OL-SZ 6479",
+    "erstzulassung": "2017-06-30",
+    "laufleistung_km": 31470
+  },
+  "saetze": {
+    "mechanik": "118",
+    "karosserie": "173",
+    "elektrik": "159",
+    "lack_lohn": "130",
+    "lack_material_prozent": "35.5",
+    "upe_aufschlag_prozent": "22",
+    "verbringung": "70"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507H",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "999",
+      "aufschlag_prozent": "22",
+      "betrag": "1218.78"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Tuer vorn links",
+      "teilenummer": "5H0831055H",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "540.2",
+      "aufschlag_prozent": "22",
+      "betrag": "659.04"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer links",
+      "teilenummer": "5H0941005H",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "60.05",
+      "aufschlag_prozent": "22",
+      "betrag": "73.26"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "14.3",
+      "stundensatz": "173",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "247.39"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "8.9",
+      "stundensatz": "118",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "105.02"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Airbagsteuergeraet auslesen",
+      "teilenummer": null,
+      "arbeitswerte": "9.7",
+      "stundensatz": "159",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "154.23"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "4.3",
+      "stundensatz": "130",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "75.74"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "5.4",
+      "stundensatz": "130",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "95.12"
+    },
+    {
+      "laufnummer": 23,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "13.5",
+      "stundensatz": "130",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "237.80"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "70"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "1951.08",
+    "arbeit": "506.64",
+    "lack": "408.66",
+    "nebenkosten": "70.00",
+    "netto": "2936.38",
+    "mehrwertsteuer": "557.91",
+    "brutto": "3494.29"
+  }
+}

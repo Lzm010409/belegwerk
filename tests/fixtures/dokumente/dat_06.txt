@@ -1,0 +1,52 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0731/7320TG
+Vorgangsnummer      0731/7320TG
+
+Fahrzeug
+Hersteller / Typ    FORD Focus Turnier 1.0 EcoBoost
+Fahrgestellnummer   WVWZZZA518ZX2G3M6
+Amtl. Kennzeichen   OL-IR 9769
+Erstzulassung       23.01.2019
+Laufleistung        147.860 km
+
+Verrechnungssaetze
+Lohn Mechanik                     117,00 EUR/Std
+Lohn Karosserie                   149,00 EUR/Std
+Lohn Elektrik                     171,00 EUR/Std
+Lohn Lackierung                   120,00 EUR/Std
+Lackmaterial                        36,5 %
+UPE-Aufschlag                       18,0 %
+Verbringungskosten                110,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0807221G           Stossfaenger vorn                1.084,85     18,0 %      1.280,12
+  2 5H0853651G           Kuehlergrill                       292,60     18,0 %        345,27
+  3 5H0941005G           Scheinwerfer links               1.005,10     18,0 %      1.186,02
+Summe Ersatzteile                                                   2.811,41
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      8,3  Airbagsteuergeraet auslesen                    171,00        141,93
+ 12      0,5  Tuer vorn links instand setzen                 149,00          7,45
+ 13      7,4  Motorhaube ersetzen                            149,00        110,26
+Summe Arbeitslohn                                                     259,64
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      3,0  Stossfaenger vorn lackieren                120,00         49,14
+ 22     3      8,7  Motorhaube lackieren                       120,00        142,51
+Summe Lackierung                                                      191,65
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  110,00
+ 32  Probefahrt                                                           36,00
+Summe Nebenkosten                                                     146,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.408,70
+Mehrwertsteuer 19,0 %                                                 647,65
+Gesamtbetrag brutto                                                 4.056,35
+

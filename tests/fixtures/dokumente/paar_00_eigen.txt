@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0762/2125TG
+Vorgangsnummer      0762/2125TG
+
+Fahrzeug
+Hersteller / Typ    MERCEDES-BENZ C 220 d T-Modell
+Fahrgestellnummer   WVWZZZ8M67PVGFNK2
+Amtl. Kennzeichen   OL-QF 5160
+Erstzulassung       18.07.2018
+Laufleistung        190.000 km
+
+Verrechnungssaetze
+Lohn Mechanik                     149,00 EUR/Std
+Lohn Karosserie                   130,00 EUR/Std
+Lohn Elektrik                     150,00 EUR/Std
+Lohn Lackierung                   165,00 EUR/Std
+Lackmaterial                        39,5 %
+UPE-Aufschlag                        4,0 %
+Verbringungskosten                155,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941005A           Scheinwerfer links                 392,30      4,0 %        407,99
+  2 5H0807221A           Stossfaenger vorn                1.195,20      4,0 %      1.243,01
+  3 5H0821022A           Kotfluegel vorn rechts             885,20      4,0 %        920,61
+  4 5H0853651A           Kuehlergrill                       557,50      4,0 %        579,80
+  5 5H0809957A           Radhausschale vorn links         1.031,80      4,0 %      1.073,07
+  6 5H0941006A           Scheinwerfer rechts              1.061,40      4,0 %      1.103,86
+Summe Ersatzteile                                                   5.328,34
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      6,1  Airbagsteuergeraet auslesen                    150,00         91,50
+ 12     10,1  Stossfaenger vorn aus- und einbauen            149,00        150,49
+ 13     10,4  Achsvermessung durchfuehren                    149,00        154,96
+ 14      6,3  Frontklappe einstellen                         130,00         81,90
+ 15      8,9  Tuer vorn links instand setzen                 130,00        115,70
+ 16      8,7  Kotfluegel vorn links ersetzen                 130,00        113,10
+Summe Arbeitslohn                                                     707,65
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3     16,2  Kotfluegel vorn links lackieren            165,00        372,88
+ 22     3     12,9  Motorhaube lackieren                       165,00        296,93
+Summe Lackierung                                                      669,81
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  155,00
+ 32  Probefahrt                                                           35,00
+Summe Nebenkosten                                                     190,00
+
+Kalkulationsergebnis
+Summe netto                                                         6.895,80
+Mehrwertsteuer 19,0 %                                               1.310,20
+Gesamtbetrag brutto                                                 8.206,00
+

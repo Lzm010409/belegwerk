@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DAT_Kalkulation version="3.0">
+  <Vorgang>
+    <Vorgangsnummer>0986/2488TG</Vorgangsnummer>
+  </Vorgang>
+  <Fahrzeug>
+    <Hersteller>VOLKSWAGEN</Hersteller>
+    <Typ>Golf VIII 2.0 TDI</Typ>
+    <FIN>WVWZZZRH6B3BBSKYZ</FIN>
+    <Kennzeichen>OL-OT 2854</Kennzeichen>
+    <Erstzulassung>2018-09-30</Erstzulassung>
+    <Laufleistung einheit="km">147660</Laufleistung>
+  </Fahrzeug>
+  <Verrechnungssaetze>
+    <LohnMechanik>171</LohnMechanik>
+    <LohnKarosserie>169</LohnKarosserie>
+    <LohnElektrik>156</LohnElektrik>
+    <LohnLack>173</LohnLack>
+    <LackmaterialProzent>33</LackmaterialProzent>
+    <UPEAufschlagProzent>14</UPEAufschlagProzent>
+    <Verbringung>140</Verbringung>
+  </Verrechnungssaetze>
+  <Positionen>
+    <Position art="ERSATZTEIL" nr="1">
+      <Bezeichnung>Nebelscheinwerfer links</Bezeichnung>
+      <Teilenummer>5H0941699E</Teilenummer>
+      <Einzelpreis>683.15</Einzelpreis>
+      <AufschlagProzent>14</AufschlagProzent>
+      <Betrag>778.79</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="2">
+      <Bezeichnung>Scheinwerfer rechts</Bezeichnung>
+      <Teilenummer>5H0941006E</Teilenummer>
+      <Einzelpreis>212.55</Einzelpreis>
+      <AufschlagProzent>14</AufschlagProzent>
+      <Betrag>242.31</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="3">
+      <Bezeichnung>Tuer vorn links</Bezeichnung>
+      <Teilenummer>5H0831055E</Teilenummer>
+      <Einzelpreis>716.1</Einzelpreis>
+      <AufschlagProzent>14</AufschlagProzent>
+      <Betrag>816.35</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="4">
+      <Bezeichnung>Kotfluegel vorn links</Bezeichnung>
+      <Teilenummer>5H0821021E</Teilenummer>
+      <Einzelpreis>299.05</Einzelpreis>
+      <AufschlagProzent>14</AufschlagProzent>
+      <Betrag>340.92</Betrag>
+    </Position>
+    <Position art="ERSATZTEIL" nr="5">
+      <Bezeichnung>Kotfluegel vorn rechts</Bezeichnung>
+      <Teilenummer>5H0821022E</Teilenummer>
+      <Einzelpreis>759.65</Einzelpreis>
+      <AufschlagProzent>14</AufschlagProzent>
+      <Betrag>866.00</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="11">
+      <Bezeichnung>Tuer vorn links instand setzen</Bezeichnung>
+      <Arbeitswerte>2.6</Arbeitswerte>
+      <Stundensatz>169</Stundensatz>
+      <Betrag>43.94</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="12">
+      <Bezeichnung>Achsvermessung durchfuehren</Bezeichnung>
+      <Arbeitswerte>2.6</Arbeitswerte>
+      <Stundensatz>171</Stundensatz>
+      <Betrag>44.46</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="13">
+      <Bezeichnung>Frontklappe einstellen</Bezeichnung>
+      <Arbeitswerte>3.1</Arbeitswerte>
+      <Stundensatz>169</Stundensatz>
+      <Betrag>52.39</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="14">
+      <Bezeichnung>Stossfaenger vorn aus- und einbauen</Bezeichnung>
+      <Arbeitswerte>9.7</Arbeitswerte>
+      <Stundensatz>171</Stundensatz>
+      <Betrag>165.87</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="15">
+      <Bezeichnung>Motorhaube ersetzen</Bezeichnung>
+      <Arbeitswerte>9</Arbeitswerte>
+      <Stundensatz>169</Stundensatz>
+      <Betrag>152.10</Betrag>
+    </Position>
+    <Position art="ARBEIT" nr="16">
+      <Bezeichnung>Scheinwerfer links ersetzen</Bezeichnung>
+      <Arbeitswerte>0.5</Arbeitswerte>
+      <Stundensatz>156</Stundensatz>
+      <Betrag>7.80</Betrag>
+    </Position>
+    <Position art="LACK" nr="21">
+      <Bezeichnung>Stossfaenger vorn lackieren</Bezeichnung>
+      <Arbeitswerte>6</Arbeitswerte>
+      <Stundensatz>173</Stundensatz>
+      <Lackstufe>2</Lackstufe>
+      <Betrag>138.05</Betrag>
+    </Position>
+    <Position art="LACK" nr="22">
+      <Bezeichnung>Kotfluegel vorn links lackieren</Bezeichnung>
+      <Arbeitswerte>11.9</Arbeitswerte>
+      <Stundensatz>173</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>273.81</Betrag>
+    </Position>
+    <Position art="LACK" nr="23">
+      <Bezeichnung>Motorhaube lackieren</Bezeichnung>
+      <Arbeitswerte>9.3</Arbeitswerte>
+      <Stundensatz>173</Stundensatz>
+      <Lackstufe>3</Lackstufe>
+      <Betrag>213.98</Betrag>
+    </Position>
+    <Position art="NEBENKOSTEN" nr="31">
+      <Bezeichnung>Verbringungskosten</Bezeichnung>
+      <Betrag>140</Betrag>
+    </Position>
+  </Positionen>
+  <Summen>
+    <Ersatzteile>3044.37</Ersatzteile>
+    <Arbeit>466.56</Arbeit>
+    <Lack>625.84</Lack>
+    <Nebenkosten>140.00</Nebenkosten>
+    <Netto>4276.77</Netto>
+    <Mehrwertsteuer satz="19.0">812.59</Mehrwertsteuer>
+    <Brutto>5089.36</Brutto>
+  </Summen>
+</DAT_Kalkulation>

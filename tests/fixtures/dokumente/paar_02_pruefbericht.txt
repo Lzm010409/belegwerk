@@ -1,0 +1,53 @@
+ControlExpert GmbH - Rechnungspruefung                        Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0704/2319TG
+Fahrgestellnummer   WVWZZZDDLFDG5D0M0
+Amtl. Kennzeichen   OL-ET 396
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     161,00 EUR/Std
+Lohn Karosserie                   102,00 EUR/Std
+Lohn Elektrik                     122,00 EUR/Std
+Lohn Lackierung                   167,00 EUR/Std
+Lackmaterial                        34,0 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  2 5H0823031C           Motorhaube                         607,80      0,0 %        607,80
+  3 5H0809957C           Radhausschale vorn links           750,65      0,0 %        750,65
+  4 5H0821022C           Kotfluegel vorn rechts             246,60      0,0 %        246,60
+  5 5H0941006C           Scheinwerfer rechts                927,95      0,0 %        927,95
+  6 5H0805594C           Querträger vorn                    699,75      0,0 %        699,75
+Summe Ersatzteile                                                   3.232,75
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      6,0  Scheinwerfer links ersetzen                    122,00         73,20
+ 12      8,5  Motorhaube ersetzen                            102,00         86,70
+ 13     13,7  Airbagsteuergeraet auslesen                    122,00        167,14
+ 14      1,6  Tuer vorn links instand setzen                 102,00         16,32
+ 15      2,2  Frontklappe einstellen                         102,00         22,44
+ 16      8,9  Kotfluegel vorn links ersetzen                 102,00         90,78
+Summe Arbeitslohn                                                     456,58
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      2,0  Tuer vorn links lackieren                  167,00         44,76
+ 22     2     10,5  Kotfluegel vorn links lackieren            167,00        234,97
+Summe Lackierung                                                      279,73
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+Summe Nebenkosten                                                       0,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   6.280,72
+Summe netto                                                         3.969,06
+Mehrwertsteuer 19,0 %                                                 754,12
+Gesamtbetrag brutto                                                 4.723,18
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

@@ -1,0 +1,178 @@
+{
+  "quelle": "DAT",
+  "quellformat": "pdf",
+  "adapter": "dat_pdf",
+  "aktenzeichen": "0760/8461TG",
+  "fahrzeug": {
+    "hersteller": "FORD",
+    "modell": "Focus Turnier 1.0 EcoBoost",
+    "vin": "WVWZZZMPRTYZ09JWY",
+    "kennzeichen": "OL-LZ 6168",
+    "erstzulassung": "2023-11-25",
+    "laufleistung_km": 70700
+  },
+  "saetze": {
+    "mechanik": "159",
+    "karosserie": "164",
+    "elektrik": "136",
+    "lack_lohn": "161",
+    "lack_material_prozent": "32",
+    "upe_aufschlag_prozent": "11",
+    "verbringung": "135"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507Q",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1009.85",
+      "aufschlag_prozent": "11",
+      "betrag": "1120.93"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kuehlergrill",
+      "teilenummer": "5H0853651Q",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "877.8",
+      "aufschlag_prozent": "11",
+      "betrag": "974.36"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Nebelscheinwerfer links",
+      "teilenummer": "5H0941699Q",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "692.95",
+      "aufschlag_prozent": "11",
+      "betrag": "769.17"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "7.3",
+      "stundensatz": "164",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "119.72"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Kotfluegel vorn links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "8.8",
+      "stundensatz": "164",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "144.32"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Motorhaube ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "9.1",
+      "stundensatz": "164",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "149.24"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "9.7",
+      "stundensatz": "164",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "159.08"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "8.1",
+      "stundensatz": "161",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "172.14"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "17.7",
+      "stundensatz": "161",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "376.16"
+    },
+    {
+      "laufnummer": 23,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "10.8",
+      "stundensatz": "161",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "229.52"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "135"
+    },
+    {
+      "laufnummer": 32,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Entsorgung Altteile",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "28"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "2864.46",
+    "arbeit": "572.36",
+    "lack": "777.82",
+    "nebenkosten": "163.00",
+    "netto": "4377.64",
+    "mehrwertsteuer": "831.75",
+    "brutto": "5209.39"
+  }
+}

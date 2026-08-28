@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0863/4747TG
+Vorgangsnummer      0863/4747TG
+
+Fahrzeug
+Hersteller / Typ    BMW 320d Touring
+Fahrgestellnummer   WVWZZZ05HS2EEDJH1
+Amtl. Kennzeichen   OL-PZ 3112
+Erstzulassung       19.09.2017
+Laufleistung        152.140 km
+
+Verrechnungssaetze
+Lohn Mechanik                     139,00 EUR/Std
+Lohn Karosserie                   135,00 EUR/Std
+Lohn Elektrik                     158,00 EUR/Std
+Lohn Lackierung                   162,00 EUR/Std
+Lackmaterial                        42,5 %
+UPE-Aufschlag                       15,0 %
+Verbringungskosten                 60,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0831055O           Tuer vorn links                    499,95     15,0 %        574,94
+  2 5H0821022O           Kotfluegel vorn rechts             443,85     15,0 %        510,43
+  3 5H0941005O           Scheinwerfer links                 719,60     15,0 %        827,54
+  4 5H0809957O           Radhausschale vorn links           803,45     15,0 %        923,97
+  5 5H0805594O           Querträger vorn                    678,40     15,0 %        780,16
+Summe Ersatzteile                                                   3.617,04
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      2,1  Scheinwerfer links ersetzen                    158,00         33,18
+ 12     11,6  Frontklappe einstellen                         135,00        156,60
+ 13      6,5  Motorhaube ersetzen                            135,00         87,75
+ 14     10,5  Airbagsteuergeraet auslesen                    158,00        165,90
+ 15      5,0  Kotfluegel vorn links ersetzen                 135,00         67,50
+ 16      1,1  Stossfaenger vorn aus- und einbauen            139,00         15,29
+Summe Arbeitslohn                                                     526,22
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2     12,9  Stossfaenger vorn lackieren                162,00        297,80
+ 22     3     16,7  Kotfluegel vorn links lackieren            162,00        385,52
+Summe Lackierung                                                      683,32
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                   60,00
+ 32  Entsorgung Altteile                                                  51,00
+ 33  Fahrzeugreinigung                                                   115,00
+Summe Nebenkosten                                                     226,00
+
+Kalkulationsergebnis
+Summe netto                                                         5.052,58
+Mehrwertsteuer 19,0 %                                                 959,99
+Gesamtbetrag brutto                                                 6.012,57
+

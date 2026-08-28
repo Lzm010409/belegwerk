@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
@@ -31,8 +32,17 @@ async def lebenszyklus(app: FastAPI) -> AsyncIterator[None]:
         await ersten_mandanten_anlegen()
     except Exception as fehler:  # noqa: BLE001 — Start darf daran nicht scheitern
         _log.error("Erststart fehlgeschlagen", extra={"fehlerart": type(fehler).__name__})
+    from belegwerk.kern.auftraege import arbeiter_schleife
+
+    stopp = asyncio.Event()
+    arbeiter = asyncio.create_task(arbeiter_schleife(stopp), name="auftragsarbeiter")
     _log.info("Anwendung gestartet", extra={"version": __version__, "umgebung": konfiguration.umgebung})
     yield
+    stopp.set()
+    try:
+        await asyncio.wait_for(arbeiter, timeout=15)
+    except (TimeoutError, asyncio.CancelledError):
+        arbeiter.cancel()
     from belegwerk.datenbank import engine_schliessen
 
     await engine_schliessen()

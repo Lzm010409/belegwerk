@@ -1,0 +1,53 @@
+ControlExpert GmbH - Rechnungspruefung                        Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0593/9749TG
+Fahrgestellnummer   WVWZZZ79GWWUF7GRM
+Amtl. Kennzeichen   OL-FL 4998
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     160,00 EUR/Std
+Lohn Karosserie                   137,70 EUR/Std
+Lohn Elektrik                     178,00 EUR/Std
+Lohn Lackierung                   133,00 EUR/Std
+Lackmaterial                        24,0 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941699F           Nebelscheinwerfer links            738,20      0,0 %        738,20
+  2 5H0853651F           Kuehlergrill                       128,30      0,0 %        128,30
+  3 5H0941006F           Scheinwerfer rechts              1.197,15      0,0 %      1.197,15
+Summe Ersatzteile                                                   2.063,65
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     11,1  Scheinwerfer links ersetzen                    178,00        197,58
+ 12     11,8  Airbagsteuergeraet auslesen                    178,00        210,04
+ 13     12,1  Frontklappe einstellen                         137,70        166,62
+ 14      3,2  Achsvermessung durchfuehren                    160,00         51,20
+ 15     10,8  Motorhaube ersetzen                            137,70        148,72
+ 16      4,8  Stossfaenger vorn aus- und einbauen            160,00         76,80
+Summe Arbeitslohn                                                     850,96
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1      4,2  Stossfaenger vorn lackieren                133,00         69,27
+ 22     1      4,0  Beilackierung Seitenwand links             133,00         65,97
+ 23     3      9,2  Tuer vorn links lackieren                  133,00        151,73
+Summe Lackierung                                                      286,97
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 32  Entsorgung Altteile                                                  81,00
+Summe Nebenkosten                                                      81,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   3.708,30
+Summe netto                                                         3.282,58
+Mehrwertsteuer 19,0 %                                                 623,69
+Gesamtbetrag brutto                                                 3.906,27
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

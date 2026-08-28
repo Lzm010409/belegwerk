@@ -1,0 +1,67 @@
+# Profil: Audatex (AudaPad Web). Dieselbe Fachlichkeit, andere Woerter.
+name: audatex
+quelle: AUDATEX
+formate: [pdf, txt]
+
+adapter:
+  pdf: audatex_pdf
+  txt: audatex_txt
+
+erkennung:
+  mindestpunkte: 3
+  signaturen:
+    - muster: 'Audatex|AudaPad'
+      gewicht: 3
+    - muster: 'Reparaturkalkulation'
+      gewicht: 2
+    - muster: 'Kalkulationssumme'
+      gewicht: 2
+    - muster: 'Stundenverrechnungssaetze|Stundenverrechnungssätze'
+      gewicht: 1
+
+pflichtfelder: [aktenzeichen, vin]
+
+felder:
+  aktenzeichen: 'Vorgangsnummer\s{2,}(?P<aktenzeichen>\S+)'
+  fahrzeug: 'Hersteller\s*/\s*Typ\s{2,}(?P<hersteller>[A-ZÄÖÜ][A-ZÄÖÜ\-]+)\s+(?P<modell>.+?)\s*$'
+  vin: '(?:Fahrgestellnummer|FIN)\s{2,}(?P<vin>[A-HJ-NPR-Z0-9]{17})'
+  kennzeichen: 'Amtl\.?\s*Kennzeichen\s{2,}(?P<kennzeichen>[A-ZÄÖÜ]{1,3}-[A-Z]{1,2}\s?\d{1,4}[EH]?)'
+  erstzulassung: 'Erstzulassung\s{2,}(?P<erstzulassung>\d{2}\.\d{2}\.\d{4})'
+  laufleistung: 'Laufleistung\s{2,}(?P<laufleistung>[\d.]+)\s*km'
+
+saetze:
+  mechanik: 'AZ-Satz\s+Mechanik\s{2,}(?P<wert>[\d.]+,\d{2})'
+  karosserie: 'AZ-Satz\s+Karosserie\s{2,}(?P<wert>[\d.]+,\d{2})'
+  elektrik: 'AZ-Satz\s+Elektrik\s{2,}(?P<wert>[\d.]+,\d{2})'
+  lack_lohn: 'AZ-Satz\s+Lack\s{2,}(?P<wert>[\d.]+,\d{2})'
+  lack_material_prozent: 'Lackmaterialindex\s{2,}(?P<wert>[\d.]+,\d)\s*%'
+  upe_aufschlag_prozent: 'Teileaufschlag\s{2,}(?P<wert>[\d.]+,\d)\s*%'
+  verbringung: 'Verbringung\s{2,}(?P<wert>[\d.]+,\d{2})\s*EUR'
+
+summen:
+  ersatzteile: 'Teile\s+gesamt\s{2,}(?P<wert>[\d.]+,\d{2})'
+  arbeit: 'Arbeit\s+gesamt\s{2,}(?P<wert>[\d.]+,\d{2})'
+  lack: 'Lack\s+gesamt\s{2,}(?P<wert>[\d.]+,\d{2})'
+  nebenkosten: 'Nebenkosten\s+gesamt\s{2,}(?P<wert>[\d.]+,\d{2})'
+  netto: 'Reparaturkosten\s+netto\s{2,}(?P<wert>[\d.]+,\d{2})'
+  mehrwertsteuer: 'zzgl\.\s*MwSt\s+[\d.,]+\s*%\s{2,}(?P<wert>[\d.]+,\d{2})'
+  brutto: 'Reparaturkosten\s+brutto\s{2,}(?P<wert>[\d.]+,\d{2})'
+
+abschnitte:
+  - art: ERSATZTEIL
+    beginn: '^\s*Teilepositionen\s*$'
+    ende: '^\s*Teile\s+gesamt'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<teilenummer>[A-Z0-9][A-Z0-9./\-]{4,})\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<einzelpreis>[\d.]+,\d{2})\s{2,}(?P<aufschlag>[\d.]+,\d)\s*%\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+  - art: ARBEIT
+    beginn: '^\s*Arbeitspositionen\s*$'
+    ende: '^\s*Arbeit\s+gesamt'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<aw>[\d.]+,\d)\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<satz>[\d.]+,\d{2})\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+  - art: LACK
+    beginn: '^\s*Lackpositionen\s*$'
+    ende: '^\s*Lack\s+gesamt'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<stufe>\d)\s+(?P<aw>[\d.]+,\d)\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<satz>[\d.]+,\d{2})\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+  - art: NEBENKOSTEN
+    beginn: '^\s*Nebenkosten\s*$'
+    ende: '^\s*Nebenkosten\s+gesamt'
+    zeile: '^\s*(?P<nr>\d{1,3})\s+(?P<bezeichnung>\D.*?)\s{2,}(?P<betrag>[\d.]+,\d{2})\s*$'
+    optional: true

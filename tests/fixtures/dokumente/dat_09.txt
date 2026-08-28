@@ -1,0 +1,58 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0523/7111TG
+Vorgangsnummer      0523/7111TG
+
+Fahrzeug
+Hersteller / Typ    MERCEDES-BENZ C 220 d T-Modell
+Fahrgestellnummer   WVWZZZYYC5UXNJJYX
+Amtl. Kennzeichen   OL-ZX 1084
+Erstzulassung       16.10.2024
+Laufleistung        88.330 km
+
+Verrechnungssaetze
+Lohn Mechanik                     111,00 EUR/Std
+Lohn Karosserie                   182,00 EUR/Std
+Lohn Elektrik                     124,00 EUR/Std
+Lohn Lackierung                   167,00 EUR/Std
+Lackmaterial                        45,0 %
+UPE-Aufschlag                        5,0 %
+Verbringungskosten                140,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0807221J           Stossfaenger vorn                  378,05      5,0 %        396,95
+  2 5H0941005J           Scheinwerfer links                 366,50      5,0 %        384,83
+  3 5H0821021J           Kotfluegel vorn links            1.001,35      5,0 %      1.051,42
+  4 5H0823031J           Motorhaube                         172,70      5,0 %        181,34
+Summe Ersatzteile                                                   2.014,54
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      0,8  Stossfaenger vorn aus- und einbauen            111,00          8,88
+ 12     13,5  Frontklappe einstellen                         182,00        245,70
+ 13      3,9  Achsvermessung durchfuehren                    111,00         43,29
+ 14      9,5  Motorhaube ersetzen                            182,00        172,90
+ 15      4,0  Tuer vorn links instand setzen                 182,00         72,80
+ 16      4,0  Kotfluegel vorn links ersetzen                 182,00         72,80
+Summe Arbeitslohn                                                     616,37
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      6,3  Tuer vorn links lackieren                  167,00        152,55
+ 22     3     13,6  Kotfluegel vorn links lackieren            167,00        329,32
+ 23     1     13,7  Beilackierung Seitenwand links             167,00        331,75
+ 24     3      9,6  Motorhaube lackieren                       167,00        232,46
+Summe Lackierung                                                    1.046,08
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  140,00
+ 32  Fahrzeugreinigung                                                    52,00
+Summe Nebenkosten                                                     192,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.868,99
+Mehrwertsteuer 19,0 %                                                 735,11
+Gesamtbetrag brutto                                                 4.604,10
+

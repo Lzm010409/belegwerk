@@ -1,0 +1,52 @@
+ControlExpert GmbH - Rechnungspruefung                        Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0719/2644TG
+Fahrgestellnummer   WVWZZZFV30J2UKWM0
+Amtl. Kennzeichen   OL-BT 9086
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     166,00 EUR/Std
+Lohn Karosserie                   117,30 EUR/Std
+Lohn Elektrik                     160,00 EUR/Std
+Lohn Lackierung                   171,00 EUR/Std
+Lackmaterial                        29,5 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  2 5H0941005B           Scheinwerfer links               1.025,50      0,0 %      1.025,50
+  3 5H0831055B           Tuer vorn links                  1.109,55      0,0 %      1.109,55
+  4 5H0941006B           Scheinwerfer rechts                 92,35      0,0 %         92,35
+  5 5H0807221B           Stossfaenger vorn                1.169,05      0,0 %      1.169,05
+Summe Ersatzteile                                                   3.396,45
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      7,1  Tuer vorn links instand setzen                 117,30         83,28
+ 12      6,6  Scheinwerfer links ersetzen                    160,00        105,60
+ 13     12,0  Kotfluegel vorn links ersetzen                 117,30        140,76
+Summe Arbeitslohn                                                     329,64
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      5,6  Motorhaube lackieren                       171,00        124,01
+ 22     2     10,5  Stossfaenger vorn lackieren                171,00        232,52
+ 23     3      8,6  Kotfluegel vorn links lackieren            171,00        190,44
+Summe Lackierung                                                      546,97
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 32  Fahrzeugreinigung                                                    72,00
+ 33  Probefahrt                                                           79,00
+Summe Nebenkosten                                                     151,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   5.229,14
+Summe netto                                                         4.424,06
+Mehrwertsteuer 19,0 %                                                 840,57
+Gesamtbetrag brutto                                                 5.264,63
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

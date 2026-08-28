@@ -1,0 +1,56 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0320/8201TG
+Vorgangsnummer      0320/8201TG
+
+Fahrzeug
+Hersteller / Typ    SEAT Leon ST 1.5 TSI
+Fahrgestellnummer   WVWZZZSBXWJDHHD55
+Amtl. Kennzeichen   OL-KD 2356
+Erstzulassung       23.06.2023
+Laufleistung        114.890 km
+
+Verrechnungssaetze
+Lohn Mechanik                     169,00 EUR/Std
+Lohn Karosserie                   151,00 EUR/Std
+Lohn Elektrik                     149,00 EUR/Std
+Lohn Lackierung                   156,00 EUR/Std
+Lackmaterial                        31,5 %
+UPE-Aufschlag                       24,0 %
+Verbringungskosten                175,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941006D           Scheinwerfer rechts                131,45     24,0 %        163,00
+  2 5H0941699D           Nebelscheinwerfer links            450,15     24,0 %        558,19
+  3 5H0823031D           Motorhaube                       1.165,90     24,0 %      1.445,72
+Summe Ersatzteile                                                   2.166,91
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      2,0  Motorhaube ersetzen                            151,00         30,20
+ 12      1,6  Tuer vorn links instand setzen                 151,00         24,16
+ 13      0,5  Achsvermessung durchfuehren                    169,00          8,45
+ 14      9,6  Kotfluegel vorn links ersetzen                 151,00        144,96
+Summe Arbeitslohn                                                     207,77
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      3,1  Tuer vorn links lackieren                  156,00         63,59
+ 22     3      5,1  Motorhaube lackieren                       156,00        104,62
+ 23     2      7,4  Stossfaenger vorn lackieren                156,00        151,80
+ 24     3     14,3  Kotfluegel vorn links lackieren            156,00        293,35
+Summe Lackierung                                                      613,36
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  175,00
+ 32  Entsorgung Altteile                                                  42,00
+ 33  Fahrzeugreinigung                                                    41,00
+Summe Nebenkosten                                                     258,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.246,04
+Mehrwertsteuer 19,0 %                                                 616,75
+Gesamtbetrag brutto                                                 3.862,79
+

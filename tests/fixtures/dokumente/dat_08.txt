@@ -1,0 +1,55 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0949/2695TG
+Vorgangsnummer      0949/2695TG
+
+Fahrzeug
+Hersteller / Typ    SEAT Leon ST 1.5 TSI
+Fahrgestellnummer   WVWZZZ55WYJ506X30
+Amtl. Kennzeichen   OL-SL 6809
+Erstzulassung       24.11.2020
+Laufleistung        23.660 km
+
+Verrechnungssaetze
+Lohn Mechanik                     166,00 EUR/Std
+Lohn Karosserie                   163,00 EUR/Std
+Lohn Elektrik                     125,00 EUR/Std
+Lohn Lackierung                   165,00 EUR/Std
+Lackmaterial                        33,0 %
+UPE-Aufschlag                        1,0 %
+Verbringungskosten                165,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0809957I           Radhausschale vorn links         1.141,45      1,0 %      1.152,86
+  2 5H0805594I           Querträger vorn                     63,60      1,0 %         64,24
+  3 5H0821021I           Kotfluegel vorn links              928,45      1,0 %        937,73
+  4 5H0941006I           Scheinwerfer rechts                582,05      1,0 %        587,87
+Summe Ersatzteile                                                   2.742,70
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      6,0  Scheinwerfer links ersetzen                    125,00         75,00
+ 12      4,1  Tuer vorn links instand setzen                 163,00         66,83
+ 13      3,1  Kotfluegel vorn links ersetzen                 163,00         50,53
+ 14      6,3  Frontklappe einstellen                         163,00        102,69
+ 15     10,1  Motorhaube ersetzen                            163,00        164,63
+Summe Arbeitslohn                                                     459,68
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      7,7  Motorhaube lackieren                       165,00        168,98
+ 22     1     11,5  Beilackierung Seitenwand links             165,00        252,37
+ 23     3      8,3  Tuer vorn links lackieren                  165,00        182,14
+Summe Lackierung                                                      603,49
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  165,00
+Summe Nebenkosten                                                     165,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.970,87
+Mehrwertsteuer 19,0 %                                                 754,47
+Gesamtbetrag brutto                                                 4.725,34
+

@@ -1,0 +1,154 @@
+{
+  "quelle": "DAT",
+  "quellformat": "vxs",
+  "adapter": "dat_vxs",
+  "aktenzeichen": "0163/6577TG",
+  "fahrzeug": {
+    "hersteller": "AUDI",
+    "modell": "A4 Avant 40 TDI",
+    "vin": "WVWZZZMX3XSYCM2C2",
+    "kennzeichen": "OL-LA 23",
+    "erstzulassung": "2022-04-02",
+    "laufleistung_km": 127170
+  },
+  "saetze": {
+    "mechanik": "117",
+    "karosserie": "125",
+    "elektrik": "141",
+    "lack_lohn": "142",
+    "lack_material_prozent": "37",
+    "upe_aufschlag_prozent": "20",
+    "verbringung": "165"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Tuer vorn links",
+      "teilenummer": "5H0831055F",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "267.3",
+      "aufschlag_prozent": "20",
+      "betrag": "320.76"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006F",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "526.5",
+      "aufschlag_prozent": "20",
+      "betrag": "631.80"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507F",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "158.9",
+      "aufschlag_prozent": "20",
+      "betrag": "190.68"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Radhausschale vorn links",
+      "teilenummer": "5H0809957F",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1150.45",
+      "aufschlag_prozent": "20",
+      "betrag": "1380.54"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "5.7",
+      "stundensatz": "117",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "66.69"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Frontklappe einstellen",
+      "teilenummer": null,
+      "arbeitswerte": "8.1",
+      "stundensatz": "125",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "101.25"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "3.6",
+      "stundensatz": "125",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "45.00"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "17.1",
+      "stundensatz": "142",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "332.66"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "8.9",
+      "stundensatz": "142",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "173.14"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "165"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "2523.78",
+    "arbeit": "212.94",
+    "lack": "505.80",
+    "nebenkosten": "165.00",
+    "netto": "3407.52",
+    "mehrwertsteuer": "647.43",
+    "brutto": "4054.95"
+  }
+}

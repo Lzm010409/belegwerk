@@ -1,0 +1,202 @@
+{
+  "quelle": "DAT",
+  "quellformat": "txt",
+  "adapter": "dat_txt",
+  "aktenzeichen": "0101/6145TG",
+  "fahrzeug": {
+    "hersteller": "OPEL",
+    "modell": "Astra K 1.4 Turbo",
+    "vin": "WVWZZZBTVHNV1XRRZ",
+    "kennzeichen": "OL-TP 1962",
+    "erstzulassung": "2021-08-12",
+    "laufleistung_km": 131220
+  },
+  "saetze": {
+    "mechanik": "122",
+    "karosserie": "170",
+    "elektrik": "160",
+    "lack_lohn": "124",
+    "lack_material_prozent": "44.5",
+    "upe_aufschlag_prozent": "5",
+    "verbringung": "145"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn rechts",
+      "teilenummer": "5H0821022A",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1160.7",
+      "aufschlag_prozent": "5",
+      "betrag": "1218.74"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Stossfaenger vorn",
+      "teilenummer": "5H0807221A",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1136.45",
+      "aufschlag_prozent": "5",
+      "betrag": "1193.27"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Radhausschale vorn links",
+      "teilenummer": "5H0809957A",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "645.4",
+      "aufschlag_prozent": "5",
+      "betrag": "677.67"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006A",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "418",
+      "aufschlag_prozent": "5",
+      "betrag": "438.90"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507A",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "795.45",
+      "aufschlag_prozent": "5",
+      "betrag": "835.22"
+    },
+    {
+      "laufnummer": 6,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021A",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "344.9",
+      "aufschlag_prozent": "5",
+      "betrag": "362.15"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "11.1",
+      "stundensatz": "170",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "188.70"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Kotfluegel vorn links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "5.6",
+      "stundensatz": "170",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "95.20"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "1",
+      "stundensatz": "160",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "16.00"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "4.7",
+      "stundensatz": "124",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "84.21"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Kotfluegel vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "8.4",
+      "stundensatz": "124",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "150.51"
+    },
+    {
+      "laufnummer": 23,
+      "art": "LACK",
+      "bezeichnung": "Stossfaenger vorn lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "6.1",
+      "stundensatz": "124",
+      "lackstufe": 2,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "109.30"
+    },
+    {
+      "laufnummer": 24,
+      "art": "LACK",
+      "bezeichnung": "Motorhaube lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "9.3",
+      "stundensatz": "124",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "166.64"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "145"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "4725.95",
+    "arbeit": "299.90",
+    "lack": "510.66",
+    "nebenkosten": "145.00",
+    "netto": "5681.51",
+    "mehrwertsteuer": "1079.49",
+    "brutto": "6761.00"
+  }
+}

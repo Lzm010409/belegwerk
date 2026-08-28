@@ -1,0 +1,54 @@
+Eucon Digital GmbH - Pruefbericht Kalkulation                 Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0899/5529TG
+Fahrgestellnummer   WVWZZZFE4UHNSKGUU
+Amtl. Kennzeichen   OL-ZE 8344
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     135,00 EUR/Std
+Lohn Karosserie                   155,55 EUR/Std
+Lohn Elektrik                     140,00 EUR/Std
+Lohn Lackierung                   166,00 EUR/Std
+Lackmaterial                        30,5 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941699M           Nebelscheinwerfer links            486,95      0,0 %        486,95
+  2 5H0807221M           Stossfaenger vorn                  536,65      0,0 %        536,65
+  4 5H0853651M           Kuehlergrill                       704,15      0,0 %        704,15
+  5 5H0809957M           Radhausschale vorn links         1.042,10      0,0 %      1.042,10
+Summe Ersatzteile                                                   2.769,85
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     10,6  Tuer vorn links instand setzen                 155,55        164,88
+ 12      7,3  Stossfaenger vorn aus- und einbauen            135,00         98,55
+ 13      4,1  Airbagsteuergeraet auslesen                    140,00         57,40
+ 14      2,7  Frontklappe einstellen                         155,55         42,00
+ 15      2,9  Scheinwerfer links ersetzen                    140,00         40,60
+ 16      7,5  Kotfluegel vorn links ersetzen                 155,55        116,66
+Summe Arbeitslohn                                                     520,09
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2     16,3  Stossfaenger vorn lackieren                166,00        353,11
+ 22     3     13,0  Kotfluegel vorn links lackieren            166,00        281,62
+ 23     2      7,4  Motorhaube lackieren                       166,00        160,31
+ 24     3     11,3  Tuer vorn links lackieren                  166,00        244,79
+Summe Lackierung                                                    1.039,83
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+Summe Nebenkosten                                                       0,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   5.529,56
+Summe netto                                                         4.329,77
+Mehrwertsteuer 19,0 %                                                 822,66
+Gesamtbetrag brutto                                                 5.152,43
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

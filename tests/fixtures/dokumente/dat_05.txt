@@ -1,0 +1,57 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0620/5637TG
+Vorgangsnummer      0620/5637TG
+
+Fahrzeug
+Hersteller / Typ    TOYOTA Corolla Touring Sports
+Fahrgestellnummer   WVWZZZGB02V0N6KCA
+Amtl. Kennzeichen   OL-OA 694
+Erstzulassung       14.07.2022
+Laufleistung        49.220 km
+
+Verrechnungssaetze
+Lohn Mechanik                     161,00 EUR/Std
+Lohn Karosserie                   172,00 EUR/Std
+Lohn Elektrik                     153,00 EUR/Std
+Lohn Lackierung                   142,00 EUR/Std
+Lackmaterial                        35,5 %
+UPE-Aufschlag                       15,0 %
+Verbringungskosten                 75,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0941006F           Scheinwerfer rechts                602,35     15,0 %        692,70
+  2 5H0941699F           Nebelscheinwerfer links            848,90     15,0 %        976,24
+  3 5H0807221F           Stossfaenger vorn                  200,70     15,0 %        230,81
+  4 5H0823031F           Motorhaube                         479,15     15,0 %        551,02
+  5 5H0853651F           Kuehlergrill                       425,35     15,0 %        489,15
+  6 5H0821022F           Kotfluegel vorn rechts             187,35     15,0 %        215,45
+  7 5H0857507F           Aussenspiegel links                528,45     15,0 %        607,72
+Summe Ersatzteile                                                   3.763,09
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     10,5  Tuer vorn links instand setzen                 172,00        180,60
+ 12      9,6  Kotfluegel vorn links ersetzen                 172,00        165,12
+ 13     14,3  Frontklappe einstellen                         172,00        245,96
+Summe Arbeitslohn                                                     591,68
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     2      9,0  Stossfaenger vorn lackieren                142,00        173,17
+ 22     1     12,7  Beilackierung Seitenwand links             142,00        244,36
+Summe Lackierung                                                      417,53
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                   75,00
+ 32  Fahrzeugreinigung                                                    81,00
+ 33  Entsorgung Altteile                                                  67,00
+Summe Nebenkosten                                                     223,00
+
+Kalkulationsergebnis
+Summe netto                                                         4.995,30
+Mehrwertsteuer 19,0 %                                                 949,11
+Gesamtbetrag brutto                                                 5.944,41
+

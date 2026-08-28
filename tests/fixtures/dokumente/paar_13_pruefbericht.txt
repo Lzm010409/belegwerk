@@ -1,0 +1,56 @@
+Eucon Digital GmbH - Pruefbericht Kalkulation                 Seite 1
+
+Pruefbericht zur Schadenkalkulation
+Schadennummer       0186/4931TG
+Fahrgestellnummer   WVWZZZCS8C2RUYLX1
+Amtl. Kennzeichen   OL-AW 8806
+
+Anerkannte Verrechnungssaetze
+Lohn Mechanik                     115,00 EUR/Std
+Lohn Karosserie                   107,10 EUR/Std
+Lohn Elektrik                     131,00 EUR/Std
+Lohn Lackierung                   128,00 EUR/Std
+Lackmaterial                        26,5 %
+UPE-Aufschlag                        0,0 %
+Verbringungskosten                  0,00 EUR
+
+Anerkannte Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821022N           Kotfluegel vorn rechts             598,65      0,0 %        598,65
+  2 5H0853651N           Kuehlergrill                       578,50      0,0 %        578,50
+  3 5H0831055N           Tuer vorn links                    700,95      0,0 %        700,95
+  5 5H0821021N           Kotfluegel vorn links               47,50      0,0 %         47,50
+  6 5H0941005N           Scheinwerfer links                 579,30      0,0 %        579,30
+  7 5H0809957N           Radhausschale vorn links           397,90      0,0 %        397,90
+Summe Ersatzteile                                                   2.902,80
+
+Anerkannter Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      8,1  Achsvermessung durchfuehren                    115,00         93,15
+ 12      1,7  Stossfaenger vorn aus- und einbauen            115,00         19,55
+ 13     11,8  Kotfluegel vorn links ersetzen                 107,10        126,38
+ 14     13,7  Scheinwerfer links ersetzen                    131,00        179,47
+ 15      2,3  Airbagsteuergeraet auslesen                    131,00         30,13
+ 16      4,4  Frontklappe einstellen                         107,10         47,12
+Summe Arbeitslohn                                                     495,80
+
+Anerkannte Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1      5,8  Stossfaenger vorn lackieren                128,00         93,91
+ 22     3     15,3  Motorhaube lackieren                       128,00        247,74
+ 23     3      6,4  Kotfluegel vorn links lackieren            128,00        103,63
+Summe Lackierung                                                      445,28
+
+Anerkannte Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 32  Probefahrt                                                          117,00
+Summe Nebenkosten                                                     117,00
+
+Pruefergebnis
+Kalkulierte Reparaturkosten netto                                   4.423,01
+Summe netto                                                         3.960,88
+Mehrwertsteuer 19,0 %                                                 752,57
+Gesamtbetrag brutto                                                 4.713,45
+
+Die Pruefung erfolgte anhand der uebermittelten Kalkulation.
+

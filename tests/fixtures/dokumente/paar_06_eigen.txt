@@ -1,0 +1,59 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0363/9523TG
+Vorgangsnummer      0363/9523TG
+
+Fahrzeug
+Hersteller / Typ    SEAT Leon ST 1.5 TSI
+Fahrgestellnummer   WVWZZZHV7LEEWME1M
+Amtl. Kennzeichen   OL-SB 5573
+Erstzulassung       04.05.2020
+Laufleistung        140.160 km
+
+Verrechnungssaetze
+Lohn Mechanik                     125,00 EUR/Std
+Lohn Karosserie                   157,00 EUR/Std
+Lohn Elektrik                     156,00 EUR/Std
+Lohn Lackierung                   170,00 EUR/Std
+Lackmaterial                        37,0 %
+UPE-Aufschlag                       24,0 %
+Verbringungskosten                170,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0853651G           Kuehlergrill                     1.049,20     24,0 %      1.301,01
+  2 5H0941006G           Scheinwerfer rechts                645,70     24,0 %        800,67
+  3 5H0857507G           Aussenspiegel links                145,25     24,0 %        180,11
+  4 5H0821021G           Kotfluegel vorn links              805,35     24,0 %        998,63
+  5 5H0809957G           Radhausschale vorn links           694,65     24,0 %        861,37
+  6 5H0821022G           Kotfluegel vorn rechts             502,95     24,0 %        623,66
+  7 5H0941005G           Scheinwerfer links               1.089,05     24,0 %      1.350,42
+Summe Ersatzteile                                                   6.115,87
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      1,7  Stossfaenger vorn aus- und einbauen            125,00         21,25
+ 12      0,9  Airbagsteuergeraet auslesen                    156,00         14,04
+ 13     11,9  Achsvermessung durchfuehren                    125,00        148,75
+ 14      9,4  Tuer vorn links instand setzen                 157,00        147,58
+ 15     13,7  Kotfluegel vorn links ersetzen                 157,00        215,09
+Summe Arbeitslohn                                                     546,71
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      2,1  Motorhaube lackieren                       170,00         48,91
+ 22     3     17,5  Kotfluegel vorn links lackieren            170,00        407,58
+ 23     2     14,0  Stossfaenger vorn lackieren                170,00        326,06
+Summe Lackierung                                                      782,55
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  170,00
+ 32  Probefahrt                                                           76,00
+Summe Nebenkosten                                                     246,00
+
+Kalkulationsergebnis
+Summe netto                                                         7.691,13
+Mehrwertsteuer 19,0 %                                               1.461,31
+Gesamtbetrag brutto                                                 9.152,44
+

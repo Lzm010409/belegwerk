@@ -1,0 +1,56 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0101/6145TG
+Vorgangsnummer      0101/6145TG
+
+Fahrzeug
+Hersteller / Typ    OPEL Astra K 1.4 Turbo
+Fahrgestellnummer   WVWZZZBTVHNV1XRRZ
+Amtl. Kennzeichen   OL-TP 1962
+Erstzulassung       12.08.2021
+Laufleistung        131.220 km
+
+Verrechnungssaetze
+Lohn Mechanik                     122,00 EUR/Std
+Lohn Karosserie                   170,00 EUR/Std
+Lohn Elektrik                     160,00 EUR/Std
+Lohn Lackierung                   124,00 EUR/Std
+Lackmaterial                        44,5 %
+UPE-Aufschlag                        5,0 %
+Verbringungskosten                145,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0821022A           Kotfluegel vorn rechts           1.160,70      5,0 %      1.218,74
+  2 5H0807221A           Stossfaenger vorn                1.136,45      5,0 %      1.193,27
+  3 5H0809957A           Radhausschale vorn links           645,40      5,0 %        677,67
+  4 5H0941006A           Scheinwerfer rechts                418,00      5,0 %        438,90
+  5 5H0857507A           Aussenspiegel links                795,45      5,0 %        835,22
+  6 5H0821021A           Kotfluegel vorn links              344,90      5,0 %        362,15
+Summe Ersatzteile                                                   4.725,95
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11     11,1  Tuer vorn links instand setzen                 170,00        188,70
+ 12      5,6  Kotfluegel vorn links ersetzen                 170,00         95,20
+ 13      1,0  Scheinwerfer links ersetzen                    160,00         16,00
+Summe Arbeitslohn                                                     299,90
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     3      4,7  Tuer vorn links lackieren                  124,00         84,21
+ 22     3      8,4  Kotfluegel vorn links lackieren            124,00        150,51
+ 23     2      6,1  Stossfaenger vorn lackieren                124,00        109,30
+ 24     3      9,3  Motorhaube lackieren                       124,00        166,64
+Summe Lackierung                                                      510,66
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                  145,00
+Summe Nebenkosten                                                     145,00
+
+Kalkulationsergebnis
+Summe netto                                                         5.681,51
+Mehrwertsteuer 19,0 %                                               1.079,49
+Gesamtbetrag brutto                                                 6.761,00
+

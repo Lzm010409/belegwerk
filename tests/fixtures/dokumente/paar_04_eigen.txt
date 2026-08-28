@@ -1,0 +1,57 @@
+DAT Deutschland - SilverDAT 3                                 Seite 1
+
+Kalkulation zum Vorgang 0896/2240TG
+Vorgangsnummer      0896/2240TG
+
+Fahrzeug
+Hersteller / Typ    TOYOTA Corolla Touring Sports
+Fahrgestellnummer   WVWZZZV6GG1ZN0M5V
+Amtl. Kennzeichen   OL-IC 925
+Erstzulassung       11.11.2023
+Laufleistung        146.820 km
+
+Verrechnungssaetze
+Lohn Mechanik                     171,00 EUR/Std
+Lohn Karosserie                   146,00 EUR/Std
+Lohn Elektrik                     125,00 EUR/Std
+Lohn Lackierung                   172,00 EUR/Std
+Lackmaterial                        30,5 %
+UPE-Aufschlag                       22,0 %
+Verbringungskosten                 70,00 EUR
+
+Ersatzteile
+Pos Teilenummer          Bezeichnung                            UPE   Aufschlag        Betrag
+  1 5H0805594E           Querträger vorn                  1.130,40     22,0 %      1.379,09
+  2 5H0941006E           Scheinwerfer rechts                259,00     22,0 %        315,98
+  3 5H0823031E           Motorhaube                         703,80     22,0 %        858,64
+Summe Ersatzteile                                                   2.553,71
+
+Arbeitslohn
+Pos     AW  Beschreibung                                       Satz         Betrag
+ 11      9,4  Kotfluegel vorn links ersetzen                 146,00        137,24
+ 12      1,4  Achsvermessung durchfuehren                    171,00         23,94
+ 13      7,4  Stossfaenger vorn aus- und einbauen            171,00        126,54
+ 14      9,8  Frontklappe einstellen                         146,00        143,08
+ 15      9,1  Motorhaube ersetzen                            146,00        132,86
+ 16      2,9  Airbagsteuergeraet auslesen                    125,00         36,25
+Summe Arbeitslohn                                                     599,91
+
+Lackierung
+Pos Stufe     AW  Beschreibung                                   Satz         Betrag
+ 21     1     10,7  Beilackierung Seitenwand links             172,00        240,17
+ 22     3      5,6  Kotfluegel vorn links lackieren            172,00        125,70
+ 23     3      2,9  Tuer vorn links lackieren                  172,00         65,09
+Summe Lackierung                                                      430,96
+
+Nebenkosten
+Pos Beschreibung                                                            Betrag
+ 31  Verbringungskosten                                                   70,00
+ 32  Entsorgung Altteile                                                 120,00
+ 33  Fahrzeugreinigung                                                    25,00
+Summe Nebenkosten                                                     215,00
+
+Kalkulationsergebnis
+Summe netto                                                         3.799,58
+Mehrwertsteuer 19,0 %                                                 721,92
+Gesamtbetrag brutto                                                 4.521,50
+

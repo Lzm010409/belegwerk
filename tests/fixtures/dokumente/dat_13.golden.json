@@ -1,0 +1,190 @@
+{
+  "quelle": "DAT",
+  "quellformat": "pdf",
+  "adapter": "dat_pdf",
+  "aktenzeichen": "0980/5828TG",
+  "fahrzeug": {
+    "hersteller": "TOYOTA",
+    "modell": "Corolla Touring Sports",
+    "vin": "WVWZZZXVNBV9085EX",
+    "kennzeichen": "OL-II 6723",
+    "erstzulassung": "2019-04-23",
+    "laufleistung_km": 162950
+  },
+  "saetze": {
+    "mechanik": "142",
+    "karosserie": "143",
+    "elektrik": "118",
+    "lack_lohn": "144",
+    "lack_material_prozent": "31.5",
+    "upe_aufschlag_prozent": "12",
+    "verbringung": "95"
+  },
+  "positionen": [
+    {
+      "laufnummer": 1,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Motorhaube",
+      "teilenummer": "5H0823031N",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "1107.45",
+      "aufschlag_prozent": "12",
+      "betrag": "1240.34"
+    },
+    {
+      "laufnummer": 2,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Radhausschale vorn links",
+      "teilenummer": "5H0809957N",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "586.35",
+      "aufschlag_prozent": "12",
+      "betrag": "656.71"
+    },
+    {
+      "laufnummer": 3,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Scheinwerfer rechts",
+      "teilenummer": "5H0941006N",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "159.35",
+      "aufschlag_prozent": "12",
+      "betrag": "178.47"
+    },
+    {
+      "laufnummer": 4,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Kotfluegel vorn links",
+      "teilenummer": "5H0821021N",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "389.4",
+      "aufschlag_prozent": "12",
+      "betrag": "436.13"
+    },
+    {
+      "laufnummer": 5,
+      "art": "ERSATZTEIL",
+      "bezeichnung": "Aussenspiegel links",
+      "teilenummer": "5H0857507N",
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": "459.65",
+      "aufschlag_prozent": "12",
+      "betrag": "514.81"
+    },
+    {
+      "laufnummer": 11,
+      "art": "ARBEIT",
+      "bezeichnung": "Stossfaenger vorn aus- und einbauen",
+      "teilenummer": null,
+      "arbeitswerte": "3.6",
+      "stundensatz": "142",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "51.12"
+    },
+    {
+      "laufnummer": 12,
+      "art": "ARBEIT",
+      "bezeichnung": "Scheinwerfer links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "4.2",
+      "stundensatz": "118",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "49.56"
+    },
+    {
+      "laufnummer": 13,
+      "art": "ARBEIT",
+      "bezeichnung": "Tuer vorn links instand setzen",
+      "teilenummer": null,
+      "arbeitswerte": "10.5",
+      "stundensatz": "143",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "150.15"
+    },
+    {
+      "laufnummer": 14,
+      "art": "ARBEIT",
+      "bezeichnung": "Achsvermessung durchfuehren",
+      "teilenummer": null,
+      "arbeitswerte": "3.1",
+      "stundensatz": "142",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "44.02"
+    },
+    {
+      "laufnummer": 15,
+      "art": "ARBEIT",
+      "bezeichnung": "Kotfluegel vorn links ersetzen",
+      "teilenummer": null,
+      "arbeitswerte": "11",
+      "stundensatz": "143",
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "157.30"
+    },
+    {
+      "laufnummer": 21,
+      "art": "LACK",
+      "bezeichnung": "Tuer vorn links lackieren",
+      "teilenummer": null,
+      "arbeitswerte": "14.8",
+      "stundensatz": "144",
+      "lackstufe": 3,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "280.25"
+    },
+    {
+      "laufnummer": 22,
+      "art": "LACK",
+      "bezeichnung": "Beilackierung Seitenwand links",
+      "teilenummer": null,
+      "arbeitswerte": "6.6",
+      "stundensatz": "144",
+      "lackstufe": 1,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "124.98"
+    },
+    {
+      "laufnummer": 31,
+      "art": "NEBENKOSTEN",
+      "bezeichnung": "Verbringungskosten",
+      "teilenummer": null,
+      "arbeitswerte": null,
+      "stundensatz": null,
+      "lackstufe": null,
+      "einzelpreis": null,
+      "aufschlag_prozent": null,
+      "betrag": "95"
+    }
+  ],
+  "summen": {
+    "ersatzteile": "3026.46",
+    "arbeit": "452.15",
+    "lack": "405.23",
+    "nebenkosten": "95.00",
+    "netto": "3978.84",
+    "mehrwertsteuer": "755.98",
+    "brutto": "4734.82"
+  }
+}
